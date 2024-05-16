@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 
 import { Inter } from 'next/font/google';
 
+import Footer from '@/components/common/Footer';
+import Navbar from '@/components/common/Navbar';
+
 import { Providers } from './_providers/Providers';
 import './globals.css';
 
@@ -19,8 +22,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Providers>{children}</Providers>
+      <body className={`bg-[#F5F5F5] pt-10 ${inter.className}`}>
+        <Providers>
+          <Navbar />
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
