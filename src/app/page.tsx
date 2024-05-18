@@ -7,24 +7,40 @@ import nftImage from '../../public/images/main-nft.png';
 
 export default function Home() {
   return (
-    <main className="w-3/4 mx-auto py-16">
-      <div className="grid grid-cols-2 gap-2">
-        <div className="flex flex-col gap-12 w-2/3 py-36">
+    <div className="py-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+        <div className="flex flex-col gap-6 xl:gap-12 w-full xl:w-2/3 py-12 2xl:py-36">
           <div>
-            <h1 className="text-9xl font-bold uppercase">ROCK</h1>
-            <h1 className="text-9xl font-bold uppercase">ONYX</h1>
+            <h1 className="text-8xl xl:text-9xl 2xl:text-[160px] leading-none font-bold uppercase">
+              ROCK
+            </h1>
+            <h1 className="text-8xl xl:text-9xl 2xl:text-[160px] leading-none font-bold uppercase">
+              ONYX
+            </h1>
           </div>
           <p className="text-xl font-normal opacity-80">
             Sophisticated hedge fund strategies implemented on-chain, generating high yields and
             Eth/Btc airdrop points
           </p>
           <div>
-            <Button color="primary">Launch App</Button>
+            <Button color="primary" size="lg" className="rounded-full">
+              Launch App
+            </Button>
           </div>
         </div>
-        <div className="w-full h-full relative">
-          <Image src={nftImage} alt="Rock Onyx" fill className="object-contain" />
-          <Button className="absolute bottom-6 right-6" color="secondary">
+        <div className="w-full h-[560px] sm:h-[800px] md:h-[680px] lg:h-[500px] xl:h-[600px] 2xl:h-full relative rounded-3xl overflow-hidden">
+          <Image
+            src={nftImage}
+            alt="Rock Onyx"
+            priority
+            fill
+            sizes="100%"
+            className="object-cover"
+          />
+          <Button
+            className="absolute bottom-6 right-6 text-black rounded-full px-8"
+            color="secondary"
+          >
             Mint
           </Button>
         </div>
@@ -48,6 +64,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

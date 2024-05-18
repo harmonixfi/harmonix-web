@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 import { ChevronDownIcon } from '@heroicons/react/16/solid';
 import {
+  Accordion,
+  AccordionItem,
   Button,
   Dropdown,
   DropdownItem,
@@ -24,39 +26,31 @@ import { LogoIcon } from '../icons';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = [
-    'Profile',
-    'Dashboard',
-    'Activity',
-    'Analytics',
-    'System',
-    'Deployments',
-    'My Settings',
-    'Team Settings',
-    'Help & Feedback',
-    'Log Out',
-  ];
+  const menuItems = ['Profile', 'Dashboard', 'Activity', 'Analytics', 'Help & Feedback', 'Log Out'];
 
   return (
-    <NextUiNavbar className="bg-transparent" onMenuOpenChange={setIsMenuOpen}>
+    <NextUiNavbar
+      shouldHideOnScroll
+      classNames={{
+        base: 'w-full sm:w-5/6 lg:w-4/5 mx-auto bg-transparent',
+        wrapper: 'px-4 sm:px-0',
+      }}
+      maxWidth="full"
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-          className="sm:hidden"
-        />
         <NavbarBrand>
           <LogoIcon className="w-12 h-12" />
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-12 p-2 bg-white rounded-full" justify="center">
-        <Dropdown>
-          <NavbarItem>
+      <NavbarContent className="hidden lg:flex gap-12 p-2 bg-white rounded-full" justify="center">
+        <Dropdown className="h-full" classNames={{ content: 'min-w-32' }}>
+          <NavbarItem className="h-full">
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="px-4 py-2 bg-transparent data-[hover=true]:bg-transparent"
-                radius="sm"
+                className="h-full px-4 py-2 bg-transparent text-base rounded-full"
                 variant="light"
                 endContent={<ChevronDownIcon className="w-5 h-5" />}
               >
@@ -65,38 +59,21 @@ const Navbar = () => {
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu
-            aria-label="ACME features"
+            aria-label="about"
             itemClasses={{
-              base: 'gap-4',
+              base: 'text-center',
             }}
           >
-            <DropdownItem
-              key="autoscaling"
-              description="ACME scales apps to meet user demand, automagically, based on load."
-            >
-              Autoscaling
-            </DropdownItem>
-            <DropdownItem
-              key="usage_metrics"
-              description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
-            >
-              Usage Metrics
-            </DropdownItem>
-            <DropdownItem
-              key="production_ready"
-              description="ACME runs on ACME, join us and others serving requests at web scale."
-            >
-              Production Ready
-            </DropdownItem>
+            <DropdownItem key="faq">FAQ</DropdownItem>
+            <DropdownItem key="blog">Blog</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown>
-          <NavbarItem>
+        <Dropdown className="h-full" classNames={{ content: 'min-w-32' }}>
+          <NavbarItem className="h-full">
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="px-4 py-2 bg-[#F4F4F4] rounded-full data-[hover=true]:bg-[#F4F4F4]"
-                radius="sm"
+                className="h-full px-4 py-2 bg-transparent text-base rounded-full"
                 variant="light"
                 endContent={<ChevronDownIcon className="w-5 h-5" />}
               >
@@ -105,33 +82,18 @@ const Navbar = () => {
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu
-            aria-label="ACME features"
+            aria-label="Community"
             itemClasses={{
-              base: 'gap-4',
+              base: 'text-center',
             }}
           >
-            <DropdownItem
-              key="autoscaling"
-              description="ACME scales apps to meet user demand, automagically, based on load."
-            >
-              Autoscaling
-            </DropdownItem>
-            <DropdownItem
-              key="usage_metrics"
-              description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
-            >
-              Usage Metrics
-            </DropdownItem>
-            <DropdownItem
-              key="production_ready"
-              description="ACME runs on ACME, join us and others serving requests at web scale."
-            >
-              Production Ready
-            </DropdownItem>
+            <DropdownItem key="github">Github</DropdownItem>
+            <DropdownItem key="telegram">Telegram</DropdownItem>
+            <DropdownItem key="twitter">Twitter</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page" className="px-4 py-2">
+        <NavbarItem>
+          <Link color="foreground" href="#" className="px-4 py-2">
             Dashboard
           </Link>
         </NavbarItem>
@@ -143,27 +105,62 @@ const Navbar = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button color="primary" href="#" variant="bordered">
+          <Button color="primary" href="#" variant="ghost" className="rounded-full border">
             Launch App
           </Button>
         </NavbarItem>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          className="lg:hidden"
+        />
       </NavbarContent>
 
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2 ? 'primary' : index === menuItems.length - 1 ? 'danger' : 'foreground'
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+      <NavbarMenu className="bg-transparent pt-12 space-y-2">
+        <NavbarMenuItem>
+          <Accordion
+            showDivider={false}
+            itemClasses={{
+              base: 'py-2',
+              trigger: 'p-0',
+              titleWrapper: 'flex-none',
+              indicator: '-rotate-90 text-black data-[open=true]:rotate-90',
+            }}
+          >
+            <AccordionItem key="about" aria-label="About" title="About">
+              <div className="flex flex-col gap-4">
+                <Link color="foreground" href="#" className="px-4">
+                  FAQ
+                </Link>
+                <Link color="foreground" href="#" className="px-4">
+                  Blog
+                </Link>
+              </div>
+            </AccordionItem>
+            <AccordionItem key="community" aria-label="Community" title="Community">
+              <div className="flex flex-col gap-4">
+                <Link color="foreground" href="#" className="px-4">
+                  Github
+                </Link>
+                <Link color="foreground" href="#" className="px-4">
+                  Telegram
+                </Link>
+                <Link color="foreground" href="#" className="px-4">
+                  Twitter
+                </Link>
+              </div>
+            </AccordionItem>
+          </Accordion>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link color="foreground" href="#" className="text-lg px-2">
+            Dashboard
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <Link color="foreground" href="#" className="text-lg px-2">
+            Treasury
+          </Link>
+        </NavbarMenuItem>
       </NavbarMenu>
     </NextUiNavbar>
   );
