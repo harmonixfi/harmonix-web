@@ -7,7 +7,9 @@
     "dev": "next dev",
     "format": "prettier --write .",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "deploy:dev": "AWS_PROFILE=onyx sst deploy --stage=dev",
+    "deploy": "AWS_PROFILE=onyx sst deploy"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.3",

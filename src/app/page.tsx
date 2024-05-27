@@ -12,7 +12,7 @@ export default function Home() {
         <div className="flex flex-col gap-6 xl:gap-12 w-full xl:w-2/3 py-12 2xl:py-36">
           <div>
             <h1 className="text-8xl xl:text-9xl 2xl:text-[160px] leading-none font-bold uppercase">
-              ROCK
+              ROCK1
             </h1>
             <h1 className="text-8xl xl:text-9xl 2xl:text-[160px] leading-none font-bold uppercase">
               ONYX
