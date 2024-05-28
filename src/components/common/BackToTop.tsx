@@ -1,6 +1,6 @@
 'use client';
 
-import { Button } from '@nextui-org/react';
+import { ArrowUpIcon, ChevronUpIcon } from '@heroicons/react/16/solid';
 
 const BackToTop = () => {
   const handleBackToTop = () => {
@@ -12,9 +12,14 @@ const BackToTop = () => {
   };
 
   return (
-    <Button variant="light" className="text-white" onClick={handleBackToTop}>
+    <button
+      type="button"
+      className="flex items-center gap-2 animate-bounce opacity-70 hover:opacity-100"
+      onClick={handleBackToTop}
+    >
       Back to top
-    </Button>
+      <ArrowUpIcon className="w-4 h-4" />
+    </button>
   );
 };
 

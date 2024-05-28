@@ -21,12 +21,10 @@ import {
   Navbar as NextUiNavbar,
 } from '@nextui-org/react';
 
-import { LogoIcon } from '../icons';
+import { GithubIcon, LogoIcon, LogoWithTextIcon, TelegramIcon, TwitterIcon } from '../icons';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const menuItems = ['Profile', 'Dashboard', 'Activity', 'Analytics', 'Help & Feedback', 'Log Out'];
 
   return (
     <NextUiNavbar
@@ -40,7 +38,8 @@ const Navbar = () => {
     >
       <NavbarContent>
         <NavbarBrand>
-          <LogoIcon className="w-12 h-12" />
+          <LogoIcon className="w-auto h-12 xl:hidden" />
+          <LogoWithTextIcon className="w-auto h-12 hidden xl:block" />
         </NavbarBrand>
       </NavbarContent>
 
@@ -68,12 +67,12 @@ const Navbar = () => {
             <DropdownItem key="blog">Blog</DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Dropdown className="h-full" classNames={{ content: 'min-w-32' }}>
+        <Dropdown className="h-full" classNames={{ content: 'min-w-36' }}>
           <NavbarItem className="h-full">
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="h-full px-4 py-2 bg-transparent text-base rounded-full"
+                className="h-full px-4 py-2 bg-transparent text-base text-black rounded-full"
                 variant="light"
                 endContent={<ChevronDownIcon className="w-5 h-5" />}
               >
@@ -84,12 +83,21 @@ const Navbar = () => {
           <DropdownMenu
             aria-label="Community"
             itemClasses={{
-              base: 'text-center',
+              title: 'flex items-center gap-3',
             }}
           >
-            <DropdownItem key="github">Github</DropdownItem>
-            <DropdownItem key="telegram">Telegram</DropdownItem>
-            <DropdownItem key="twitter">Twitter</DropdownItem>
+            <DropdownItem key="github">
+              <GithubIcon className="w-6 h-6" />
+              Github
+            </DropdownItem>
+            <DropdownItem key="telegram">
+              <TelegramIcon className="w-6 h-6" />
+              Telegram
+            </DropdownItem>
+            <DropdownItem key="twitter">
+              <TwitterIcon className="w-6 h-6" />
+              Twitter
+            </DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <NavbarItem>
@@ -105,7 +113,11 @@ const Navbar = () => {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button color="primary" href="#" variant="ghost" className="rounded-full border">
+          <Button
+            href="#"
+            size="lg"
+            className="bg-transparent border border-primary rounded-full text-black hover:bg-secondary hover:border-secondary"
+          >
             Launch App
           </Button>
         </NavbarItem>
@@ -138,13 +150,16 @@ const Navbar = () => {
             </AccordionItem>
             <AccordionItem key="community" aria-label="Community" title="Community">
               <div className="flex flex-col gap-4">
-                <Link color="foreground" href="#" className="px-4">
+                <Link color="foreground" href="#" className="flex items-center gap-2 px-4">
+                  <GithubIcon className="w-5 h-5" />
                   Github
                 </Link>
-                <Link color="foreground" href="#" className="px-4">
+                <Link color="foreground" href="#" className="flex items-center gap-2 px-4">
+                  <TelegramIcon className="w-5 h-5" />
                   Telegram
                 </Link>
-                <Link color="foreground" href="#" className="px-4">
+                <Link color="foreground" href="#" className="flex items-center gap-2 px-4">
+                  <TwitterIcon className="w-5 h-5" />
                   Twitter
                 </Link>
               </div>

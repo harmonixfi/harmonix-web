@@ -14,6 +14,11 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'off-white': {
+          DEFAULT: '#F1F1EB',
+        },
+      },
     },
   },
   darkMode: 'class',
@@ -23,10 +28,10 @@ const config: Config = {
         light: {
           colors: {
             primary: {
-              DEFAULT: '#0032FF',
+              DEFAULT: '#173132',
             },
             secondary: {
-              DEFAULT: '#42FFF4',
+              DEFAULT: '#E2F6A1',
             },
           },
         },
