@@ -7,3 +7,4 @@ export { default as TwitterIcon } from './Twitter';
 export { default as TelegramIcon } from './Telegram';
 export { default as GithubIcon } from './Github';
 export { default as BrandTextIcon } from './BrandText';
+export { default as FooterLineIcon } from './FooterLine';
