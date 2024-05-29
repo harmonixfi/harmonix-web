@@ -18,7 +18,7 @@ export default async function Home() {
         <h1 className="text-7xl font-light capitalize text-center">
           Building Harmony in Crypto Asset Strategies
         </h1>
-        <p className="text-2xl font-normal text-center opacity-80">
+        <p className="w-5/6 text-2xl font-normal text-center opacity-80">
           Harmonix - Implies a harmony in strategies that balance risk and reward, suitable for a
           platform managing diverse crypto assets.
         </p>

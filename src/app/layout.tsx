@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 
 import Footer from '@/components/common/Footer';
-import Navbar from '@/components/common/Navbar';
+import Navbar from '@/components/common/navbar/Navbar';
 
 import { Providers } from './_providers/Providers';
 import './globals.css';
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${outfit.className} bg-[#F5F5F5]`}>
-      <body className="pt-8">
+      <body className="lg:pt-8">
         <Providers>
           <Navbar />
           <main className="w-full sm:w-5/6 lg:w-3/4 mx-auto px-6 sm:px-0">{children}</main>

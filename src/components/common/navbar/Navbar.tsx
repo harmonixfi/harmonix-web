@@ -2,15 +2,10 @@
 
 import { useState } from 'react';
 
-import { ChevronDownIcon } from '@heroicons/react/16/solid';
 import {
   Accordion,
   AccordionItem,
   Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
   Link,
   NavbarBrand,
   NavbarContent,
@@ -21,7 +16,8 @@ import {
   Navbar as NextUiNavbar,
 } from '@nextui-org/react';
 
-import { GithubIcon, LogoIcon, LogoWithTextIcon, TelegramIcon, TwitterIcon } from '../icons';
+import { GithubIcon, LogoIcon, LogoWithTextIcon, TelegramIcon, TwitterIcon } from '../../icons';
+import NavbarDropdown from './NavbarDropdown';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +26,7 @@ const Navbar = () => {
     <NextUiNavbar
       shouldHideOnScroll
       classNames={{
-        base: 'w-full sm:w-5/6 lg:w-4/5 mx-auto bg-transparent',
+        base: 'w-full sm:px-12 lg:px-24 bg-white lg:bg-transparent',
         wrapper: 'px-4 sm:px-0',
       }}
       maxWidth="full"
@@ -43,72 +39,22 @@ const Navbar = () => {
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden lg:flex gap-12 p-2 bg-white rounded-full" justify="center">
-        <Dropdown className="h-full" classNames={{ content: 'min-w-32' }}>
-          <NavbarItem className="h-full">
-            <DropdownTrigger>
-              <Button
-                disableRipple
-                className="h-full px-4 py-2 text-base border-none rounded-full !opacity-100 hover:bg-secondary"
-                variant="bordered"
-                endContent={<ChevronDownIcon className="w-5 h-5" />}
-              >
-                About
-              </Button>
-            </DropdownTrigger>
-          </NavbarItem>
-          <DropdownMenu
-            aria-label="about"
-            color="secondary"
-            itemClasses={{
-              base: 'text-center !text-black',
-            }}
-          >
-            <DropdownItem key="faq">FAQ</DropdownItem>
-            <DropdownItem key="blog">
-              <Link
-                href="https://mirror.xyz/0xa1e8a739166876845B7dEdc177989024bAB0D810"
-                target="_blank"
-              >
-                Blog
-              </Link>
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
-        <Dropdown className="h-full" classNames={{ content: 'min-w-36' }}>
-          <NavbarItem className="h-full">
-            <DropdownTrigger>
-              <Button
-                disableRipple
-                className="h-full px-4 py-2 text-base text-black border-none rounded-full !opacity-100 hover:bg-secondary"
-                variant="bordered"
-                endContent={<ChevronDownIcon className="w-5 h-5" />}
-              >
-                Community
-              </Button>
-            </DropdownTrigger>
-          </NavbarItem>
-          <DropdownMenu
-            aria-label="Community"
-            color="secondary"
-            itemClasses={{
-              title: 'flex items-center gap-3 !text-black',
-            }}
-          >
-            <DropdownItem key="github" href="https://github.com/rock-onyx" target="_blank">
-              <GithubIcon className="w-6 h-6" />
-              Github
-            </DropdownItem>
-            <DropdownItem key="telegram" href="http://t.me/rockonyx001" target="_blank">
-              <TelegramIcon className="w-6 h-6" />
-              Telegram
-            </DropdownItem>
-            <DropdownItem key="twitter" href="https://twitter.com/harmonixfi" target="_blank">
-              <TwitterIcon className="w-6 h-6" />
-              Twitter
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+      <NavbarContent className="hidden lg:flex gap-6 p-2 bg-white rounded-full" justify="center">
+        <NavbarDropdown
+          title="About"
+          items={[
+            { text: 'FAQ', link: '#' },
+            { text: 'Bog', link: 'https://mirror.xyz/0xa1e8a739166876845B7dEdc177989024bAB0D810' },
+          ]}
+        />
+        <NavbarDropdown
+          title="Community"
+          items={[
+            { icon: GithubIcon, text: 'Github', link: 'https://github.com/rock-onyx' },
+            { icon: TelegramIcon, text: 'Telegram', link: 'http://t.me/rockonyx001' },
+            { icon: TwitterIcon, text: 'Twitter', link: 'https://twitter.com/harmonixfi' },
+          ]}
+        />
         <NavbarItem className="h-full">
           <Link
             color="foreground"
@@ -121,10 +67,10 @@ const Navbar = () => {
         <NavbarItem className="h-full">
           <Link
             color="foreground"
-            href="#"
+            href="https://rock-onyx.gitbook.io/rock-onyx-docs/"
             className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
           >
-            Treasury
+            Docs
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -146,12 +92,12 @@ const Navbar = () => {
         />
       </NavbarContent>
 
-      <NavbarMenu className="bg-transparent pt-12 space-y-2">
+      <NavbarMenu className="bg-white pt-12">
         <NavbarMenuItem>
           <Accordion
             showDivider={false}
             itemClasses={{
-              base: 'py-2',
+              base: 'py-3',
               trigger: 'p-0',
               titleWrapper: 'flex-none',
               indicator: '-rotate-90 text-black data-[open=true]:rotate-90',
@@ -205,14 +151,22 @@ const Navbar = () => {
             </AccordionItem>
           </Accordion>
         </NavbarMenuItem>
-        <NavbarMenuItem>
-          <Link color="foreground" href="#" className="text-lg px-2">
+        <NavbarMenuItem className="mt-1 mb-4">
+          <Link
+            color="foreground"
+            href="https://app.harmonix.fi/dashboard"
+            className="text-lg px-2"
+          >
             Dashboard
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link color="foreground" href="#" className="text-lg px-2">
-            Treasury
+          <Link
+            color="foreground"
+            href="https://rock-onyx.gitbook.io/rock-onyx-docs/"
+            className="text-lg px-2"
+          >
+            Docs
           </Link>
         </NavbarMenuItem>
       </NavbarMenu>
