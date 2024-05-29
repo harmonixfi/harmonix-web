@@ -69,7 +69,7 @@ const Footer = () => {
           <div className="flex justify-center sm:justify-end">
             <div className="flex flex-col gap-6">
               <Link
-                href=""
+                href="https://app.harmonix.fi/dashboard"
                 target="_blank"
                 className="font-normal text-xl text-secondary underline-offset-8 hover:underline"
               >

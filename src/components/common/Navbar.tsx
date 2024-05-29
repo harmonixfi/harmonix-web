@@ -49,8 +49,8 @@ const Navbar = () => {
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="h-full px-4 py-2 bg-transparent text-base rounded-full"
-                variant="light"
+                className="h-full px-4 py-2 text-base border-none rounded-full !opacity-100 hover:bg-secondary"
+                variant="bordered"
                 endContent={<ChevronDownIcon className="w-5 h-5" />}
               >
                 About
@@ -59,8 +59,9 @@ const Navbar = () => {
           </NavbarItem>
           <DropdownMenu
             aria-label="about"
+            color="secondary"
             itemClasses={{
-              base: 'text-center',
+              base: 'text-center !text-black',
             }}
           >
             <DropdownItem key="faq">FAQ</DropdownItem>
@@ -79,8 +80,8 @@ const Navbar = () => {
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="h-full px-4 py-2 bg-transparent text-base text-black rounded-full"
-                variant="light"
+                className="h-full px-4 py-2 text-base text-black border-none rounded-full !opacity-100 hover:bg-secondary"
+                variant="bordered"
                 endContent={<ChevronDownIcon className="w-5 h-5" />}
               >
                 Community
@@ -89,8 +90,9 @@ const Navbar = () => {
           </NavbarItem>
           <DropdownMenu
             aria-label="Community"
+            color="secondary"
             itemClasses={{
-              title: 'flex items-center gap-3',
+              title: 'flex items-center gap-3 !text-black',
             }}
           >
             <DropdownItem key="github" href="https://github.com/rock-onyx" target="_blank">
@@ -107,13 +109,21 @@ const Navbar = () => {
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <NavbarItem>
-          <Link color="foreground" href="#" className="px-4 py-2">
+        <NavbarItem className="h-full">
+          <Link
+            color="foreground"
+            href="https://app.harmonix.fi/dashboard"
+            className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
+          >
             Dashboard
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#" className="px-4 py-2">
+        <NavbarItem className="h-full">
+          <Link
+            color="foreground"
+            href="#"
+            className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
+          >
             Treasury
           </Link>
         </NavbarItem>
@@ -121,7 +131,9 @@ const Navbar = () => {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
-            href="#"
+            as={Link}
+            href="https://app.harmonix.fi"
+            target="_blank"
             size="lg"
             className="bg-transparent border border-primary rounded-full text-black hover:bg-secondary hover:border-secondary"
           >

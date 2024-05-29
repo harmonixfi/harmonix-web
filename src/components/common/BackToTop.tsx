@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowUpIcon, ChevronUpIcon } from '@heroicons/react/16/solid';
+import { ArrowUpIcon } from '@heroicons/react/16/solid';
 
 const BackToTop = () => {
   const handleBackToTop = () => {
@@ -14,7 +14,7 @@ const BackToTop = () => {
   return (
     <button
       type="button"
-      className="flex items-center gap-2 animate-bounce opacity-70 hover:opacity-100"
+      className="flex items-center gap-2 animate-bounce opacity-70 z-20 hover:opacity-100"
       onClick={handleBackToTop}
     >
       Back to top
