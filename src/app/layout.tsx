@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className="lg:pt-8">
         <Providers>
           <Navbar />
-          <main className="w-full sm:w-5/6 lg:w-3/4 mx-auto px-6 sm:px-0">{children}</main>
+          <main className="w-full lg:w-3/4 xl:w-4/5 mx-auto px-6 sm:px-0">{children}</main>
           <Footer />
         </Providers>
       </body>

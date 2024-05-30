@@ -16,7 +16,7 @@ import {
   Navbar as NextUiNavbar,
 } from '@nextui-org/react';
 
-import { GithubIcon, LogoIcon, LogoWithTextIcon, TelegramIcon, TwitterIcon } from '../../icons';
+import { GithubIcon, LogoWithTextIcon, TelegramIcon, TwitterIcon } from '../../icons';
 import NavbarDropdown from './NavbarDropdown';
 
 const Navbar = () => {
@@ -34,8 +34,7 @@ const Navbar = () => {
     >
       <NavbarContent>
         <NavbarBrand>
-          <LogoIcon className="w-auto h-12 xl:hidden" />
-          <LogoWithTextIcon className="w-auto h-12 hidden xl:block" />
+          <LogoWithTextIcon className="w-auto h-10 sm:h-12 " />
         </NavbarBrand>
       </NavbarContent>
 
@@ -59,6 +58,7 @@ const Navbar = () => {
           <Link
             color="foreground"
             href="https://app.harmonix.fi/dashboards"
+            isExternal
             className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
           >
             Dashboard
