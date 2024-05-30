@@ -53,6 +53,7 @@ export default async function Home() {
           autoPlay
           loop
           muted
+          playsInline
           className="w-4/5 sm:w-3/5 h-auto absolute top-[16%] sm:top-0 left-[13%] sm:left-[22%]"
         >
           <source src="/motion.mp4" type="video/mp4" />

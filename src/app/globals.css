@@ -48,3 +48,9 @@ body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+video {
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+}
