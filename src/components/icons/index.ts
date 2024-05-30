@@ -15,3 +15,4 @@ export { default as Ellipse3Icon } from './Ellipse3';
 export { default as Ellipse4Icon } from './Ellipse4';
 export { default as Ellipse5Icon } from './Ellipse5';
 export { default as Ellipse6Icon } from './Ellipse6';
+export { default as Ellipse7Icon } from './Ellipse7';

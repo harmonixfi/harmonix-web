@@ -33,11 +33,14 @@ const menuItems = [
 const Footer = () => {
   return (
     <footer className="relative bg-primary text-white px-4 sm:px-12 lg:px-24 py-12 space-y-16 overflow-hidden">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-6 mt-8 sm:mt-14">
         <div className="lg:col-span-5">
           <FlatLogoIcon className="w-auto h-16 mb-6 mx-auto sm:mx-0" />
-          <h2 className="w-full 2xl:w-2/3 text-off-white font-normal text-2xl capitalize text-center sm:text-left">
-            Secure Your Wealth, Earn More with Automated Hedging
+          <h2 className="w-full 2xl:w-2/3 text-off-white font-light text-2xl text-center sm:text-left">
+            Secure Your Wealth, Earn More
+          </h2>
+          <h2 className="w-full 2xl:w-2/3 text-off-white font-light text-2xl text-center sm:text-left">
+            with Automated Hedging
           </h2>
         </div>
         <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-6 z-20">
@@ -47,14 +50,14 @@ const Footer = () => {
               className={`flex ${index === 0 ? 'justify-center sm:justify-start xl:justify-end' : 'justify-center xl:justify-end'}`}
             >
               <div className="flex flex-col items-center gap-6">
-                <p className="font-normal text-xl text-secondary">{menuItem.text}</p>
+                <p className="font-light text-xl text-secondary">{menuItem.text}</p>
                 <ul className="space-y-6">
                   {menuItem.items?.map((item) => (
                     <li key={item.text}>
                       <Link
                         href={item.link}
                         target="_blank"
-                        className="flex items-center gap-2 font-normal text-xl text-off-white underline-offset-8 hover:underline"
+                        className="inline-flex items-center gap-2 font-light text-xl text-off-white hover-underline-animation after:bg-white"
                       >
                         {'icon' in item && <item.icon className="w-5 h-5" />}
                         {item.text}
@@ -67,21 +70,25 @@ const Footer = () => {
           ))}
 
           <div className="flex justify-center sm:justify-end">
-            <div className="flex flex-col gap-6">
-              <Link
-                href="https://app.harmonix.fi/dashboards"
-                target="_blank"
-                className="font-normal text-xl text-secondary underline-offset-8 hover:underline"
-              >
-                Dashboard
-              </Link>
-              <Link
-                href="https://rock-onyx.gitbook.io/rock-onyx-docs/"
-                target="_blank"
-                className="font-normal text-xl text-secondary underline-offset-8 hover:underline"
-              >
-                Docs
-              </Link>
+            <div className="space-y-6">
+              <div>
+                <Link
+                  href="https://app.harmonix.fi/dashboards"
+                  target="_blank"
+                  className="inline-block font-light text-xl text-secondary hover-underline-animation after:bg-secondary"
+                >
+                  Dashboard
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="https://rock-onyx.gitbook.io/rock-onyx-docs/"
+                  target="_blank"
+                  className="inline-block font-light text-xl text-secondary hover-underline-animation after:bg-secondary"
+                >
+                  Docs
+                </Link>
+              </div>
             </div>
           </div>
         </div>

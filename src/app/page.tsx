@@ -9,6 +9,7 @@ import {
   Ellipse4Icon,
   Ellipse5Icon,
   Ellipse6Icon,
+  Ellipse7Icon,
   HomeGridIcon,
   UsdcIcon,
   UsdtIcon,
@@ -47,18 +48,29 @@ export default async function Home() {
         </Button>
       </div>
 
-      <div className="relative pt-[15%] mt-16 sm:mt-12">
-        <HomeGridIcon className="w-full h-auto" />
+      <div className="relative h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] sm:mt-12 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          className="w-4/5 sm:w-3/5 h-auto absolute top-[16%] sm:top-0 left-[13%] sm:left-[22%]"
+        >
+          <source src="/motion.mp4" type="video/mp4" />
+        </video>
 
-        <Ellipse1Icon className="absolute top-[6%] left-[40%] w-4 h-4 sm:w-6 sm:h-6 lg:w-8 lg:h-8" />
-        <Ellipse2Icon className="absolute top-[8%] right-[32%] w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20" />
-        <Ellipse3Icon className="absolute top-[14%] left-[25%] w-7 h-7 sm:w-12 sm:h-12 lg:w-16 lg:h-16" />
-        <Ellipse4Icon className="absolute top-[25%] right-[25%] w-8 h-8 sm:w-16 sm:h-16 lg:w-20 lg:h-20" />
-        <Ellipse5Icon className="absolute top-[40%] left-[30%] w-7 h-7 sm:w-12 sm:h-12 lg:w-16 lg:h-16" />
-        <Ellipse6Icon className="absolute top-[45%] right-[38%] w-5 h-5 sm:w-7 sm:h-7 lg:w-9 lg:h-9" />
+        <HomeGridIcon className="absolute -bottom-[5%] sm:-bottom-[16%] 2xl:-bottom-[28%] w-full h-auto" />
+
+        <Ellipse1Icon className="absolute top-0 left-[25%] w-2 h-2 lg:w-4 lg:h-4" />
+        <Ellipse2Icon className="absolute top-[8%] right-[12%] w-6 h-6 lg:w-8 lg:h-8" />
+        <Ellipse3Icon className="absolute top-[20%] left-[13%] w-10 h-10 sm:w-14 sm:h-14 lg:w-20 lg:h-20" />
+        <Ellipse4Icon className="absolute top-[35%] left-[6%] w-4 h-4 lg:w-8 lg:h-8" />
+        <Ellipse5Icon className="absolute top-[40%] right-[15%] w-8 h-8 sm:w-12 sm:h-12 lg:w-16 lg:h-16" />
+        <Ellipse6Icon className="absolute top-[60%] left-[20%] w-6 h-6 sm:w-10 sm:h-10 lg:w-14 lg:h-14" />
+        <Ellipse7Icon className="absolute top-[70%] right-[12%] w-3 h-3 lg:w-5 lg:h-5" />
 
         <Link
           href="https://app.harmonix.fi"
+          target="_blank"
           className="absolute bottom-4 sm:bottom-10 md:bottom-16 right-1/2 translate-x-1/2 min-w-56"
         >
           <div className="flex items-center gap-4 bg-primary rounded-full px-2 py-1.5 sm:px-4 sm:py-2.5 shadow-md">

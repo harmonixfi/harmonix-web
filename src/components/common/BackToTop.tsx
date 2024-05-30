@@ -14,7 +14,7 @@ const BackToTop = () => {
   return (
     <button
       type="button"
-      className="flex items-center gap-2 animate-bounce opacity-70 z-20 hover:opacity-100"
+      className="flex items-center gap-2 font-light text-sm animate-bounce z-20"
       onClick={handleBackToTop}
     >
       Back to top
