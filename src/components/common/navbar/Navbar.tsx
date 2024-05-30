@@ -58,7 +58,7 @@ const Navbar = () => {
         <NavbarItem className="h-full">
           <Link
             color="foreground"
-            href="https://app.harmonix.fi/dashboard"
+            href="https://app.harmonix.fi/dashboards"
             className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
           >
             Dashboard
@@ -154,7 +154,7 @@ const Navbar = () => {
         <NavbarMenuItem className="mt-1 mb-4">
           <Link
             color="foreground"
-            href="https://app.harmonix.fi/dashboard"
+            href="https://app.harmonix.fi/dashboards"
             className="text-lg px-2"
           >
             Dashboard

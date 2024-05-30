@@ -14,13 +14,12 @@ export default async function Home() {
 
   return (
     <div className="pt-28 pb-16">
-      <div className="flex flex-col items-center gap-10 w-full md:w-5/6 lg:w-4/5 2xl:w-3/5 mx-auto">
+      <div className="flex flex-col items-center gap-12 w-full md:w-5/6 lg:w-4/5 2xl:w-3/5 mx-auto">
         <h1 className="text-7xl font-light capitalize text-center">
-          Building Harmony in Crypto Asset Strategies
+          Crypto Investment On Autopilot 
         </h1>
         <p className="w-5/6 text-2xl font-normal text-center opacity-80">
-          Harmonix - Implies a harmony in strategies that balance risk and reward, suitable for a
-          platform managing diverse crypto assets.
+          Efficient capital deployment for busy investors
         </p>
         <Button
           as={Link}

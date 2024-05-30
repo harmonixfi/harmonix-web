@@ -32,15 +32,15 @@ const menuItems = [
 
 const Footer = () => {
   return (
-    <footer className="relative bg-primary text-white px-12 lg:px-24 py-12 space-y-16 overflow-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6">
-        <div>
+    <footer className="relative bg-primary text-white px-4 sm:px-12 lg:px-24 py-12 space-y-16 overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-6">
+        <div className="lg:col-span-5">
           <FlatLogoIcon className="w-auto h-16 mb-6 mx-auto sm:mx-0" />
-          <h2 className="w-full 2xl:w-1/2 text-off-white font-normal text-2xl capitalize text-center sm:text-left">
+          <h2 className="w-full 2xl:w-2/3 text-off-white font-normal text-2xl capitalize text-center sm:text-left">
             Secure Your Wealth, Earn More with Automated Hedging
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-6 z-20">
+        <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-6 z-20">
           {menuItems.map((menuItem, index) => (
             <div
               key={menuItem.text}
@@ -69,7 +69,7 @@ const Footer = () => {
           <div className="flex justify-center sm:justify-end">
             <div className="flex flex-col gap-6">
               <Link
-                href="https://app.harmonix.fi/dashboard"
+                href="https://app.harmonix.fi/dashboards"
                 target="_blank"
                 className="font-normal text-xl text-secondary underline-offset-8 hover:underline"
               >
