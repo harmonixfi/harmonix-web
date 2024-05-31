@@ -37,7 +37,7 @@ body {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 1px;
   bottom: -4px;
   left: 0;
   transform-origin: bottom right;
