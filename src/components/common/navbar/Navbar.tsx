@@ -43,13 +43,13 @@ const Navbar = () => {
           title="About"
           items={[
             { text: 'FAQ', link: '#' },
-            { text: 'Bog', link: 'https://mirror.xyz/0xa1e8a739166876845B7dEdc177989024bAB0D810' },
+            { text: 'Bog', link: 'https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04' },
           ]}
         />
         <NavbarDropdown
           title="Community"
           items={[
-            { icon: GithubIcon, text: 'Github', link: 'https://github.com/rock-onyx' },
+            { icon: GithubIcon, text: 'Github', link: 'https://github.com/harmonixfi' },
             { icon: TelegramIcon, text: 'Telegram', link: 'http://t.me/rockonyx001' },
             { icon: TwitterIcon, text: 'Twitter', link: 'https://twitter.com/harmonixfi' },
           ]}
@@ -110,7 +110,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   color="foreground"
-                  href="https://mirror.xyz/0xa1e8a739166876845B7dEdc177989024bAB0D810"
+                  href="https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04"
                   target="_blank"
                   className="px-4"
                 >
@@ -122,7 +122,7 @@ const Navbar = () => {
               <div className="flex flex-col gap-4">
                 <Link
                   color="foreground"
-                  href="https://github.com/rock-onyx"
+                  href="https://github.com/harmonixfi"
                   target="_blank"
                   className="flex items-center gap-2 px-4"
                 >

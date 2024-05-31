@@ -19,21 +19,6 @@ type MainBannerProps = {
   tvl: number;
 };
 
-const bounceAnimate1 = {
-  y: [0, 3, 6, 3, 0, -3, -6, -3, 0],
-};
-
-const bounceAnimate2 = {
-  y: [0, -3, -6, -3, 0, 3, 6, 3, 0],
-};
-
-const transition = {
-  y: {
-    duration: 2,
-    repeat: Infinity,
-  },
-};
-
 const MainBanner = (props: MainBannerProps) => {
   const { tvl } = props;
 
@@ -53,56 +38,105 @@ const MainBanner = (props: MainBannerProps) => {
 
       <motion.div
         className="absolute top-0 left-[25%]"
-        animate={bounceAnimate2}
-        transition={transition}
+        animate={{
+          y: [0, 3, 6, 3, 0, -3, -6, -3, 0],
+        }}
+        transition={{
+          y: {
+            duration: 4,
+            repeat: Infinity,
+          },
+        }}
       >
         <Ellipse1Icon className="w-4 h-4" />
       </motion.div>
 
       <motion.div
         className="absolute top-[8%] right-[12%]"
-        animate={bounceAnimate1}
-        transition={transition}
+        animate={{
+          y: [0, 4, 8, 4, 0, -4, -8, -4, 0],
+        }}
+        transition={{
+          y: {
+            duration: 7,
+            repeat: Infinity,
+          },
+        }}
       >
         <Ellipse2Icon className="w-8 h-8 lg:w-10 lg:h-10" />
       </motion.div>
 
       <motion.div
         className="absolute top-[20%] left-[13%]"
-        animate={bounceAnimate2}
-        transition={transition}
+        animate={{
+          y: [0, -5, -10, -5, 0, 5, 10, 5, 0],
+        }}
+        transition={{
+          y: {
+            duration: 5,
+            repeat: Infinity,
+          },
+        }}
       >
         <Ellipse3Icon className="w-12 h-12 sm:w-20 sm:h-20 lg:w-24 lg:h-24 xl:w-32 xl:h-32" />
       </motion.div>
 
       <motion.div
         className="absolute top-[38%] left-[6%]"
-        animate={bounceAnimate1}
-        transition={transition}
+        animate={{
+          y: [0, 5, 12, 5, 0, -5, -12, -5, 0],
+        }}
+        transition={{
+          y: {
+            duration: 6,
+            repeat: Infinity,
+          },
+        }}
       >
         <Ellipse4Icon className="w-6 h-6 lg:w-8 lg:h-8" />
       </motion.div>
 
       <motion.div
         className="absolute top-[40%] right-[15%]"
-        animate={bounceAnimate2}
-        transition={transition}
+        animate={{
+          y: [0, 3, 6, 3, 0, -3, -6, -3, 0],
+        }}
+        transition={{
+          y: {
+            duration: 4.5,
+            repeat: Infinity,
+          },
+        }}
       >
         <Ellipse5Icon className="w-10 h-10 sm:w-16 sm:h-16 lg:w-28 lg:h-28" />
       </motion.div>
 
       <motion.div
         className="absolute top-[60%] left-[20%]"
-        animate={bounceAnimate1}
-        transition={transition}
+        animate={{
+          y: [0, 6, 12, 6, 0, -6, -12, -6, 0],
+        }}
+        transition={{
+          y: {
+            duration: 8,
+            repeat: Infinity,
+          },
+        }}
       >
         <Ellipse6Icon className="w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-24" />
       </motion.div>
 
       <motion.div
         className="absolute top-[70%] right-[12%]"
-        animate={bounceAnimate2}
-        transition={transition}
+        animate={{
+          y: [0, -4, -8, -4, 0, 4, 8, 4, 0],
+        }}
+        transition={{
+          y: {
+            duration: 6,
+            repeat: Infinity,
+          },
+        }}
       >
         <Ellipse7Icon className="w-5 h-5" />
       </motion.div>

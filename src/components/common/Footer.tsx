@@ -15,15 +15,15 @@ const menuItems = [
     text: 'About',
     items: [
       { text: 'Faq', link: '' },
-      { text: 'Blog', link: 'https://mirror.xyz/0xa1e8a739166876845B7dEdc177989024bAB0D810' },
-      { text: 'Team', link: '' },
-      { text: 'Audit', link: '' },
+      { text: 'Blog', link: 'https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04' },
+      // { text: 'Team', link: '' },
+      // { text: 'Audit', link: '' },
     ],
   },
   {
     text: 'Community',
     items: [
-      { icon: GithubIcon, text: 'Github', link: 'https://github.com/rock-onyx' },
+      { icon: GithubIcon, text: 'Github', link: 'https://github.com/harmonixfi' },
       { icon: TelegramIcon, text: 'Telegram', link: 'http://t.me/rockonyx001' },
       { icon: TwitterIcon, text: 'Twitter', link: 'https://twitter.com/harmonixfi' },
     ],
