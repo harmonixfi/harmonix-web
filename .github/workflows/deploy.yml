@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Install SST CLI
         run: curl -fsSL https://ion.sst.dev/install | bash
 
@@ -28,19 +31,13 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1 # Modify this based on your deployment region
 
-      - name: Create .env file
-        id: ssm
-        run: |
-          NEXT_PUBLIC_API_URL=$(aws ssm get-parameter --name "/rock-onyx-ui/NEXT_PUBLIC_API_URL" --with-decryption --query "Parameter.Value" --output text)
-          echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL" >> .env
-
-      - name: Install dependencies
-        run: npm install
+      # - name: Create .env file
+      #   run: |
+      #     NEXT_PUBLIC_API_URL=$(aws ssm get-parameter --name "/rock-onyx-ui/NEXT_PUBLIC_API_URL" --with-decryption --query "Parameter.Value" --output text)
+      #     echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL" >> .env
 
       - name: Build project
         run: npm run build
-        env: $(cat .env | xargs)
 
       - name: Deploy with SST
         run: sst deploy
-        env: $(cat .env | xargs)
