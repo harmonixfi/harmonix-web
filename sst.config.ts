@@ -14,7 +14,7 @@ export default $config({
       domain: {
         name: 'harmonix.fi',
         dns: false,
-        cert: 'arn:aws:acm:us-east-1:211125391360:certificate/8b4ee01b-e0e5-4f10-a8e5-70e2086231c7',
+        cert: 'arn:aws:acm:us-east-1:471112945627:certificate/95c442c2-b056-40a4-8d99-20ba5a0e5664',
       },
     });
   },
