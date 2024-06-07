@@ -39,6 +39,8 @@ jobs:
 
       - name: Build project
         run: npm run build
+        env: $(cat .env | xargs)
 
       - name: Deploy with SST
         run: sst deploy
+        env: $(cat .env | xargs)
