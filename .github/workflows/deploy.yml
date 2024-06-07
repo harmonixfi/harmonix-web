@@ -32,7 +32,6 @@ jobs:
         id: ssm
         run: |
           NEXT_PUBLIC_API_URL=$(aws ssm get-parameter --name "/rock-onyx-ui/NEXT_PUBLIC_API_URL" --with-decryption --query "Parameter.Value" --output text)
-          echo $NEXT_PUBLIC_API_URL
           echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL" >> .env
 
       - name: Install dependencies
