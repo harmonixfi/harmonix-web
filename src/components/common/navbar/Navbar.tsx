@@ -43,7 +43,7 @@ const Navbar = () => {
           title="About"
           items={[
             { text: 'FAQ', link: '#' },
-            { text: 'Bog', link: 'https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04' },
+            { text: 'Blog', link: 'https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04' },
           ]}
         />
         <NavbarDropdown
