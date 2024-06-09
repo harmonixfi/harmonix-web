@@ -1,4 +1,4 @@
-name: Deploy Harmonix App with SST
+name: Deploy Harmonix Web with SST
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
 
       - name: Create .env file
         run: |
-          NEXT_PUBLIC_API_URL=$(aws ssm get-parameter --name "/rock-onyx-ui/NEXT_PUBLIC_API_URL" --with-decryption --query "Parameter.Value" --output text)
+          NEXT_PUBLIC_API_URL=$(aws ssm get-parameter --name "/harmonix-web/NEXT_PUBLIC_API_URL" --with-decryption --query "Parameter.Value" --output text)
           echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL" >> .env
 
       - name: Build project

@@ -4,7 +4,7 @@
 export default $config({
   app(input) {
     return {
-      name: 'rock-onyx-ui',
+      name: 'harmonix-web',
       removal: input?.stage === 'production' ? 'retain' : 'remove',
       home: 'aws',
     };
