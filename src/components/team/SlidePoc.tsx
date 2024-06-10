@@ -5,23 +5,35 @@ import { motion } from 'framer-motion';
 const SlidePoc = () => {
   return (
     <div className="w-2/3 mx-auto">
-      <div className="bg-blue-200 h-[600px] rounded-2xl">
+      <motion.div
+        initial={{ scale: 1 }}
+        whileInView={{ scale: 0.8 }}
+        viewport={{ once: false, amount: 0.9 }}
+        transition={{ duration: 0.5 }}
+        className="bg-blue-200 h-[600px] rounded-2xl"
+      >
         <p>Slide 1</p>
-      </div>
+      </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, scale: 1, y: 0 }}
-        whileInView={{ opacity: 1, scale: 0.8, y: 80 }}
-        viewport={{ once: false }}
+        initial={{ scale: 1 }}
+        whileInView={{ scale: 0.8 }}
+        viewport={{ once: false, amount: 0.9 }}
         transition={{ duration: 0.5 }}
         className="bg-green-200 h-[600px] rounded-2xl"
       >
         <p>Slide 2</p>
       </motion.div>
 
-      <div className="bg-pink-200 h-[600px] rounded-2xl">
+      <motion.div
+        initial={{ scale: 1 }}
+        whileInView={{ scale: 0.8 }}
+        viewport={{ once: false, amount: 0.9 }}
+        transition={{ duration: 0.5 }}
+        className="bg-pink-200 h-[600px] rounded-2xl"
+      >
         <p>Slide 3</p>
-      </div>
+      </motion.div>
     </div>
   );
 };
