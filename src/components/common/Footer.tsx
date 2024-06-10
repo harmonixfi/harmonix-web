@@ -17,7 +17,7 @@ const menuItems = [
       { text: 'Faq', link: '' },
       { text: 'Blog', link: 'https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04' },
       // { text: 'Team', link: '' },
-      // { text: 'Audit', link: '' },
+      { text: 'Audit', link: 'https://github.com/harmonixfi/core-smart-contract/tree/main/audits' },
     ],
   },
   {

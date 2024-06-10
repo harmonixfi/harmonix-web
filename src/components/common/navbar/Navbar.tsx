@@ -44,6 +44,10 @@ const Navbar = () => {
           items={[
             { text: 'FAQ', link: '#' },
             { text: 'Blog', link: 'https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04' },
+            {
+              text: 'Audit',
+              link: 'https://github.com/harmonixfi/core-smart-contract/tree/main/audits',
+            },
           ]}
         />
         <NavbarDropdown
@@ -68,6 +72,7 @@ const Navbar = () => {
           <Link
             color="foreground"
             href="https://rock-onyx.gitbook.io/rock-onyx-docs/"
+            isExternal
             className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
           >
             Docs
@@ -79,7 +84,7 @@ const Navbar = () => {
           <Button
             as={Link}
             href="https://app.harmonix.fi"
-            target="_blank"
+            isExternal
             size="lg"
             className="bg-transparent border border-primary rounded-full text-black hover:bg-secondary hover:border-secondary"
           >
@@ -111,10 +116,18 @@ const Navbar = () => {
                 <Link
                   color="foreground"
                   href="https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04"
-                  target="_blank"
+                  isExternal
                   className="px-4"
                 >
                   Blog
+                </Link>
+                <Link
+                  color="foreground"
+                  href="https://github.com/harmonixfi/core-smart-contract/tree/main/audits"
+                  isExternal
+                  className="px-4"
+                >
+                  Audit
                 </Link>
               </div>
             </AccordionItem>
@@ -123,7 +136,7 @@ const Navbar = () => {
                 <Link
                   color="foreground"
                   href="https://github.com/harmonixfi"
-                  target="_blank"
+                  isExternal
                   className="flex items-center gap-2 px-4"
                 >
                   <GithubIcon className="w-5 h-5" />
@@ -132,7 +145,7 @@ const Navbar = () => {
                 <Link
                   color="foreground"
                   href="http://t.me/rockonyx001"
-                  target="_blank"
+                  isExternal
                   className="flex items-center gap-2 px-4"
                 >
                   <TelegramIcon className="w-5 h-5" />
@@ -141,7 +154,7 @@ const Navbar = () => {
                 <Link
                   color="foreground"
                   href="https://twitter.com/harmonixfi"
-                  target="_blank"
+                  isExternal
                   className="flex items-center gap-2 px-4"
                 >
                   <TwitterIcon className="w-5 h-5" />
@@ -164,6 +177,7 @@ const Navbar = () => {
           <Link
             color="foreground"
             href="https://rock-onyx.gitbook.io/rock-onyx-docs/"
+            isExternal
             className="text-lg px-2"
           >
             Docs
