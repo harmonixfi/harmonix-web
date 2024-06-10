@@ -54,7 +54,7 @@ const Navbar = () => {
           title="Community"
           items={[
             { icon: GithubIcon, text: 'Github', link: 'https://github.com/harmonixfi' },
-            { icon: TelegramIcon, text: 'Telegram', link: 'http://t.me/rockonyx001' },
+            { icon: TelegramIcon, text: 'Telegram', link: 'https://t.me/harmonix_chat' },
             { icon: TwitterIcon, text: 'Twitter', link: 'https://twitter.com/harmonixfi' },
           ]}
         />
@@ -144,7 +144,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   color="foreground"
-                  href="http://t.me/rockonyx001"
+                  href="https://t.me/harmonix_chat"
                   isExternal
                   className="flex items-center gap-2 px-4"
                 >

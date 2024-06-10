@@ -24,7 +24,7 @@ const menuItems = [
     text: 'Community',
     items: [
       { icon: GithubIcon, text: 'Github', link: 'https://github.com/harmonixfi' },
-      { icon: TelegramIcon, text: 'Telegram', link: 'http://t.me/rockonyx001' },
+      { icon: TelegramIcon, text: 'Telegram', link: 'https://t.me/harmonix_chat' },
       { icon: TwitterIcon, text: 'Twitter', link: 'https://twitter.com/harmonixfi' },
     ],
   },
