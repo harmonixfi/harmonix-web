@@ -2,6 +2,7 @@ import { Button } from '@nextui-org/react';
 import Link from 'next/link';
 
 import { getVaultsOverview } from '@/api/vault';
+import AuditSection from '@/components/common/home/AuditSection';
 import MainBanner from '@/components/common/home/MainBanner';
 
 async function getData() {
@@ -38,6 +39,8 @@ export default async function Home() {
       </div>
 
       <MainBanner tvl={vaultsOverview.tvl_in_all_vaults} />
+
+      <AuditSection />
     </div>
   );
 }
