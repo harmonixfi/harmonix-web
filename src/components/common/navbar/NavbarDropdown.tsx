@@ -11,6 +11,7 @@ import {
   DropdownTrigger,
   NavbarItem,
 } from '@nextui-org/react';
+import Link from 'next/link';
 
 type NavbarDropdownProps = {
   title: string;
@@ -18,6 +19,7 @@ type NavbarDropdownProps = {
     icon?: ComponentType<{ className?: string }>;
     text: string;
     link: string;
+    isExternal?: boolean;
   }[];
 };
 
@@ -66,9 +68,15 @@ const NavbarDropdown = (props: NavbarDropdownProps) => {
         }}
       >
         {items.map((x) => (
-          <DropdownItem key={x.text} href={x.link} target="_blank">
-            {x.icon && <x.icon className="w-6 h-6" />}
-            {x.text}
+          <DropdownItem key={x.text}>
+            <Link
+              href={x.link}
+              target={x.isExternal ? '_blank' : undefined}
+              className="flex items-center gap-2 w-full"
+            >
+              {x.icon && <x.icon className="w-6 h-6" />}
+              {x.text}
+            </Link>
           </DropdownItem>
         ))}
       </DropdownMenu>

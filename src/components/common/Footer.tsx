@@ -20,18 +20,18 @@ const menuItems = [
     text: 'About',
     items: [
       { text: 'Faq', link: '' },
-      { text: 'Blog', link: EXTERNAL_LINKS.Blog },
-      // { text: 'Team', link: '' },
-      { text: 'Audit', link: EXTERNAL_LINKS.Audit },
+      { text: 'Blog', link: EXTERNAL_LINKS.Blog, isExternal: true },
+      { text: 'Team', link: '' },
+      { text: 'Audit', link: EXTERNAL_LINKS.Audit, isExternal: true },
     ],
   },
   {
     text: 'Community',
     items: [
-      { icon: GithubIcon, text: 'Github', link: EXTERNAL_LINKS.Github },
-      { icon: TelegramIcon, text: 'Telegram', link: EXTERNAL_LINKS.Telegram },
-      { icon: TwitterIcon, text: 'Twitter', link: EXTERNAL_LINKS.Twitter },
-      { icon: DiscordIcon, text: 'Discord', link: EXTERNAL_LINKS.Discord },
+      { icon: GithubIcon, text: 'Github', link: EXTERNAL_LINKS.Github, isExternal: true },
+      { icon: TelegramIcon, text: 'Telegram', link: EXTERNAL_LINKS.Telegram, isExternal: true },
+      { icon: TwitterIcon, text: 'Twitter', link: EXTERNAL_LINKS.Twitter, isExternal: true },
+      { icon: DiscordIcon, text: 'Discord', link: EXTERNAL_LINKS.Discord, isExternal: true },
     ],
   },
 ];
@@ -62,7 +62,7 @@ const Footer = () => {
                     <li key={item.text}>
                       <Link
                         href={item.link}
-                        target="_blank"
+                        target={item.isExternal ? '_blank' : undefined}
                         className="inline-flex items-center gap-2 font-light text-xl text-off-white hover-underline-animation after:bg-white"
                       >
                         {'icon' in item && <item.icon className="w-5 h-5" />}
