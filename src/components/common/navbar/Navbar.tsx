@@ -71,7 +71,7 @@ const Navbar = () => {
         <NavbarItem className="h-full">
           <Link
             color="foreground"
-            href="https://rock-onyx.gitbook.io/rock-onyx-docs/"
+            href="https://harmonix-finance.gitbook.io/harmonix-docs"
             isExternal
             className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
           >
@@ -176,7 +176,7 @@ const Navbar = () => {
         <NavbarMenuItem>
           <Link
             color="foreground"
-            href="https://rock-onyx.gitbook.io/rock-onyx-docs/"
+            href="https://harmonix-finance.gitbook.io/harmonix-docs"
             isExternal
             className="text-lg px-2"
           >

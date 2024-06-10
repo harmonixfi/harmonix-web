@@ -82,7 +82,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  href="https://rock-onyx.gitbook.io/rock-onyx-docs/"
+                  href="https://harmonix-finance.gitbook.io/harmonix-docs"
                   target="_blank"
                   className="inline-block font-light text-xl text-secondary hover-underline-animation after:bg-secondary"
                 >
