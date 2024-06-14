@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { getVaultsOverview } from '@/api/vault';
 import AuditSection from '@/components/common/home/AuditSection';
 import MainBanner from '@/components/common/home/MainBanner';
+import PlusPartnerSection from '@/components/common/home/PlusPartnerSection';
+import RewardSection from '@/components/common/home/RewardSection';
 
 async function getData() {
   const response = await getVaultsOverview();
@@ -12,6 +14,16 @@ async function getData() {
 
 export default async function Home() {
   const vaultsOverview = await getData();
+
+  const optionsVaultApy =
+    vaultsOverview.vaults.find((x) => x.name.toLowerCase().includes('option'))?.apy_1y || 119;
+
+  const deltaNeutralVaultApy =
+    Math.max(
+      ...vaultsOverview.vaults
+        .filter((x) => !x.name.toLowerCase().includes('option'))
+        .map((x) => x.apy_1y),
+    ) || 27;
 
   return (
     <div className="pt-16 sm:pt-28">
@@ -38,8 +50,12 @@ export default async function Home() {
         </Button>
       </div>
 
-      <MainBanner tvl={vaultsOverview.tvl_in_all_vaults} />
-
+      <MainBanner />
+      <RewardSection
+        optionsVaultApy={optionsVaultApy}
+        deltaNeutralVaultApy={deltaNeutralVaultApy}
+      />
+      <PlusPartnerSection />
       <AuditSection />
     </div>
   );
