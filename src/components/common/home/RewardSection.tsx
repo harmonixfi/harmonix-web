@@ -10,7 +10,6 @@ import {
   EtherfiIcon,
   FlatLogoIcon,
   KelpdaoIcon,
-  PendleIcon,
   PufferIcon,
   RenzoIcon,
   SwellIcon,
@@ -93,13 +92,7 @@ const RewardSection = (props: RewardSectionProps) => {
                     <EtherfiIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16" />
                   </li>
                   <li
-                    className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-gray-400 rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
-                    title="Pendle"
-                  >
-                    <PendleIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12" />
-                  </li>
-                  <li
-                    className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-indigo-100 rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
+                    className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-[#FEFBF6] rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
                     title="Puffer"
                   >
                     <PufferIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12" />
