@@ -15,7 +15,7 @@ const PlusPartnerSection = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <BsxIcon className="w-auto h-16" />
+          <BsxIcon className="w-auto h-20" />
         </motion.div>
         <motion.div
           className="relative"

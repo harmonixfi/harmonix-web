@@ -14,6 +14,7 @@ import {
   PufferIcon,
   RenzoIcon,
   SwellIcon,
+  VerichainIcon,
   ZircuitIcon,
 } from '@/components/icons';
 
@@ -26,78 +27,94 @@ const RewardSection = (props: RewardSectionProps) => {
   const { optionsVaultApy, deltaNeutralVaultApy } = props;
 
   return (
-    <div className="flex flex-col items-center justify-center gap-12 bg-[#EDF9F2] px-8 sm:px-12 lg:px-24 xl:px-0 pt-24 pb-32">
-      <p className="text-5xl font-light capitalize text-primary">Rewards</p>
-      <motion.div
-        initial={{ opacity: 0, y: 200 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="w-full md:w-fit bg-[#D2E9E9] px-8 sm:px-12 lg:px-24 pt-12 rounded-lg"
-      >
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-12 2xl:gap-24">
-          <div className="flex flex-col justify-center gap-16">
-            <div className="flex flex-col items-center lg:items-start gap-2">
-              <p className="text-xl font-medium">Options Vault APY</p>
-              <p className="bg-gradient-to-r from-[#4BB4B1] to-[#171918] text-transparent bg-clip-text text-5xl sm:text-7xl font-bold">
-                {optionsVaultApy.toLocaleString('en-US', { maximumFractionDigits: 2 })}%
-              </p>
-            </div>
-
-            <div className="flex flex-col items-center lg:items-start gap-2">
-              <p className="text-xl font-medium">Delta Neutral Vault APY</p>
-              <p className="bg-gradient-to-r from-[#4BB4B1] to-[#171918] text-transparent bg-clip-text text-5xl sm:text-7xl font-bold">
-                {deltaNeutralVaultApy.toLocaleString('en-US', { maximumFractionDigits: 2 })}%
-              </p>
-            </div>
+    <div className="flex flex-col items-center justify-center gap-6 bg-[#EDF9F2] px-8 sm:px-12 lg:px-24 xl:px-0 pt-24 pb-32 mx-auto">
+      <p className="text-5xl font-light capitalize text-primary mb-10">Rewards</p>
+      <div className="flex flex-col items-center justify-center gap-6 w-full xl:w-4/5 2xl:w-3/5">
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="w-full grid grid-cols-2 gap-6"
+        >
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-around gap-1 sm:gap-2 bg-[#D2E9E9] rounded-lg px-6 lg:px-16 py-1.5 sm:py-2.5">
+            <p className="text-base lg:text-lg font-medium">Stablecoin APY</p>
+            <p className="bg-gradient-to-r from-[#4BB4B1] to-[#171918] text-transparent bg-clip-text text-2xl lg:text-4xl font-bold">
+              {optionsVaultApy.toLocaleString('en-US', { maximumFractionDigits: 2 })}%
+            </p>
           </div>
+          <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-around gap-1 sm:gap-2 bg-[#D2E9E9] rounded-lg px-6 lg:px-16 py-1.5 sm:py-2.5">
+            <p className="text-base lg:text-lg font-medium">Audited by</p>
+            <Link
+              target="_blank"
+              href="https://github.com/harmonixfi/core-smart-contract/blob/main/audits/Verichains%20Public%20Report%20-%20HarmonixFinance.pdf"
+            >
+              <VerichainIcon className="w-auto h-10 lg:h-14 text-primary" />
+            </Link>
+          </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="w-full bg-[#D2E9E9] px-8 sm:px-12 lg:px-24 pt-12 rounded-lg"
+        >
+          <div className="flex flex-col justify-center items-center gap-14 2xl:gap-24">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-8 2xl:gap-24">
+              <div className="flex flex-col items-center gap-1 sm:gap-2 lg:gap-4">
+                <p className="text-lg font-medium">Vault APY</p>
+                <p className="bg-gradient-to-r from-[#4BB4B1] to-[#171918] text-transparent bg-clip-text text-3xl md:text-5xl font-bold">
+                  {deltaNeutralVaultApy.toLocaleString('en-US', { maximumFractionDigits: 2 })}%
+                </p>
+              </div>
 
-          <div className="flex flex-col items-center justify-center gap-8">
-            <div className="flex flex-col items-center gap-4">
-              <p className="text-2xl font-medium capitalize text-primary">LRT points</p>
-              <ul className="flex items-center">
-                <li
-                  className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
-                  title="Renzo"
-                >
-                  <RenzoIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12" />
-                </li>
-                <li
-                  className="-mx-2 relative transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
-                  title="Kelpdao"
-                >
-                  <KelpdaoIcon className="w-12 h-12 sm:w-16 sm:h-16" />
-                </li>
-                <li
-                  className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-[#19163b] rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
-                  title="Etherfi"
-                >
-                  <EtherfiIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16" />
-                </li>
-                <li
-                  className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-gray-400 rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
-                  title="Pendle"
-                >
-                  <PendleIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12" />
-                </li>
-                <li
-                  className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-indigo-100 rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
-                  title="Puffer"
-                >
-                  <PufferIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12" />
-                </li>
-                <li
-                  className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
-                  title="Swell"
-                >
-                  <SwellIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12" />
-                </li>
-              </ul>
+              <PlusIcon className="w-5 h-5" />
+
+              <div className="flex flex-col items-center gap-4">
+                <p className="text-lg font-medium capitalize text-primary">LRT points</p>
+                <ul className="flex items-center">
+                  <li
+                    className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-white rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
+                    title="Renzo"
+                  >
+                    <RenzoIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12" />
+                  </li>
+                  <li
+                    className="-mx-2 relative transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
+                    title="Kelpdao"
+                  >
+                    <KelpdaoIcon className="w-12 h-12 sm:w-16 sm:h-16" />
+                  </li>
+                  <li
+                    className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-[#19163b] rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
+                    title="Etherfi"
+                  >
+                    <EtherfiIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 sm:w-16 sm:h-16" />
+                  </li>
+                  <li
+                    className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-gray-400 rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
+                    title="Pendle"
+                  >
+                    <PendleIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12" />
+                  </li>
+                  <li
+                    className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-indigo-100 rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
+                    title="Puffer"
+                  >
+                    <PufferIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12" />
+                  </li>
+                  <li
+                    className="-mx-2 relative w-12 h-12 sm:w-16 sm:h-16 bg-gray-900 rounded-full transition-all duration-300 ease-in-out hover:scale-110 hover:z-20"
+                    title="Swell"
+                  >
+                    <SwellIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 sm:w-12 sm:h-12" />
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <PlusIcon className="w-8 h-8" />
-
-            <div className="flex items-center justify-around md:gap-24">
+            <div className="flex items-start justify-around gap-4 md:gap-16">
               <div className="flex flex-col items-center gap-2">
                 <span className="block relative w-12 h-12 sm:w-16 sm:h-16 bg-[#F8F6F4] rounded-full">
                   <EigenLayerIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-12 sm:h-12" />
@@ -106,12 +123,14 @@ const RewardSection = (props: RewardSectionProps) => {
                   EigenLayer points
                 </p>
               </div>
+              <PlusIcon className="w-5 h-5 translate-y-4" />
               <div className="flex flex-col items-center gap-2">
                 <ZircuitIcon className="w-12 h-12 sm:w-16 sm:h-16" />
                 <p className="text-sm sm:text-base capitalize text-primary text-center">
                   Zircuit points
                 </p>
               </div>
+              <PlusIcon className="w-5 h-5 translate-y-4" />
               <div className="flex flex-col items-center gap-2">
                 <span className="block relative w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-full">
                   <FlatLogoIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-7 h-7 sm:w-12 sm:h-12" />
@@ -122,15 +141,15 @@ const RewardSection = (props: RewardSectionProps) => {
               </div>
             </div>
           </div>
-        </div>
-        <Link
-          href="https://x.com/harmonixfi/status/1800143725232013353?s=46"
-          target="_blank"
-          className="w-full flex items-center justify-center gap-3 mt-16 mb-6"
-        >
-          <span className="text-sm">Powered by</span> <ChainLinkIcon className="w-auto h-5" />
-        </Link>
-      </motion.div>
+          <Link
+            href="https://x.com/harmonixfi/status/1800143725232013353?s=46"
+            target="_blank"
+            className="w-full flex items-center justify-center gap-3 mt-16 mb-6"
+          >
+            <span className="text-sm">Powered by</span> <ChainLinkIcon className="w-auto h-5" />
+          </Link>
+        </motion.div>
+      </div>
     </div>
   );
 };
