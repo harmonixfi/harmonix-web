@@ -1,4 +1,7 @@
+'use client';
+
 import { Link } from '@nextui-org/react';
+import { motion } from 'framer-motion';
 
 import { FooterLineIcon, VerichainIcon } from '@/components/icons';
 
@@ -12,8 +15,14 @@ const AuditSection = () => {
           reports.
         </p>
       </div>
-      <div className="relative flex flex-col items-center gap-8 w-5/6 sm:w-2/3 lg:w-1/3 xl:w-[30%] 2xl:w-1/4 bg-gradient-to-r from-[#6B9D8E] to-[#173132] p-6 sm:p-10 rounded-3xl shadow-lg overflow-hidden">
-        <VerichainIcon className="w-5/6 xl:w-3/4 h-auto" />
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+        viewport={{ once: true }}
+        className="relative flex flex-col items-center gap-8 w-5/6 sm:w-2/3 lg:w-1/3 xl:w-[30%] 2xl:w-1/4 bg-gradient-to-r from-[#6B9D8E] to-[#173132] p-6 sm:p-10 rounded-3xl shadow-lg overflow-hidden"
+      >
+        <VerichainIcon className="w-5/6 xl:w-3/4 h-auto text-white" />
         <Link
           isExternal
           href="https://github.com/harmonixfi/core-smart-contract/blob/main/audits/Verichains%20Public%20Report%20-%20HarmonixFinance.pdf"
@@ -22,7 +31,7 @@ const AuditSection = () => {
           See full report
         </Link>
         <FooterLineIcon className="absolute w-auto h-2/3 bottom-0 right-0 z-10" />
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -13,17 +13,13 @@ import {
   HomeGridIcon,
 } from '@/components/icons';
 
-import TvlBadge from './TvlBadge';
-
 type MainBannerProps = {
-  tvl: number;
+  tvl?: number;
 };
 
-const MainBanner = (props: MainBannerProps) => {
-  const { tvl } = props;
-
+const MainBanner = (_: MainBannerProps) => {
   return (
-    <div className="relative h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px] sm:mt-12 overflow-hidden">
+    <div className="relative h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[760px] sm:mt-12 overflow-hidden">
       <video
         autoPlay
         loop
@@ -140,8 +136,6 @@ const MainBanner = (props: MainBannerProps) => {
       >
         <Ellipse7Icon className="w-5 h-5" />
       </motion.div>
-
-      <TvlBadge tvl={tvl} />
     </div>
   );
 };
