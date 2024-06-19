@@ -23,7 +23,7 @@ const LegalAlert = () => {
     <>
       <Modal
         isOpen={isOpen}
-        isDismissable
+        isDismissable={false}
         isKeyboardDismissDisabled
         hideCloseButton
         shouldBlockScroll={false}
