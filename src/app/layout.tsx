@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 
 import Footer from '@/components/common/Footer';
+import LegalAlert from '@/components/common/LegalAlert';
 import Navbar from '@/components/common/navbar/Navbar';
 
 import { Providers } from './_providers/Providers';
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           <main>{children}</main>
+          <LegalAlert />
           <Footer />
         </Providers>
       </body>

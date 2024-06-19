@@ -1,3 +1,4 @@
+import { Button } from '@nextui-org/react';
 import Link from 'next/link';
 
 import {
@@ -9,6 +10,7 @@ import {
   TwitterIcon,
 } from '../icons';
 import BackToTop from './BackToTop';
+import Legal from './Legal';
 
 const menuItems = [
   {
@@ -32,7 +34,7 @@ const menuItems = [
 
 const Footer = () => {
   return (
-    <footer className="relative bg-primary text-white px-4 sm:px-12 lg:px-24 py-12 space-y-16 overflow-hidden">
+    <footer className="relative bg-primary text-white px-4 sm:px-12 lg:px-24 pt-12 pb-24 space-y-16 overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-6 mt-8 sm:mt-14">
         <div className="lg:col-span-5">
           <FlatLogoIcon className="w-auto h-16 mb-6 mx-auto sm:mx-0" />
@@ -102,6 +104,15 @@ const Footer = () => {
       </div>
 
       <FooterLineIcon className="absolute w-auto h-full bottom-0 right-0 z-10" />
+
+      <Legal />
+
+      <Button
+        size="sm"
+        className="fixed bottom-8 left-4 sm:left-12 lg:left-24 rounded-sm shadow-sm bg-opacity-60 text-sm"
+      >
+        Not available in the U.S.
+      </Button>
     </footer>
   );
 };
