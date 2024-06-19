@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const BackerSection = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-16 bg-[#EDF9F2] px-8 lg:px-24 pt-24 pb-40">
+    <div className="flex flex-col items-center justify-center gap-20 bg-[#EDF9F2] px-8 lg:px-24 pt-24 pb-40">
       <p className="text-5xl font-light capitalize text-primary">Backed By</p>
       <motion.div
         initial={{ opacity: 0, y: 200 }}
@@ -14,7 +14,7 @@ const BackerSection = () => {
         viewport={{ once: true }}
         className="flex items-center justify-center flex-wrap gap-12 sm:gap-16 md:gap-24"
       >
-        <span className="relative aspect-[3.2] h-16 sm:h-24 lg:h-32">
+        <span className="relative aspect-[3.2] h-12 sm:h-16 lg:h-24 transition-all duration-400 ease-in-out hover:scale-105">
           <Image
             src="/solanium_ventures.png"
             fill
@@ -23,7 +23,7 @@ const BackerSection = () => {
             className="object-cover"
           />
         </span>
-        <span className="relative aspect-[1.2] h-20 sm:h-32 lg:h-40">
+        <span className="relative aspect-[1.2] h-16 sm:h-24 lg:h-32 transition-all duration-400 ease-in-out hover:scale-105">
           <Image src="/sqrDAO_black.png" fill sizes="100%" alt="sqrDAO" className="object-cover" />
         </span>
       </motion.div>
