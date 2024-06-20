@@ -1,8 +1,11 @@
 import { Button } from '@nextui-org/react';
 import Link from 'next/link';
 
+import { EXTERNAL_LINKS } from '@/constants/url';
+
 import {
   BrandTextIcon,
+  DiscordIcon,
   FlatLogoIcon,
   FooterLineIcon,
   GithubIcon,
@@ -17,17 +20,18 @@ const menuItems = [
     text: 'About',
     items: [
       { text: 'Faq', link: '' },
-      { text: 'Blog', link: 'https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04' },
+      { text: 'Blog', link: EXTERNAL_LINKS.Blog },
       // { text: 'Team', link: '' },
-      { text: 'Audit', link: 'https://github.com/harmonixfi/core-smart-contract/tree/main/audits' },
+      { text: 'Audit', link: EXTERNAL_LINKS.Audit },
     ],
   },
   {
     text: 'Community',
     items: [
-      { icon: GithubIcon, text: 'Github', link: 'https://github.com/harmonixfi' },
-      { icon: TelegramIcon, text: 'Telegram', link: 'https://t.me/harmonix_chat' },
-      { icon: TwitterIcon, text: 'Twitter', link: 'https://twitter.com/harmonixfi' },
+      { icon: GithubIcon, text: 'Github', link: EXTERNAL_LINKS.Github },
+      { icon: TelegramIcon, text: 'Telegram', link: EXTERNAL_LINKS.Telegram },
+      { icon: TwitterIcon, text: 'Twitter', link: EXTERNAL_LINKS.Twitter },
+      { icon: DiscordIcon, text: 'Discord', link: EXTERNAL_LINKS.Discord },
     ],
   },
 ];
@@ -75,7 +79,7 @@ const Footer = () => {
             <div className="space-y-6">
               <div>
                 <Link
-                  href="https://app.harmonix.fi/dashboards"
+                  href={EXTERNAL_LINKS.Dashboard}
                   target="_blank"
                   className="inline-block font-light text-xl text-secondary hover-underline-animation after:bg-secondary"
                 >
@@ -84,7 +88,7 @@ const Footer = () => {
               </div>
               <div>
                 <Link
-                  href="https://harmonix-finance.gitbook.io/harmonix-docs"
+                  href={EXTERNAL_LINKS.Docs}
                   target="_blank"
                   className="inline-block font-light text-xl text-secondary hover-underline-animation after:bg-secondary"
                 >

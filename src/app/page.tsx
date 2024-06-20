@@ -6,6 +6,7 @@ import AuditSection from '@/components/common/home/AuditSection';
 import MainBanner from '@/components/common/home/MainBanner';
 import PlusPartnerSection from '@/components/common/home/PlusPartnerSection';
 import RewardSection from '@/components/common/home/RewardSection';
+import { EXTERNAL_LINKS } from '@/constants/url';
 
 async function getData() {
   const response = await getVaultsOverview();
@@ -43,7 +44,7 @@ export default async function Home() {
           color="primary"
           size="lg"
           className="rounded-full text-secondary px-6"
-          href="https://app.harmonix.fi"
+          href={EXTERNAL_LINKS.App}
           target="_blank"
         >
           Launch App

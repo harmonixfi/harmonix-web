@@ -16,6 +16,7 @@ import {
   VerichainIcon,
   ZircuitIcon,
 } from '@/components/icons';
+import { EXTERNAL_LINKS } from '@/constants/url';
 
 type RewardSectionProps = {
   optionsVaultApy: number;
@@ -44,10 +45,7 @@ const RewardSection = (props: RewardSectionProps) => {
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-around gap-1 sm:gap-2 bg-[#D2E9E9] rounded-lg px-6 lg:px-16 py-1.5 sm:py-2.5">
             <p className="text-base lg:text-lg font-medium">Audited by</p>
-            <Link
-              target="_blank"
-              href="https://github.com/harmonixfi/core-smart-contract/blob/main/audits/Verichains%20Public%20Report%20-%20HarmonixFinance.pdf"
-            >
+            <Link target="_blank" href={EXTERNAL_LINKS.VerichainReport}>
               <VerichainIcon className="w-auto h-10 lg:h-14 text-primary" />
             </Link>
           </div>
@@ -135,7 +133,7 @@ const RewardSection = (props: RewardSectionProps) => {
             </div>
           </div>
           <Link
-            href="https://x.com/harmonixfi/status/1800143725232013353?s=46"
+            href={EXTERNAL_LINKS.TwitterChainLinkPost}
             target="_blank"
             className="w-full flex items-center justify-center gap-3 mt-16 mb-6"
           >

@@ -16,7 +16,9 @@ import {
   Navbar as NextUiNavbar,
 } from '@nextui-org/react';
 
-import { GithubIcon, LogoWithTextIcon, TelegramIcon, TwitterIcon } from '../../icons';
+import { EXTERNAL_LINKS } from '@/constants/url';
+
+import { DiscordIcon, GithubIcon, LogoWithTextIcon, TelegramIcon, TwitterIcon } from '../../icons';
 import NavbarDropdown from './NavbarDropdown';
 
 const Navbar = () => {
@@ -43,25 +45,26 @@ const Navbar = () => {
           title="About"
           items={[
             { text: 'FAQ', link: '#' },
-            { text: 'Blog', link: 'https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04' },
+            { text: 'Blog', link: EXTERNAL_LINKS.Blog },
             {
               text: 'Audit',
-              link: 'https://github.com/harmonixfi/core-smart-contract/tree/main/audits',
+              link: EXTERNAL_LINKS.Audit,
             },
           ]}
         />
         <NavbarDropdown
           title="Community"
           items={[
-            { icon: GithubIcon, text: 'Github', link: 'https://github.com/harmonixfi' },
-            { icon: TelegramIcon, text: 'Telegram', link: 'https://t.me/harmonix_chat' },
-            { icon: TwitterIcon, text: 'Twitter', link: 'https://twitter.com/harmonixfi' },
+            { icon: GithubIcon, text: 'Github', link: EXTERNAL_LINKS.Github },
+            { icon: TelegramIcon, text: 'Telegram', link: EXTERNAL_LINKS.Telegram },
+            { icon: TwitterIcon, text: 'Twitter', link: EXTERNAL_LINKS.Twitter },
+            { icon: DiscordIcon, text: 'Discord', link: EXTERNAL_LINKS.Discord },
           ]}
         />
         <NavbarItem className="h-full">
           <Link
             color="foreground"
-            href="https://app.harmonix.fi/dashboards"
+            href={EXTERNAL_LINKS.Dashboard}
             isExternal
             className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
           >
@@ -71,7 +74,7 @@ const Navbar = () => {
         <NavbarItem className="h-full">
           <Link
             color="foreground"
-            href="https://harmonix-finance.gitbook.io/harmonix-docs"
+            href={EXTERNAL_LINKS.Docs}
             isExternal
             className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
           >
@@ -83,7 +86,7 @@ const Navbar = () => {
         <NavbarItem>
           <Button
             as={Link}
-            href="https://app.harmonix.fi"
+            href={EXTERNAL_LINKS.App}
             isExternal
             size="lg"
             className="bg-transparent border border-primary rounded-full text-black hover:bg-secondary hover:border-secondary"
@@ -113,20 +116,10 @@ const Navbar = () => {
                 <Link color="foreground" href="#" className="px-4">
                   FAQ
                 </Link>
-                <Link
-                  color="foreground"
-                  href="https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04"
-                  isExternal
-                  className="px-4"
-                >
+                <Link color="foreground" href={EXTERNAL_LINKS.Blog} isExternal className="px-4">
                   Blog
                 </Link>
-                <Link
-                  color="foreground"
-                  href="https://github.com/harmonixfi/core-smart-contract/tree/main/audits"
-                  isExternal
-                  className="px-4"
-                >
+                <Link color="foreground" href={EXTERNAL_LINKS.Audit} isExternal className="px-4">
                   Audit
                 </Link>
               </div>
@@ -135,7 +128,7 @@ const Navbar = () => {
               <div className="flex flex-col gap-4">
                 <Link
                   color="foreground"
-                  href="https://github.com/harmonixfi"
+                  href={EXTERNAL_LINKS.Github}
                   isExternal
                   className="flex items-center gap-2 px-4"
                 >
@@ -144,7 +137,7 @@ const Navbar = () => {
                 </Link>
                 <Link
                   color="foreground"
-                  href="https://t.me/harmonix_chat"
+                  href={EXTERNAL_LINKS.Telegram}
                   isExternal
                   className="flex items-center gap-2 px-4"
                 >
@@ -153,12 +146,21 @@ const Navbar = () => {
                 </Link>
                 <Link
                   color="foreground"
-                  href="https://twitter.com/harmonixfi"
+                  href={EXTERNAL_LINKS.Twitter}
                   isExternal
                   className="flex items-center gap-2 px-4"
                 >
                   <TwitterIcon className="w-5 h-5" />
                   Twitter
+                </Link>
+                <Link
+                  color="foreground"
+                  href={EXTERNAL_LINKS.Discord}
+                  isExternal
+                  className="flex items-center gap-2 px-4"
+                >
+                  <DiscordIcon className="w-5 h-5" />
+                  Discord
                 </Link>
               </div>
             </AccordionItem>
@@ -167,19 +169,15 @@ const Navbar = () => {
         <NavbarMenuItem className="mt-1 mb-4">
           <Link
             color="foreground"
-            href="https://app.harmonix.fi/dashboards"
+            href={EXTERNAL_LINKS.Dashboard}
+            isExternal
             className="text-lg px-2"
           >
             Dashboard
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link
-            color="foreground"
-            href="https://harmonix-finance.gitbook.io/harmonix-docs"
-            isExternal
-            className="text-lg px-2"
-          >
+          <Link color="foreground" href={EXTERNAL_LINKS.Docs} isExternal className="text-lg px-2">
             Docs
           </Link>
         </NavbarMenuItem>

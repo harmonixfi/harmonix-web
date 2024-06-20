@@ -4,6 +4,7 @@ import { Link } from '@nextui-org/react';
 import { motion } from 'framer-motion';
 
 import { FooterLineIcon, VerichainIcon } from '@/components/icons';
+import { EXTERNAL_LINKS } from '@/constants/url';
 
 const AuditSection = () => {
   return (
@@ -25,7 +26,7 @@ const AuditSection = () => {
         <VerichainIcon className="w-5/6 xl:w-3/4 h-auto text-white" />
         <Link
           isExternal
-          href="https://github.com/harmonixfi/core-smart-contract/blob/main/audits/Verichains%20Public%20Report%20-%20HarmonixFinance.pdf"
+          href={EXTERNAL_LINKS.VerichainReport}
           className="text-off-white font-light underline opacity-90 z-20"
         >
           See full report

@@ -6,6 +6,7 @@ export { default as UsdcIcon } from './Usdc';
 export { default as TwitterIcon } from './Twitter';
 export { default as TelegramIcon } from './Telegram';
 export { default as GithubIcon } from './Github';
+export { default as DiscordIcon } from './Discord';
 export { default as BrandTextIcon } from './BrandText';
 export { default as FooterLineIcon } from './FooterLine';
 export { default as HomeGridIcon } from './HomeGrid';

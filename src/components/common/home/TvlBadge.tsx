@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import { UsdcIcon, UsdtIcon } from '@/components/icons';
+import { EXTERNAL_LINKS } from '@/constants/url';
 
 type TvlBadgeProps = {
   tvl: number;
@@ -11,7 +12,7 @@ const TvlBadge = (props: TvlBadgeProps) => {
 
   return (
     <Link
-      href="https://app.harmonix.fi"
+      href={EXTERNAL_LINKS.App}
       target="_blank"
       className="absolute bottom-4 sm:bottom-10 md:bottom-12 left-1/2 -translate-x-1/2 min-w-56"
     >
