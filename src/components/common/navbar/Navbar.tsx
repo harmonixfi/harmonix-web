@@ -25,8 +25,13 @@ import NavbarDropdown from './NavbarDropdown';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <NextUiNavbar
+      isMenuOpen={isMenuOpen}
       shouldHideOnScroll
       classNames={{
         base: 'w-full sm:px-12 lg:px-24 bg-white lg:bg-transparent',
@@ -37,7 +42,7 @@ const Navbar = () => {
     >
       <NavbarContent>
         <NavbarBrand>
-          <Link href="/">
+          <Link href="/" onClick={handleCloseMenu}>
             <LogoWithTextIcon className="w-auto h-10 sm:h-12 " />
           </Link>
         </NavbarBrand>
@@ -49,6 +54,7 @@ const Navbar = () => {
           items={[
             { text: 'FAQ', link: '#' },
             { text: 'Blog', link: EXTERNAL_LINKS.Blog, isExternal: true },
+            { text: 'Team', link: '/team' },
             {
               text: 'Audit',
               link: EXTERNAL_LINKS.Audit,
@@ -132,6 +138,9 @@ const Navbar = () => {
                   className="px-4"
                 >
                   Blog
+                </Link>
+                <Link color="foreground" href="/team" className="px-4" onClick={handleCloseMenu}>
+                  Team
                 </Link>
                 <Link
                   color="foreground"

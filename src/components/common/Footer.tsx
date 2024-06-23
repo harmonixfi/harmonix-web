@@ -21,7 +21,7 @@ const menuItems = [
     items: [
       { text: 'Faq', link: '' },
       { text: 'Blog', link: EXTERNAL_LINKS.Blog, isExternal: true },
-      { text: 'Team', link: '' },
+      { text: 'Team', link: '/team' },
       { text: 'Audit', link: EXTERNAL_LINKS.Audit, isExternal: true },
     ],
   },
