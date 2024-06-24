@@ -24,14 +24,14 @@ const content = [
 
 const CoreValues = () => {
   return (
-    <div className="rounded-3xl bg-[#DFEAFF] p-16">
+    <div className="rounded-3xl bg-[#DFEAFF] p-8 sm:p-12 md:p-16">
       <span className="flex items-center justify-center w-12 h-12 bg-primary rounded-full">
         <DocumentTextIcon className="w-6 h-6 text-white" />
       </span>
       <h3 className="text-primary text-4xl font-medium capitalize mt-6">Our core values</h3>
-      <ul className="flex gap-12 mt-16">
+      <ul className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-6 2xl:gap-12 mt-8 lg:mt-16">
         {content.map((x) => (
-          <li key={x.title} className="flex-1 bg-white rounded-3xl p-6 space-y-4 text-primary">
+          <li key={x.title} className="bg-white rounded-3xl p-6 space-y-4 text-primary">
             <p className="text-lg font-semibold">{x.title}</p>
             <p className="text-lg font-light">{x.description}</p>
           </li>
