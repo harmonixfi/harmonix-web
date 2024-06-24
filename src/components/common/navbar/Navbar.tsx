@@ -6,15 +6,16 @@ import {
   Accordion,
   AccordionItem,
   Button,
-  Link,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
+  Link as NextUiLink,
   Navbar as NextUiNavbar,
 } from '@nextui-org/react';
+import Link from 'next/link';
 
 import { EXTERNAL_LINKS } from '@/constants/url';
 
@@ -24,8 +25,13 @@ import NavbarDropdown from './NavbarDropdown';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <NextUiNavbar
+      isMenuOpen={isMenuOpen}
       shouldHideOnScroll
       classNames={{
         base: 'w-full sm:px-12 lg:px-24 bg-white lg:bg-transparent',
@@ -36,7 +42,9 @@ const Navbar = () => {
     >
       <NavbarContent>
         <NavbarBrand>
-          <LogoWithTextIcon className="w-auto h-10 sm:h-12 " />
+          <Link href="/" onClick={handleCloseMenu}>
+            <LogoWithTextIcon className="w-auto h-10 sm:h-12 " />
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
@@ -45,41 +53,48 @@ const Navbar = () => {
           title="About"
           items={[
             { text: 'FAQ', link: '#' },
-            { text: 'Blog', link: EXTERNAL_LINKS.Blog },
+            { text: 'Blog', link: EXTERNAL_LINKS.Blog, isExternal: true },
+            { text: 'Team', link: '/team' },
             {
               text: 'Audit',
               link: EXTERNAL_LINKS.Audit,
+              isExternal: true,
             },
           ]}
         />
         <NavbarDropdown
           title="Community"
           items={[
-            { icon: GithubIcon, text: 'Github', link: EXTERNAL_LINKS.Github },
-            { icon: TelegramIcon, text: 'Telegram', link: EXTERNAL_LINKS.Telegram },
-            { icon: TwitterIcon, text: 'Twitter', link: EXTERNAL_LINKS.Twitter },
-            { icon: DiscordIcon, text: 'Discord', link: EXTERNAL_LINKS.Discord },
+            { icon: GithubIcon, text: 'Github', link: EXTERNAL_LINKS.Github, isExternal: true },
+            {
+              icon: TelegramIcon,
+              text: 'Telegram',
+              link: EXTERNAL_LINKS.Telegram,
+              isExternal: true,
+            },
+            { icon: TwitterIcon, text: 'Twitter', link: EXTERNAL_LINKS.Twitter, isExternal: true },
+            { icon: DiscordIcon, text: 'Discord', link: EXTERNAL_LINKS.Discord, isExternal: true },
           ]}
         />
         <NavbarItem className="h-full">
-          <Link
+          <NextUiLink
             color="foreground"
             href={EXTERNAL_LINKS.Dashboard}
-            isExternal
+            target="_blank"
             className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
           >
             Dashboard
-          </Link>
+          </NextUiLink>
         </NavbarItem>
         <NavbarItem className="h-full">
-          <Link
+          <NextUiLink
             color="foreground"
             href={EXTERNAL_LINKS.Docs}
-            isExternal
+            target="_blank"
             className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
           >
             Docs
-          </Link>
+          </NextUiLink>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
@@ -87,7 +102,7 @@ const Navbar = () => {
           <Button
             as={Link}
             href={EXTERNAL_LINKS.App}
-            isExternal
+            target="_blank"
             size="lg"
             className="bg-transparent border border-primary rounded-full text-black hover:bg-secondary hover:border-secondary"
           >
@@ -116,52 +131,65 @@ const Navbar = () => {
                 <Link color="foreground" href="#" className="px-4">
                   FAQ
                 </Link>
-                <Link color="foreground" href={EXTERNAL_LINKS.Blog} isExternal className="px-4">
+                <Link
+                  color="foreground"
+                  href={EXTERNAL_LINKS.Blog}
+                  target="_blank"
+                  className="px-4"
+                >
                   Blog
                 </Link>
-                <Link color="foreground" href={EXTERNAL_LINKS.Audit} isExternal className="px-4">
+                <Link color="foreground" href="/team" className="px-4" onClick={handleCloseMenu}>
+                  Team
+                </Link>
+                <Link
+                  color="foreground"
+                  href={EXTERNAL_LINKS.Audit}
+                  target="_blank"
+                  className="px-4"
+                >
                   Audit
                 </Link>
               </div>
             </AccordionItem>
             <AccordionItem key="community" aria-label="Community" title="Community">
               <div className="flex flex-col gap-4">
-                <Link
+                <NextUiLink
                   color="foreground"
                   href={EXTERNAL_LINKS.Github}
-                  isExternal
+                  target="_blank"
                   className="flex items-center gap-2 px-4"
                 >
                   <GithubIcon className="w-5 h-5" />
                   Github
-                </Link>
-                <Link
+                </NextUiLink>
+                <NextUiLink
                   color="foreground"
                   href={EXTERNAL_LINKS.Telegram}
-                  isExternal
+                  target="_blank"
                   className="flex items-center gap-2 px-4"
                 >
                   <TelegramIcon className="w-5 h-5" />
                   Telegram
-                </Link>
-                <Link
+                </NextUiLink>
+                <NextUiLink
                   color="foreground"
                   href={EXTERNAL_LINKS.Twitter}
-                  isExternal
+                  target="_blank"
                   className="flex items-center gap-2 px-4"
                 >
                   <TwitterIcon className="w-5 h-5" />
                   Twitter
-                </Link>
-                <Link
+                </NextUiLink>
+                <NextUiLink
                   color="foreground"
                   href={EXTERNAL_LINKS.Discord}
-                  isExternal
+                  target="_blank"
                   className="flex items-center gap-2 px-4"
                 >
                   <DiscordIcon className="w-5 h-5" />
                   Discord
-                </Link>
+                </NextUiLink>
               </div>
             </AccordionItem>
           </Accordion>
@@ -170,14 +198,19 @@ const Navbar = () => {
           <Link
             color="foreground"
             href={EXTERNAL_LINKS.Dashboard}
-            isExternal
+            target="_blank"
             className="text-lg px-2"
           >
             Dashboard
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link color="foreground" href={EXTERNAL_LINKS.Docs} isExternal className="text-lg px-2">
+          <Link
+            color="foreground"
+            href={EXTERNAL_LINKS.Docs}
+            target="_blank"
+            className="text-lg px-2"
+          >
             Docs
           </Link>
         </NavbarMenuItem>

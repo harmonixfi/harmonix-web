@@ -29,3 +29,5 @@ export { default as SwellIcon } from './Swell';
 export { default as BsxIcon } from './Bsx';
 export { default as PendleWithTextIcon } from './PendleWithText';
 export { default as ChainLinkIcon } from './ChainLink';
+export { default as WhatShapeIcon } from './WhatShape';
+export { default as WhatLineIcon } from './WhatLine';
