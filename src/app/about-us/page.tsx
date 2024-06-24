@@ -1,12 +1,12 @@
+import CoreValues from '@/components/about-us/CoreValues';
+import JoinUs from '@/components/about-us/JoinUs';
+import Mission from '@/components/about-us/Mission';
+import Vision from '@/components/about-us/Vision';
+import What from '@/components/about-us/What';
+import Why from '@/components/about-us/Why';
 import { HomeGridIcon } from '@/components/icons';
-import CoreValues from '@/components/team/CoreValues';
-import JoinUs from '@/components/team/JoinUs';
-import Mission from '@/components/team/Mission';
-import Vision from '@/components/team/Vision';
-import What from '@/components/team/What';
-import Why from '@/components/team/Why';
 
-export default async function Team() {
+export default async function AboutUs() {
   return (
     <div className="relative w-full px-6 sm:px-12 lg:px-24 flex flex-col gap-32 pt-16 sm:pt-28">
       {/* <SlidePoc /> */}

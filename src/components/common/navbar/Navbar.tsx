@@ -54,7 +54,7 @@ const Navbar = () => {
           items={[
             { text: 'FAQ', link: '#' },
             { text: 'Blog', link: EXTERNAL_LINKS.Blog, isExternal: true },
-            { text: 'Team', link: '/team' },
+            { text: 'About us', link: '/about-us' },
             {
               text: 'Audit',
               link: EXTERNAL_LINKS.Audit,
@@ -139,8 +139,13 @@ const Navbar = () => {
                 >
                   Blog
                 </Link>
-                <Link color="foreground" href="/team" className="px-4" onClick={handleCloseMenu}>
-                  Team
+                <Link
+                  color="foreground"
+                  href="/about-us"
+                  className="px-4"
+                  onClick={handleCloseMenu}
+                >
+                  About us
                 </Link>
                 <Link
                   color="foreground"

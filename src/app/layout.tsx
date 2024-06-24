@@ -11,10 +11,31 @@ import './globals.css';
 
 const outfit = Outfit({ subsets: ['latin'] });
 
+const metaTitle = 'Harmonix Finance';
+const metaDescription =
+  'Building efficient hedge fund on-chain derivatives pools. Delta neutral. Option Wheel. Restaking. Juicy Yield. Low Risk.';
+const metaImageUrl = '/twitter-banner.jpeg';
+
 export const metadata: Metadata = {
-  title: 'Harmonix',
+  title: 'Harmonix Finance',
   description:
     'Implies a harmony in strategies that balance risk and reward, suitable for a platform managing diverse crypto assets.',
+  metadataBase: new URL('https://harmonix.fi'),
+  twitter: {
+    site: '@harmonixfi',
+    title: metaTitle,
+    description: metaDescription,
+    card: 'summary_large_image',
+    images: {
+      url: metaImageUrl,
+    },
+  },
+  openGraph: {
+    title: metaTitle,
+    description: metaDescription,
+    type: 'website',
+    images: { url: metaImageUrl },
+  },
 };
 
 export default function RootLayout({
