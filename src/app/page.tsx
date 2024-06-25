@@ -59,7 +59,7 @@ export default async function Home() {
       />
       <PlusPartnerSection />
       <AuditSection />
-      <BackerSection />
+      {/* <BackerSection /> */}
     </div>
   );
 }
