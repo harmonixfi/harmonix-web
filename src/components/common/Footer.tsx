@@ -55,9 +55,9 @@ const Footer = () => {
               key={menuItem.text}
               className={`flex ${index === 0 ? 'justify-center sm:justify-start xl:justify-end' : 'justify-center xl:justify-end'}`}
             >
-              <div className="flex flex-col items-center gap-6">
+              <div className="flex flex-col items-center sm:items-start gap-6">
                 <p className="font-light text-xl text-secondary">{menuItem.text}</p>
-                <ul className="space-y-6">
+                <ul className="flex flex-col items-center sm:items-start gap-6">
                   {menuItem.items?.map((item) => (
                     <li key={item.text}>
                       <Link
