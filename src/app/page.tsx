@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 import { getVaultsOverview } from '@/api/vault';
 import AuditSection from '@/components/common/home/AuditSection';
+import BackerSection from '@/components/common/home/BackerSection';
 import MainBanner from '@/components/common/home/MainBanner';
 import PlusPartnerSection from '@/components/common/home/PlusPartnerSection';
 import RewardSection from '@/components/common/home/RewardSection';
@@ -58,6 +59,7 @@ export default async function Home() {
       />
       <PlusPartnerSection />
       <AuditSection />
+      <BackerSection />
     </div>
   );
 }
