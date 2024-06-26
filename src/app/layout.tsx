@@ -14,7 +14,7 @@ const outfit = Outfit({ subsets: ['latin'] });
 const metaTitle = 'Harmonix Finance';
 const metaDescription =
   'Building efficient hedge fund on-chain derivatives pools. Delta neutral. Option Wheel. Restaking. Juicy Yield. Low Risk.';
-const metaImageUrl = '/twitter-banner.jpeg';
+const metaImageUrl = '/og-banner.jpg';
 
 export const metadata: Metadata = {
   title: 'Harmonix Finance',
