@@ -8,24 +8,27 @@ import Navbar from '@/components/common/navbar/Navbar';
 
 import { Providers } from './_providers/Providers';
 import './globals.css';
+import {
+  metaImageUrl,
+  metaOpenGraphType,
+  metaTwitterCard,
+  metaTwitterSite,
+} from './shared-metadata';
 
 const outfit = Outfit({ subsets: ['latin'] });
 
-const metaTitle = 'Harmonix Finance';
-const metaDescription =
-  'Building efficient hedge fund on-chain derivatives pools. Delta neutral. Option Wheel. Restaking. Juicy Yield. Low Risk.';
-const metaImageUrl = '/og-banner.jpg';
+const metaTitle = `Welcome to Harmonix Finance: Crypto Investment On Autopilot`;
+const metaDescription = `The leading DeFi platform offering automated vault strategies to maximize returns and minimize risks.`;
 
 export const metadata: Metadata = {
-  title: 'Harmonix Finance',
-  description:
-    'Implies a harmony in strategies that balance risk and reward, suitable for a platform managing diverse crypto assets.',
   metadataBase: new URL('https://harmonix.fi'),
+  title: metaTitle,
+  description: metaDescription,
   twitter: {
-    site: '@harmonixfi',
+    site: metaTwitterSite,
     title: metaTitle,
     description: metaDescription,
-    card: 'summary_large_image',
+    card: metaTwitterCard,
     images: {
       url: metaImageUrl,
     },
@@ -33,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: metaTitle,
     description: metaDescription,
-    type: 'website',
+    type: metaOpenGraphType,
     images: { url: metaImageUrl },
   },
 };
