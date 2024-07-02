@@ -36,6 +36,9 @@ jobs:
           NEXT_PUBLIC_API_URL=$(aws ssm get-parameter --name "/harmonix-web/NEXT_PUBLIC_API_URL" --with-decryption --query "Parameter.Value" --output text)
           echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL" >> .env
 
+          NEXT_PUBLIC_TEST_URL=$(aws ssm get-parameter --name "/harmonix-web/NEXT_PUBLIC_TEST_URL" --with-decryption --query "Parameter.Value" --output text)
+          echo "NEXT_PUBLIC_TEST_URL=$NEXT_PUBLIC_TEST_URL" >> .env
+
       - name: Set SST Secret
         run: sst secret set DomainCert ${{ secrets.DOMAIN_CERT }}
 
