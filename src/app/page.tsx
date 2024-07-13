@@ -29,17 +29,11 @@ export default async function Home() {
 
   return (
     <div className="pt-16 sm:pt-28">
-      <div className="w-full lg:w-3/4 xl:w-4/5 mx-auto flex flex-col items-center gap-12">
-        <h1 className="block sm:hidden xl:block text-7xl font-light capitalize text-center">
-          Crypto Investment On Autopilot 
+      <div className="w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center gap-12">
+        <h1 className="text-6xl lg:text-7xl font-light capitalize text-center">
+          Building Efficient <span className="whitespace-nowrap">Hedge Fund</span>{' '}
+          <span className="whitespace-nowrap">On-Chain</span> Derivatives Pools
         </h1>
-        <div className="hidden sm:block xl:hidden">
-          <h1 className="text-7xl font-light capitalize text-center">Crypto Investment</h1>
-          <h1 className="text-7xl font-light capitalize text-center">On Autopilot </h1>
-        </div>
-        <p className="w-5/6 text-2xl font-light text-center opacity-80">
-          Efficient capital deployment for busy investors
-        </p>
         <Button
           as={Link}
           color="primary"
