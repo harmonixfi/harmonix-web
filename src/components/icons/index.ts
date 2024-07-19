@@ -31,3 +31,6 @@ export { default as PendleWithTextIcon } from './PendleWithText';
 export { default as ChainLinkIcon } from './ChainLink';
 export { default as WhatShapeIcon } from './WhatShape';
 export { default as WhatLineIcon } from './WhatLine';
+export { default as KelpdaoLogoIcon } from './KelpdaoLogo';
+export { default as KyberNetworkIcon } from './KyberNetwork';
+export { default as NodeKitIcon } from './NodeKit';
