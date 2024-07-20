@@ -18,12 +18,12 @@ export default async function Home() {
   const vaultsOverview = await getData();
 
   const optionsVaultApy =
-    vaultsOverview.vaults.find((x) => x.name.toLowerCase().includes('option'))?.apy_1y || 119;
+    vaultsOverview.vaults.find((x) => x.slug.toLowerCase().includes('option'))?.apy_1y || 119;
 
   const deltaNeutralVaultApy =
     Math.max(
       ...vaultsOverview.vaults
-        .filter((x) => !x.name.toLowerCase().includes('option'))
+        .filter((x) => !x.slug.toLowerCase().includes('option'))
         .map((x) => x.apy_1y),
     ) || 27;
 
