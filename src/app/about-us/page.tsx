@@ -16,7 +16,7 @@ import {
 } from '../shared-metadata';
 
 const metaTitle = `About Harmonix Team`;
-const metaDescription = `Learn about the experienced and passionate team behind Harmonix. Our experts in DeFi, blockchain, and finance are dedicated to providing top-notch investment solutions.`;
+const metaDescription = `Learn about the experienced and passionate team behind Harmonix. Our experts in DeFi, blockchain, and finance are dedicated to providing top-notch investment solutions`;
 
 export const metadata: Metadata = {
   title: metaTitle,
