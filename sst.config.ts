@@ -3,7 +3,7 @@
 export default $config({
   app(input) {
     return {
-      name: "harmonix-web",
+      name: "harmonix-remix-web",
       removal: input?.stage === "production" ? "retain" : "remove",
       home: "aws",
     };
@@ -12,7 +12,7 @@ export default $config({
   async run() {
     const domainCertSecret = new sst.Secret("DomainCert");
 
-    new sst.aws.Remix("HarmonixWeb", {
+    new sst.aws.Remix("HarmonixRemixWeb", {
       domain: {
         name: "harmonix.fi",
         dns: false,
