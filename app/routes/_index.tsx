@@ -105,7 +105,7 @@ export default function Index() {
           color="primary"
           size="lg"
           className="rounded-full text-secondary px-6"
-          href={EXTERNAL_LINKS.App}
+          to={EXTERNAL_LINKS.App}
           target="_blank"
           rel="noreferrer"
         >
