@@ -16,13 +16,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install dependencies
         run: npm install
 
       - name: Install SST CLI
-        run: curl -fsSL https://ion.sst.dev/install | bash
+        run: curl -fsSL https://sst.dev/install | bash
 
       - name: Set up AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -33,8 +33,8 @@ jobs:
 
       - name: Create .env file
         run: |
-          NEXT_PUBLIC_API_URL=$(aws ssm get-parameter --name "/harmonix-web/NEXT_PUBLIC_API_URL" --with-decryption --query "Parameter.Value" --output text)
-          echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL" >> .env
+          API_URL=$(aws ssm get-parameter --name "/harmonix-web/NEXT_PUBLIC_API_URL" --with-decryption --query "Parameter.Value" --output text)
+          echo "API_URL=$API_URL" >> .env
 
       - name: Set SST Secret
         run: sst secret set DomainCert ${{ secrets.DOMAIN_CERT }}
