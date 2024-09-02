@@ -1,6 +1,6 @@
 import { Button } from "@nextui-org/react";
 import type { MetaFunction } from "@remix-run/node";
-import { Link, json, useLoaderData } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import { useQuery } from "@tanstack/react-query";
 import { GetVaultOverviewResponse } from "~/@types/vault";
 import AuditSection from "~/components/common/home/AuditSection";
@@ -61,17 +61,13 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export const loader = async () => {
-  return json({ env: { API_URL: process.env.API_URL } });
-};
-
 export default function Index() {
-  const { env } = useLoaderData<typeof loader>();
-
   const { data } = useQuery({
     queryKey: ["GET_VAULT_STATISTICS"],
     queryFn: async () => {
-      const response = await fetch(`${env.API_URL}/statistics/`);
+      const response = await fetch(
+        "https://api.rockonyx.xyz/api/v1/statistics/"
+      );
 
       if (!response.ok) {
         throw new Error("Failed to fetch data");
