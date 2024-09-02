@@ -4,7 +4,7 @@ import { Link } from "@remix-run/react";
 import { useQuery } from "@tanstack/react-query";
 import { GetVaultOverviewResponse } from "~/@types/vault";
 import AuditSection from "~/components/common/home/AuditSection";
-import BackerSection from "~/components/common/home/BackerSection";
+// import BackerSection from "~/components/common/home/BackerSection";
 import MainBanner from "~/components/common/home/MainBanner";
 import PlusPartnerSection from "~/components/common/home/PlusPartnerSection";
 import RewardSection from "~/components/common/home/RewardSection";
@@ -120,7 +120,7 @@ export default function Index() {
       />
       <PlusPartnerSection />
       <AuditSection />
-      <BackerSection />
+      {/* <BackerSection /> */}
     </div>
   );
 }
