@@ -96,9 +96,11 @@ export default function Index() {
     <div className="pt-16 sm:pt-28">
       <div className="w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center gap-12">
         <h1 className="text-6xl lg:text-7xl font-light capitalize text-center">
-          Building Efficient{" "}
-          <span className="whitespace-nowrap">Hedge Fund</span>{" "}
-          <span className="whitespace-nowrap">On-Chain</span> Derivatives Pools
+          Building <span className="whitespace-nowrap">the next</span>{" "}
+          <span className="whitespace-nowrap">generation</span>{" "}
+          <span className="whitespace-nowrap">of</span>{" "}
+          <span className="whitespace-nowrap">TradFi yield</span>{" "}
+          <span className="whitespace-nowrap">onchain</span>
         </h1>
         <Button
           as={Link}
