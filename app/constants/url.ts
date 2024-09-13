@@ -12,7 +12,7 @@ export const EXTERNAL_LINKS = {
 
   Audit: "https://github.com/harmonixfi/vault-contracts/tree/main/audits",
   VerichainReport:
-    "https://github.com/harmonixfi/core-smart-contract/blob/main/audits",
+    "https://github.com/harmonixfi/vault-contracts/tree/main/audits",
 
   TwitterChainLinkPost:
     "https://x.com/harmonixfi/status/1800143725232013353?s=46",
