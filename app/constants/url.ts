@@ -10,9 +10,8 @@ export const EXTERNAL_LINKS = {
   Docs: "https://harmonix-finance.gitbook.io/harmonix-docs",
   Blog: "https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04",
 
-  Audit: "https://github.com/harmonixfi/vault-contracts/tree/main/audits",
-  VerichainReport:
-    "https://github.com/harmonixfi/vault-contracts/tree/main/audits",
+  Audit: "https://verichains.io/?search=harmonix",
+  VerichainReport: "https://verichains.io/?search=harmonix",
 
   TwitterChainLinkPost:
     "https://x.com/harmonixfi/status/1800143725232013353?s=46",
