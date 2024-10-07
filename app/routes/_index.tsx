@@ -11,7 +11,8 @@ import RewardSection from "~/components/common/home/RewardSection";
 import { METADATA } from "~/constants/metadata";
 import { EXTERNAL_LINKS } from "~/constants/url";
 
-const metaTitle = "Welcome to Harmonix Finance: Crypto Investment On Autopilot";
+const metaTitle =
+  "Welcome to Harmonix Finance: Building the next generation of TradFi yield onchain";
 const metaDescription =
   "The leading DeFi platform offering automated vault strategies to maximize returns and minimize risks.";
 
