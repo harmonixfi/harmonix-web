@@ -19,10 +19,12 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
 
-      # - name: Install SST CLI
-      #   run: curl -fsSL https://sst.dev/install | bash
+      - name: Install SST CLI
+        run: curl -fsSL https://sst.dev/install | bash
 
       - name: Set up AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
