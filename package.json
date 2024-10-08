@@ -21,7 +21,9 @@
     "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sst": "3.0.91"
+    "sst": "3.0.91",
+    "@pulumi/pulumi": "^3.61.0",
+    "@pulumi/aws": "^6.55.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.11.2",
