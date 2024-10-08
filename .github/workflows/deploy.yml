@@ -19,12 +19,7 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        run: |
-          rm -rf node_modules package-lock.json
-          npm install
-
-      - name: Install SST CLI
-        run: curl -fsSL https://sst.dev/install | bash
+        run: npm install
 
       - name: Set up AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -41,7 +36,7 @@ jobs:
           echo "$parameter" >> .env
 
       - name: Set SST Secret
-        run: sst secret set DomainCert ${{ secrets.DOMAIN_CERT }}
+        run: npx sst secret set DomainCert ${{ secrets.DOMAIN_CERT }}
 
       - name: Deploy with SST
-        run: sst deploy
+        run: npx sst deploy
