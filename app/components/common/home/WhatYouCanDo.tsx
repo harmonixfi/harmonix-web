@@ -1,7 +1,7 @@
 const WhatYouCanDo = () => {
   return (
     <div className="flex flex-col items-center gap-24 w-full sm:w-5/6 lg:w-3/4 xl:w-2/3 mx-auto px-6 sm:px-0">
-      <h3 className="text-primary text-6xl font-medium text-center">
+      <h3 className="text-primary text-4xl sm:text-6xl font-medium text-center">
         What You Can Do on Harmonix
       </h3>
       <div className="flex flex-col gap-32">

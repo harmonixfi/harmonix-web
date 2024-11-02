@@ -4,10 +4,10 @@ const WhatWeSolve = () => {
   return (
     <div className="bg-[#EDF9F2] py-28">
       <div className="flex flex-col items-center gap-16 w-full sm:w-5/6 lg:w-3/4 xl:w-2/3 mx-auto">
-        <h3 className="text-primary text-6xl font-medium text-center capitalize">
+        <h3 className="text-primary text-4xl sm:text-6xl font-medium text-center capitalize">
           The Pain Points We Solve
         </h3>
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 px-6 sm:px-0">
           <div className="relative bg-[#D2E9E9] rounded-xl p-8">
             <p className="text-xl font-semibold mb-2">Complexity</p>
             <p className="text-[#3C3D37] font-light">

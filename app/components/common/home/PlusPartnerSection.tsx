@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import {
-  BsxIcon,
+  GoldLinkIcon,
+  HyperliquidIcon,
   KelpdaoLogoIcon,
   KyberNetworkIcon,
   NodeKitIcon,
@@ -19,19 +20,20 @@ const PlusPartnerSection = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-x-2 gap-y-16 lg:gap-y-12 w-full md:w-[90%] lg:w-9/12 2xl:w-[1000px] sm:gap-x-12 md:gap-x-16 lg:gap-x-24 2xl:gap-x-40 mt-8 mx-auto">
-          <BsxIcon className="w-auto h-[72px] sm:h-20" />
-
-          <KelpdaoLogoIcon className="w-auto h-[72px] sm:h-[86px]" />
-          <KyberNetworkIcon className="w-auto h-20 sm:h-24" />
-          <NodeKitIcon className="w-auto h-20 sm:h-24" />
+        <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-x-2 gap-y-16 lg:gap-y-12 w-full md:w-[90%] lg:w-9/12 2xl:w-[1200px] sm:gap-x-12 md:gap-x-16 lg:gap-x-24 2xl:gap-x-40 mt-8 mx-auto">
+          <KelpdaoLogoIcon className="w-auto h-16 sm:h-20" />
+          <KyberNetworkIcon className="w-auto h-20 sm:h-[90px]" />
+          <NodeKitIcon className="w-auto h-[72px] sm:h-[86px]" />
 
           <div className="relative">
-            <PendleWithTextIcon className="w-auto h-24 sm:h-32" />
-            <p className="absolute top-[72px] sm:top-24 left-1/2 -translate-x-1/2 inline-block text-sm bg-secondary opacity-80 rounded-2xl px-3 py-0.5">
+            <PendleWithTextIcon className="w-auto h-24 sm:h-[116px]" />
+            {/* <p className="absolute top-[72px] sm:top-24 left-1/2 -translate-x-1/2 inline-block text-sm bg-secondary opacity-80 rounded-2xl px-3 py-0.5">
               Coming soon
-            </p>
+            </p> */}
           </div>
+
+          <GoldLinkIcon className="w-auto h-12 sm:h-14" />
+          <HyperliquidIcon className="w-auto h-12 sm:h-14" />
         </div>
       </motion.div>
     </div>
