@@ -2,7 +2,10 @@ import { Accordion, AccordionItem } from "@nextui-org/react";
 
 const FAQ = () => {
   return (
-    <div className="flex flex-col items-center gap-8 w-full sm:w-5/6 lg:w-2/3 xl:w-1/2 mx-auto px-6 sm:px-0">
+    <div
+      id="faq"
+      className="flex flex-col items-center gap-8 w-full sm:w-5/6 lg:w-2/3 xl:w-1/2 mx-auto px-6 sm:px-0"
+    >
       <h3 className="text-primary text-4xl sm:text-6xl font-medium text-center capitalize">
         FAQ
       </h3>

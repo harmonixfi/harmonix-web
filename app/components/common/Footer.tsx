@@ -17,7 +17,7 @@ const menuItems = [
   {
     text: "About",
     items: [
-      { text: "Faq", link: "" },
+      { text: "Faq", link: "/#faq" },
       { text: "Blog", link: EXTERNAL_LINKS.Blog, isExternal: true },
       { text: "About us", link: "/about-us" },
       { text: "Audit", link: EXTERNAL_LINKS.Audit, isExternal: true },

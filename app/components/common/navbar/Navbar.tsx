@@ -56,7 +56,7 @@ const Navbar = () => {
         <NavbarDropdown
           title="About"
           items={[
-            { text: "FAQ", link: "#" },
+            { text: "FAQ", link: "/#faq" },
             { text: "Blog", link: EXTERNAL_LINKS.Blog, isExternal: true },
             { text: "About us", link: "/about-us" },
             {
@@ -150,7 +150,7 @@ const Navbar = () => {
           >
             <AccordionItem key="about" aria-label="About" title="About">
               <div className="flex flex-col gap-4">
-                <Link color="foreground" to="#" className="px-4">
+                <Link color="foreground" to="/#faq" className="px-4">
                   FAQ
                 </Link>
                 <Link
