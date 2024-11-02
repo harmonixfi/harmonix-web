@@ -6,6 +6,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import { LinksFunction } from "@remix-run/node";
 import {
   Links,
+  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -39,6 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             <LegalAlert />
             <Footer />
             <ScrollRestoration />
+            <LiveReload />
             <Scripts />
           </QueryClientProvider>
         </NextUIProvider>

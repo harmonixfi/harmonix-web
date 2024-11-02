@@ -4,10 +4,15 @@ import { Link } from "@remix-run/react";
 import { useQuery } from "@tanstack/react-query";
 import { GetVaultOverviewResponse } from "~/@types/vault";
 import AuditSection from "~/components/common/home/AuditSection";
+import FAQ from "~/components/common/home/FAQ";
 // import BackerSection from "~/components/common/home/BackerSection";
 import MainBanner from "~/components/common/home/MainBanner";
 import PlusPartnerSection from "~/components/common/home/PlusPartnerSection";
 import RewardSection from "~/components/common/home/RewardSection";
+import What from "~/components/common/home/What";
+import WhatWeSolve from "~/components/common/home/WhatWeSolve";
+import WhatYouCanDo from "~/components/common/home/WhatYouCanDo";
+import Why from "~/components/common/home/Why";
 import { METADATA } from "~/constants/metadata";
 import { EXTERNAL_LINKS } from "~/constants/url";
 
@@ -117,12 +122,23 @@ export default function Index() {
       </div>
 
       <MainBanner />
+
+      <div className="flex flex-col gap-20 pb-24">
+        <What />
+        <Why />
+        <WhatWeSolve />
+        <WhatYouCanDo />
+      </div>
+
       <RewardSection
         optionsVaultApy={optionsVaultApy}
         deltaNeutralVaultApy={deltaNeutralVaultApy}
       />
       <PlusPartnerSection />
       <AuditSection />
+      <div className="py-24">
+        <FAQ />
+      </div>
       {/* <BackerSection /> */}
     </div>
   );
