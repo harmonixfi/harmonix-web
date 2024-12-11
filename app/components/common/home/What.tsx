@@ -17,7 +17,7 @@ const What = () => {
   return (
     <div
       ref={ref}
-      className="relative grid lg:grid-cols-2 gap-16 lg:gap-4 bg-primary rounded-tl-3xl rounded-tr-3xl lg:rounded-tl-[64px] lg:rounded-tr-[64px] py-16 lg:py-28 2xl:py-40 overflow-hidden"
+      className="relative grid lg:grid-cols-2 gap-16 lg:gap-4 bg-primary rounded-3xl lg:rounded-[64px] py-16 lg:py-28 2xl:py-40 overflow-hidden"
     >
       <div className="space-y-6 lg:space-y-12 pl-8 sm:pl-16 xl:pl-24 2xl:pl-32 pr-8 sm:pr-16 lg:pr-0 2xl:pr-20 z-30">
         <div className="2xl:space-y-2 text-off-white text-5xl sm:text-6xl xl:text-8xl font-light">

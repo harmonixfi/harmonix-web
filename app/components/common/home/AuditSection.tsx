@@ -26,7 +26,7 @@ const AuditSection = () => {
           href={EXTERNAL_LINKS.VerichainReport}
           className="text-off-white font-light underline opacity-90 z-20"
         >
-          See full report
+          See Full Report
         </Link>
         <FooterLineIcon className="absolute w-auto h-2/3 bottom-0 right-0 z-10" />
       </motion.div>

@@ -46,7 +46,7 @@ const RewardSection = (props: RewardSectionProps) => {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-around gap-1 sm:gap-2 bg-[#D2E9E9] rounded-lg px-6 lg:px-16 py-1.5 sm:py-2.5">
-            <p className="text-base lg:text-lg font-medium">Audited by</p>
+            <p className="text-base lg:text-lg font-medium">Audited By</p>
             <Link
               target="_blank"
               rel="noreferrer"
@@ -149,7 +149,7 @@ const RewardSection = (props: RewardSectionProps) => {
             rel="noreferrer"
             className="w-full flex items-center justify-center gap-3 mt-16 mb-6"
           >
-            <span className="text-sm">Powered by</span>{" "}
+            <span className="text-sm">Powered By</span>{" "}
             <ChainLinkIcon className="w-auto h-5" />
           </Link>
         </motion.div>

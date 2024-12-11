@@ -9,10 +9,10 @@ import FAQ from "~/components/common/home/FAQ";
 import MainBanner from "~/components/common/home/MainBanner";
 import PlusPartnerSection from "~/components/common/home/PlusPartnerSection";
 import RewardSection from "~/components/common/home/RewardSection";
-import What from "~/components/common/home/What";
-import WhatWeSolve from "~/components/common/home/WhatWeSolve";
+// import What from "~/components/common/home/What";
+// import WhatWeSolve from "~/components/common/home/WhatWeSolve";
 import WhatYouCanDo from "~/components/common/home/WhatYouCanDo";
-import Why from "~/components/common/home/Why";
+// import Why from "~/components/common/home/Why";
 import { METADATA } from "~/constants/metadata";
 import { EXTERNAL_LINKS } from "~/constants/url";
 
@@ -101,13 +101,10 @@ export default function Index() {
   return (
     <div className="pt-16 sm:pt-28">
       <div className="w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center gap-12">
-        <h1 className="text-6xl lg:text-7xl font-light capitalize text-center">
-          Building <span className="whitespace-nowrap">the next</span>{" "}
-          <span className="whitespace-nowrap">generation</span>{" "}
-          <span className="whitespace-nowrap">of</span>{" "}
-          <span className="whitespace-nowrap">TradFi yield</span>{" "}
-          <span className="whitespace-nowrap">onchain</span>
-        </h1>
+        <div className="text-5xl sm:text-6xl lg:text-7xl font-light text-center space-y-1">
+          <h1>Reshaping Yield Optimization</h1>
+          <h1>Minimize Risk, Maximize Yield</h1>
+        </div>
         <Button
           as={Link}
           color="primary"
@@ -124,9 +121,9 @@ export default function Index() {
       <MainBanner />
 
       <div className="flex flex-col gap-20 pb-24">
-        <What />
-        <Why />
-        <WhatWeSolve />
+        {/* <What />
+        <Why /> */}
+        {/* <WhatWeSolve /> */}
         <WhatYouCanDo />
       </div>
 

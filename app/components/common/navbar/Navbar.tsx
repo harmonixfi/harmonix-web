@@ -58,7 +58,7 @@ const Navbar = () => {
           items={[
             { text: "FAQ", link: "/#faq" },
             { text: "Blog", link: EXTERNAL_LINKS.Blog, isExternal: true },
-            { text: "About us", link: "/about-us" },
+            { text: "About Us", link: "/about-us" },
             {
               text: "Audit",
               link: EXTERNAL_LINKS.Audit,
@@ -168,7 +168,7 @@ const Navbar = () => {
                   className="px-4"
                   onClick={handleCloseMenu}
                 >
-                  About us
+                  About Us
                 </Link>
                 <Link
                   color="foreground"
