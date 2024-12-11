@@ -101,9 +101,13 @@ export default function Index() {
   return (
     <div className="pt-16 sm:pt-28">
       <div className="w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center gap-12">
-        <div className="text-5xl sm:text-6xl lg:text-7xl font-light text-center space-y-1">
-          <h1>Reshaping Yield Optimization</h1>
-          <h1>Minimize Risk, Maximize Yield</h1>
+        <div className="text-center space-y-3">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-normal">
+            Reshaping Yield Optimization
+          </h1>
+          <h1 className="text-5xl sm:text-6xl lg:text-5xl font-extralight ">
+            Minimize Risk, Maximize Yield
+          </h1>
         </div>
         <Button
           as={Link}
@@ -120,7 +124,7 @@ export default function Index() {
 
       <MainBanner />
 
-      <div className="flex flex-col gap-20 pb-24">
+      <div className="flex flex-col gap-20 py-24">
         {/* <What />
         <Why /> */}
         {/* <WhatWeSolve /> */}
