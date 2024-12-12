@@ -1,5 +1,5 @@
 import Footer from "./components/common/Footer";
-import LegalAlert from "./components/common/LegalAlert";
+// import LegalAlert from "./components/common/LegalAlert";
 import Navbar from "./components/common/navbar/Navbar";
 import "./tailwind.css";
 import { NextUIProvider } from "@nextui-org/react";
@@ -37,7 +37,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
           <QueryClientProvider client={queryClient}>
             <Navbar />
             <main>{children}</main>
-            <LegalAlert />
+            {/* <LegalAlert /> */}
             <Footer />
             <ScrollRestoration />
             <LiveReload />
