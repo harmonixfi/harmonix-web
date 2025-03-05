@@ -4,14 +4,19 @@ import { Link } from "@remix-run/react";
 import { useQuery } from "@tanstack/react-query";
 import { GetVaultOverviewResponse } from "~/@types/vault";
 import AuditSection from "~/components/common/home/AuditSection";
+import CoreTechnology from "~/components/common/home/CoreTechnologySection";
 import FAQ from "~/components/common/home/FAQ";
 // import BackerSection from "~/components/common/home/BackerSection";
 import MainBanner from "~/components/common/home/MainBanner";
 import PlusPartnerSection from "~/components/common/home/PlusPartnerSection";
 import RewardSection from "~/components/common/home/RewardSection";
+import RewardSection2 from "~/components/common/home/RewardSection2";
+import Verichain from "~/components/common/home/Verichain";
 // import What from "~/components/common/home/What";
 // import WhatWeSolve from "~/components/common/home/WhatWeSolve";
 import WhatYouCanDo from "~/components/common/home/WhatYouCanDo";
+import Earn from "~/components/common/home/earn/Earn";
+import { VerichainIcon } from "~/components/icons";
 // import Why from "~/components/common/home/Why";
 import { METADATA } from "~/constants/metadata";
 import { EXTERNAL_LINKS } from "~/constants/url";
@@ -100,12 +105,12 @@ export default function Index() {
 
   return (
     <div className="pt-16 sm:pt-28">
-      <div className="w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center gap-12">
-        <div className="text-center space-y-3">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-normal">
+      <div className="w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center space-y-6 text-primary">
+        <div className="text-center space-y-6">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold">
             Reshaping Yield Optimization
           </h1>
-          <h1 className="text-5xl sm:text-6xl lg:text-5xl font-extralight ">
+          <h1 className="text-2xl sm:text-3xl lg:text-2xl font-light mt-2">
             Minimize Risk, Maximize Yield
           </h1>
         </div>
@@ -113,7 +118,7 @@ export default function Index() {
           as={Link}
           color="primary"
           size="lg"
-          className="rounded-full text-secondary px-6"
+          className="rounded-full bg-secondary text-primary shadow-sm border border-solid border-primary"
           to={EXTERNAL_LINKS.App}
           target="_blank"
           rel="noreferrer"
@@ -124,6 +129,13 @@ export default function Index() {
 
       <MainBanner />
 
+      <div className={"mt-24"}>
+        <Verichain />
+      </div>
+
+      <Earn />
+      <CoreTechnology />
+      <RewardSection2 />
       <div className="flex flex-col gap-20 py-24">
         {/* <What />
         <Why /> */}

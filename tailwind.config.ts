@@ -12,10 +12,24 @@ export default {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-linear":
+          "linear-gradient(109deg, #97FCE4 -1.94%, #E2F6A1 101.26%)",
       },
       colors: {
         "off-white": {
           DEFAULT: "#F1F1EB",
+        },
+        "sub-title": {
+          DEFAULT: "#84889A",
+        },
+        "sub-title-2": {
+          DEFAULT: "#666D80",
+        },
+        "light-yellow": {
+          DEFAULT: "#E2F6A1",
+        },
+        "bg-grey": {
+          DEFAULT: "#F7F8FB",
         },
       },
       fontFamily: {
