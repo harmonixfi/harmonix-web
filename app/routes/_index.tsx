@@ -4,10 +4,13 @@ import { Link } from "@remix-run/react";
 import { useQuery } from "@tanstack/react-query";
 import { GetVaultOverviewResponse } from "~/@types/vault";
 import AuditSection from "~/components/common/home/AuditSection";
+import AuditSection2 from "~/components/common/home/AuditSection2";
 import CoreTechnology from "~/components/common/home/CoreTechnologySection";
 import FAQ from "~/components/common/home/FAQ";
+import FAQSection from "~/components/common/home/FAQSection";
 // import BackerSection from "~/components/common/home/BackerSection";
 import MainBanner from "~/components/common/home/MainBanner";
+import Partner from "~/components/common/home/PartnerSection";
 import PlusPartnerSection from "~/components/common/home/PlusPartnerSection";
 import RewardSection from "~/components/common/home/RewardSection";
 import RewardSection2 from "~/components/common/home/RewardSection2";
@@ -136,22 +139,25 @@ export default function Index() {
       <Earn />
       <CoreTechnology />
       <RewardSection2 />
-      <div className="flex flex-col gap-20 py-24">
-        {/* <What />
+      {/* <Partner /> */}
+      <AuditSection2 />
+      <FAQSection />
+      {/* <div className="flex flex-col gap-20 py-24"> */}
+      {/* <What />
         <Why /> */}
-        {/* <WhatWeSolve /> */}
-        <WhatYouCanDo />
-      </div>
+      {/* <WhatWeSolve /> */}
+      {/* <WhatYouCanDo /> */}
+      {/* </div> */}
 
-      <RewardSection
+      {/* <RewardSection
         optionsVaultApy={optionsVaultApy}
         deltaNeutralVaultApy={deltaNeutralVaultApy}
       />
       <PlusPartnerSection />
-      <AuditSection />
-      <div className="py-24">
+      <AuditSection /> */}
+      {/* <div className="py-24">
         <FAQ />
-      </div>
+      </div> */}
       {/* <BackerSection /> */}
     </div>
   );

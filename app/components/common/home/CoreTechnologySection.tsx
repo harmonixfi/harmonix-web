@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import BearMarketYield from "~/components/icons/BearMarketYield";
 import PreciseExecution from "~/components/icons/PreciseExecution";
 import YieldOptimization from "~/components/icons/YieldOptimization";
@@ -14,7 +15,11 @@ export default function CoreTechnologySection() {
       >
         Core Technology
       </h1>
-      <div
+      <motion.div
+        initial={{ opacity: 0, y: 200 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ once: true }}
         className={"lg:grid lg:grid-cols-3 lg:gap-x-6 space-y-5 lg:space-y-0"}
       >
         <div className={"px-8 py-[46px] rounded-3xl bg-white"}>
@@ -53,7 +58,7 @@ export default function CoreTechnologySection() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

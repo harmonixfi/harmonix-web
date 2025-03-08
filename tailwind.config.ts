@@ -31,6 +31,9 @@ export default {
         "bg-grey": {
           DEFAULT: "#F7F8FB",
         },
+        "dark-green": {
+          DEFAULT: "#171918",
+        },
       },
       fontFamily: {
         outfit: ["outfit", "sans-serif"],
