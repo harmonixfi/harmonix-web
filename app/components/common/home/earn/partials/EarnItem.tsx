@@ -1,53 +1,77 @@
-import ArrowDown from "~/components/icons/ArrowDown";
-import Dai from "~/components/icons/Dai";
-import Usdc from "~/components/icons/Usdc";
-import Usdt from "~/components/icons/Usdt";
+import { HarmonixPointIcon } from "~/components/icons";
 
 export default function EarnItem() {
   return (
-    <div
-      className={
-        "rounded-3xl bg-bg-grey flex items-center p-4 lg:px-28 lg:py-[97px]"
-      }
-    >
-      <div className={"relative mr-6"}>
-        <div className={"p-4 lg:py-7 lg:px-9 bg-white rounded-3xl mb-1"}>
-          <div className={"text-sm opacity-50"}>You pay</div>
-          <h1 className={"text-4xl lg:text-7xl font-normal text-sub-title"}>
-            1000
-          </h1>
-        </div>
-        <div className={"p-4 lg:py-7 lg:px-9 bg-white rounded-3xl"}>
-          <div className={"text-sm opacity-50"}>You pay</div>
-          <h1 className={"text-4xl lg:text-7xl font-normal"}>1028</h1>
-        </div>
-        <div
-          className={
-            "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl lg:rounded-3xl text-center bg-white border-5 border-solid border-light-yellow w-10 h-10 lg:w-16 lg:h-16 flex justify-center items-center"
-          }
-        >
-          <ArrowDown className={"w-4 h-4"} />
+    <div className={"rounded-3xl bg-bg-grey p-4 lg:p-10 space-y-6"}>
+      <div
+        className={"py-6 px-10 text-center bg-gradient-earn w-full rounded-3xl"}
+      >
+        <p className={"text-[15px] font-medium text-main-green"}>
+          Your Position
+        </p>
+        <div className={"mt-2 relative"}>
+          <p className={"text-5xl lg:text-[78px] text-sub-title"}>
+            30.63 <span className={"text-lg lg:text-[32px]"}>USDC</span>
+          </p>
+          <span
+            className={
+              "absolute text-green text-lg lg:text-2xl top-[1px] -right-[3px] lg:top-[28px] lg:right-[52px]"
+            }
+          >
+            (+0.63%)
+          </span>
         </div>
       </div>
-      <div className={"p-[12px] lg:p-[25px] bg-white lg:space-y-3 rounded-3xl"}>
-        <div className={"flex space-x-1 lg:justify-between items-center"}>
-          <div className={"w-10 h-10"}>
-            <Usdc className={"w-8 h-8"} />
+      <div className={"grid grid-cols-2 lg:grid-cols-3 gap-2 text-center"}>
+        <div
+          className={"bg-white rounded-3xl px-4 py-6 space-y-2 text-main-green"}
+        >
+          <div
+            className={
+              "flex items-center justify-center bg-yellow-y20 rounded-[64px]"
+            }
+          >
+            <p>Initial deposit</p>
           </div>
-          <span>USDC</span>
+          <p className={"text-lg font-bold"}>30 USDC</p>
         </div>
-        <div className={"flex space-x-1 lg:justify-between items-center"}>
-          <div className={"w-10 h-10"}>
-            <Usdt className={"w-8 h-8"} />
+        <div
+          className={"bg-white rounded-3xl px-4 py-6 space-y-2 text-main-green"}
+        >
+          <div
+            className={
+              "flex items-center justify-center bg-yellow-y20 rounded-[64px]"
+            }
+          >
+            <p>Total share</p>
           </div>
-          <span>USDT</span>
+          <p className={"text-lg font-bold"}>19.63 roUSD</p>
         </div>
-        <div className={"flex space-x-1 lg:justify-between items-center"}>
-          <div className={"w-10 h-10"}>
-            <Dai className={"w-8 h-8"} />
+        <div
+          className={"bg-white rounded-3xl px-4 py-6 space-y-2 text-main-green"}
+        >
+          <div
+            className={
+              "flex items-center justify-center bg-yellow-y20 rounded-[64px]"
+            }
+          >
+            <p className={"text-base"}>Pending withdrawal</p>
           </div>
-          <span>DAI</span>
+          <p className={"text-lg font-bold"}>10 roUSD</p>
         </div>
+      </div>
+      <div className={"px-4 py-6 bg-gradient-earn2 text-center"}>
+        <div className={"flex items-center justify-center space-x-2"}>
+          <HarmonixPointIcon className={"w-8 h-8"} />
+          <span className={"text-main-green"}>Total Vault Earn</span>
+        </div>
+        <p
+          className={
+            "bg-clip-text bg-gradient-text text-[36px] font-bold text-transparent"
+          }
+        >
+          217.84
+        </p>
       </div>
     </div>
   );

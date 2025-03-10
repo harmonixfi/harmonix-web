@@ -139,7 +139,7 @@ export default function Index() {
       <Earn />
       <CoreTechnology />
       <RewardSection2 />
-      {/* <Partner /> */}
+      <Partner />
       <AuditSection2 />
       <FAQSection />
       {/* <div className="flex flex-col gap-20 py-24"> */}

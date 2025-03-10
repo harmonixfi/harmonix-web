@@ -17,7 +17,7 @@ export default function AuditSection2() {
           "py-[46px] space-y-6 text-center bg-light-yellow rounded-3xl flex flex-col items-center"
         }
       >
-        <p className={"font-medium text-[64px]"}>Audit</p>
+        <p className={"font-medium text-[32px] lg:text-[64px]"}>Audit</p>
         <p className={"font-normal text-2xl"}>
           Ensuring the security of Harmonix is our top priority. Discover more
           in our security reports.

@@ -1,3 +1,5 @@
+import { NodeKitIcon } from '~/components/icons';
+import { KyberNetworkIcon } from '~/components/icons';
 export { default as LogoIcon } from "./Logo";
 export { default as LogoWithTextIcon } from "./LogoWithText";
 export { default as FlatLogoIcon } from "./FlatLogo";
@@ -47,3 +49,9 @@ export { default as EigenLayerPointIcon } from "./EigenLayerPoint";
 export { default as ZircuitPointIcon } from "./ZircuitPoint";
 export { default as HarmonixPointIcon } from "./HarmonixPoint";
 export { default as KelpIcon } from "./Kelp";
+export {default as KyberNetwork2Icon} from './KyberNetwork2'
+export {default as NodeKit2Icon} from './NodeKit2'
+export {default as HyperLiquidIcon2} from './HyperLiquid2'
+export {default as Pendle2Icon} from './Pendle2'
+export {default as GoldLink2Icon} from './GoldLink2'
+export {default as VectorIcon} from './Vector'
