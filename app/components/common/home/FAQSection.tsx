@@ -4,6 +4,54 @@ import { motion } from "framer-motion";
 import { MinusIcon, PlusFaqsIcon, PlusIcon } from "~/components/icons";
 import { EXTERNAL_LINKS } from "~/constants/url";
 
+const data = [
+  {
+    title: "What is Harmonix Finance?",
+    description:
+      "Harmonix Finance is a DeFi platform that transforms sophisticated hedge fund strategies into accessible and easy-to-use automated vaults, allowing users to optimize returns through various curated investment strategies.",
+  },
+  {
+    title: "What are the core values of Harmonix Finance?",
+    description:
+      "Harmonix Finance is a DeFi platform that transforms sophisticated hedge fund strategies into accessible and easy-to-use automated vaults, allowing users to optimize returns through various curated investment strategies.",
+  },
+  {
+    title: "What sets Harmonix apart from other DeFi platforms?",
+    description:
+      "Harmonix Finance is a DeFi platform that transforms sophisticated hedge fund strategies into accessible and easy-to-use automated vaults, allowing users to optimize returns through various curated investment strategies.",
+  },
+  {
+    title: "How does Harmonix benefit investors?",
+    description:
+      "Harmonix Finance is a DeFi platform that transforms sophisticated hedge fund strategies into accessible and easy-to-use automated vaults, allowing users to optimize returns through various curated investment strategies.",
+  },
+  {
+    title: "How can I start using Harmonix?",
+    description:
+      "Harmonix Finance is a DeFi platform that transforms sophisticated hedge fund strategies into accessible and easy-to-use automated vaults, allowing users to optimize returns through various curated investment strategies.",
+  },
+  {
+    title: "What are the main vault strategies offered by Harmonix Finance?",
+    description:
+      "Harmonix Finance is a DeFi platform that transforms sophisticated hedge fund strategies into accessible and easy-to-use automated vaults, allowing users to optimize returns through various curated investment strategies.",
+  },
+  {
+    title: "What is the Option Wheel Vault? How does it work?",
+    description:
+      "Harmonix Finance is a DeFi platform that transforms sophisticated hedge fund strategies into accessible and easy-to-use automated vaults, allowing users to optimize returns through various curated investment strategies.",
+  },
+  {
+    title: "What is the Delta Neutral Vault? How does it work?",
+    description:
+      "Harmonix Finance is a DeFi platform that transforms sophisticated hedge fund strategies into accessible and easy-to-use automated vaults, allowing users to optimize returns through various curated investment strategies.",
+  },
+  {
+    title: "Has Harmonix launched tokens yet?",
+    description:
+      "Harmonix Finance is a DeFi platform that transforms sophisticated hedge fund strategies into accessible and easy-to-use automated vaults, allowing users to optimize returns through various curated investment strategies.",
+  },
+];
+
 export default function FAQSection() {
   return (
     <div
@@ -19,7 +67,7 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className={"lg:w-2/5 space-y-6"}
+          className={"lg:w-1/3 space-y-6"}
         >
           <p className={"text-[64px] font-medium"}>FAQs</p>
           <p className={"text-base font-normal"}>
@@ -32,62 +80,42 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className={"lg:w-3/5"}
+          className={"lg:w-2/3"}
         >
           <Accordion
             selectionMode={"multiple"}
             itemClasses={{
-              base: "bg-bg-grey px-4 py-3 lg:px-8 lg:py-6 text-primary rounded-3xl border border-solid border-[#E8EDEC]",
+              base: "bg-[#edf9f24d] px-4 py-3 lg:px-8 lg:py-6 text-primary rounded-3xl border border-solid border-[#F1F1EB]",
             }}
             showDivider={false}
             className={"space-y-3"}
           >
-            <AccordionItem
-              key={"1"}
-              aria-label={"What is Harmonix Finance?"}
-              title={
-                <p className={"text-lg lg:text-2xl text-dark-green"}>
-                  What is Harmonix Finance?
-                </p>
-              }
-              indicator={({ isOpen }) =>
-                isOpen ? (
-                  <MinusIcon className={"w-4 h-4 lg:w-6 lg:h-6 rotate-90"} />
-                ) : (
-                  <PlusFaqsIcon className={"w-4 h-4 lg:w-6 lg:h-6"} />
-                )
-              }
-            >
-              <p className={"text-sub-title text-lg"}>
-                Harmonix Finance is a DeFi platform that transforms
-                sophisticated hedge fund strategies into accessible and
-                easy-to-use automated vaults, allowing users to optimize returns
-                through various curated investment strategies.
-              </p>
-            </AccordionItem>
-            <AccordionItem
-              key="2"
-              aria-label="What are the core values of Harmonix Finance?"
-              title={
-                <p className={"text-lg lg:text-2xl text-dark-green"}>
-                  What are the core values of Harmonix Finance?
-                </p>
-              }
-              indicator={({ isOpen }) =>
-                isOpen ? (
-                  <MinusIcon className={"w-4 h-4 lg:w-6 lg:h-6 rotate-90"} />
-                ) : (
-                  <PlusFaqsIcon className={"w-4 h-4 lg:w-6 lg:h-6"} />
-                )
-              }
-            >
-              <ul className={"text-sub-title text-lg"}>
-                <li>Building what we understand deeply and love the most</li>
-                <li>Sustainability in everything</li>
-                <li>Humble and honest</li>
-                <li>Risk control is everything</li>
-              </ul>
-            </AccordionItem>
+            {data.map((item, index) => {
+              return (
+                <AccordionItem
+                  key={index}
+                  aria-label={"What is Harmonix Finance?"}
+                  title={
+                    <p className={"text-lg lg:text-2xl text-dark-green"}>
+                      {item.title}
+                    </p>
+                  }
+                  indicator={({ isOpen }) =>
+                    isOpen ? (
+                      <MinusIcon
+                        className={"w-4 h-4 lg:w-6 lg:h-6 rotate-90"}
+                      />
+                    ) : (
+                      <PlusFaqsIcon className={"w-4 h-4 lg:w-6 lg:h-6"} />
+                    )
+                  }
+                >
+                  <p className={"text-sub-title text-lg"}>
+                    {item.description}
+                  </p>
+                </AccordionItem>
+              );
+            })}
           </Accordion>
         </motion.div>
       </div>

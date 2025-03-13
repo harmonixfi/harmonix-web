@@ -108,7 +108,7 @@ export default function Index() {
 
   return (
     <div className="pt-16 sm:pt-28">
-      <div className="w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center space-y-6 text-primary">
+      <div className="w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center space-y-6 text-dark-green">
         <div className="text-center space-y-6">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold">
             Reshaping Yield Optimization
@@ -121,7 +121,7 @@ export default function Index() {
           as={Link}
           color="primary"
           size="lg"
-          className="rounded-full bg-secondary text-primary shadow-sm border border-solid border-primary"
+          className="rounded-full bg-light-yellow shadow-sm text-dark-green"
           to={EXTERNAL_LINKS.App}
           target="_blank"
           rel="noreferrer"
@@ -130,10 +130,11 @@ export default function Index() {
         </Button>
       </div>
 
-      <MainBanner />
-
-      <div className={"mt-24"}>
+      <div className={"relative h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[715px] overflow-hidden"}>
+        <MainBanner />
+        <div className={'absolute left-1/2 -translate-x-1/2 bottom-[45px] lg:bottom-[65px]'}>
         <Verichain />
+        </div>
       </div>
 
       <Earn />

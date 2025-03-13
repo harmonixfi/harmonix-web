@@ -19,7 +19,11 @@ export default {
         "gradient-earn2":
           "linear-gradient(180deg, #FFF -25.7%, rgba(255, 255, 255, 0.00) 100%)",
         "gradient-text":
-          "linear-gradient(180deg, #173132 -81.11%, rgba(70, 149, 152, 0.00) 100%)",
+          "linear-gradient(180deg, #171918 2.78%, rgba(23, 25, 24, 0.00) 100.56%)",
+        "gradient-main":
+          "linear-gradient(300deg, rgba(241, 240, 235, 0.50) 7.75%, rgba(88, 191, 110, 0.50) 92.25%), linear-gradient(300deg, rgba(241, 240, 235, 0.50) 7.75%, rgba(226, 246, 161, 0.50) 92.25%), url(/bg.png) lightgray 50% / cover no-repeat",
+        "gradient-line":
+          "linear-gradient(109deg, #97FCE4 -1.94%, #E2F6A1 101.26%)",
       },
       colors: {
         "off-white": {

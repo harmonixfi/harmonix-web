@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Light1Icon, Light2Icon, Light3Icon } from "~/components/icons";
 import BearMarketYield from "~/components/icons/BearMarketYield";
 import PreciseExecution from "~/components/icons/PreciseExecution";
 import YieldOptimization from "~/components/icons/YieldOptimization";
@@ -20,17 +21,26 @@ export default function CoreTechnologySection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
-        className={"lg:grid lg:grid-cols-3 lg:gap-x-6 space-y-5 lg:space-y-0"}
+        className={"lg:grid lg:grid-cols-3 lg:gap-x-10 space-y-5 lg:space-y-0"}
       >
         <div className={"px-8 py-[46px] rounded-3xl bg-white"}>
           <div
             className={
-              "bg-light-yellow w-[100px] h-[100px] rounded-full flex justify-center items-center"
+              "relative bg-[#EDF9F2] py-[35px] rounded-3xl  flex justify-center items-center"
             }
           >
             <YieldOptimization />
+            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+              <Light1Icon />
+            </div>
+            <div className={"absolute -right-[8px] -bottom-[40px]"}>
+              <Light2Icon />
+            </div>
+            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+              <Light3Icon />
+            </div>
           </div>
-          <div className={"mt-[46px]"}>
+          <div className={"mt-[46px] text-center"}>
             <div className={"text-2xl font-bold"}>Yield Optimization</div>
             <div className={"mt-4 font-normal text-sub-title-2"}>
               Maximizing returns while preserving upside potential by using

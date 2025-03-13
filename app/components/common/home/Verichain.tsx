@@ -2,10 +2,10 @@ import { VerichainIcon } from "~/components/icons";
 
 export default function Verichain() {
   return (
-    <div className={"flex justify-center text-primary mb-12 lg:mb-24"}>
+    <div className={"flex justify-center text-primary "}>
       <div
         className={
-          "p-6 bg-linear bg-gradient-linear w-[343px] rounded-3xl flex items-center"
+          "p-6 bg-linear bg-white w-[343px] rounded-3xl flex items-center"
         }
       >
         <div className={"space-x-2"}>

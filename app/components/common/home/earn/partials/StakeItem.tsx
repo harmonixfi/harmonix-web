@@ -2,10 +2,15 @@ import Alplaticks from "../../../../assets/images/alphaticks.png";
 import Nansen from "../../../../assets/images/nansen.png";
 import ValiDAO from "../../../../assets/images/valiDAO.png";
 import { VectorIcon } from "~/components/icons";
+import { motion } from "framer-motion";
 
 export default function StakeItem() {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: 200 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      viewport={{ once: true }}
       className={
         "rounded-3xl bg-bg-grey p-4 lg:px-10 lg:py-[97px] text-primary"
       }
@@ -25,7 +30,7 @@ export default function StakeItem() {
             </h1>
             <p
               className={
-                "uppercase text-green absolute top-[4px] -right-[1px] lg:top-[10px] lg:-right-[12px] text-sm lg:text-base"
+                "uppercase text-green absolute top-[4px] -right-[1px] lg:top-[0px] lg:-right-[15px] text-sm lg:text-base"
               }
             >
               hype
@@ -46,7 +51,7 @@ export default function StakeItem() {
             </h1>
             <p
               className={
-                "uppercase text-green absolute top-[4px] -right-[1px] lg:top-[10px] lg:-right-[12px] text-sm lg:text-base"
+                "uppercase text-green absolute top-[4px] -right-[1px] lg:top-[0px] lg:-right-[15px] text-sm lg:text-base"
               }
             >
               hype
@@ -78,6 +83,6 @@ export default function StakeItem() {
           <p className={"text-lg font-bold"}>42,373</p>
         </div>
       </div>
-    </div>
+      </motion.div>
   );
 }

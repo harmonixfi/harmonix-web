@@ -56,15 +56,12 @@ const menuItems = [
 
 const Footer = () => {
   return (
-    <footer className="relative bg-primary text-white px-4 sm:px-12 lg:px-24 pt-12 pb-12 space-y-16 overflow-hidden">
+    <footer className="relative bg-transparent text-dark-green px-4 sm:px-12 lg:px-24 pt-12 space-y-16 overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-6 mt-8 sm:mt-14">
         <div className="lg:col-span-5">
           <FlatLogoIcon className="w-auto h-16 mb-6 mx-auto sm:mx-0" />
-          <h2 className="w-full 2xl:w-2/3 text-off-white font-light text-2xl text-center sm:text-left">
-            Secure Your Wealth, Earn More
-          </h2>
-          <h2 className="w-full 2xl:w-2/3 text-off-white font-light text-2xl text-center sm:text-left">
-            with Automated Hedging
+          <h2 className="w-full 2xl:w-2/3  font-light text-2xl text-center sm:text-left">
+            Minimize Risk, Maximize Yield
           </h2>
         </div>
         <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-12 sm:gap-6 z-20">
@@ -78,9 +75,7 @@ const Footer = () => {
               }`}
             >
               <div className="flex flex-col items-center sm:items-start gap-6">
-                <p className="font-light text-xl text-secondary">
-                  {menuItem.text}
-                </p>
+                <p className="font-light text-xl">{menuItem.text}</p>
                 <ul className="flex flex-col items-center sm:items-start gap-6">
                   {menuItem.items?.map((item) => (
                     <li key={item.text}>
@@ -88,7 +83,7 @@ const Footer = () => {
                         to={item.link}
                         target={item.isExternal ? "_blank" : undefined}
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 font-light text-xl text-off-white hover-underline-animation after:bg-white"
+                        className="inline-flex items-center gap-2 font-light text-xl hover-underline-animation after:bg-white"
                       >
                         {"icon" in item && <item.icon className="w-5 h-5" />}
                         {item.text}
@@ -107,7 +102,7 @@ const Footer = () => {
                   to={EXTERNAL_LINKS.Dashboard}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-block font-light text-xl text-secondary hover-underline-animation after:bg-secondary"
+                  className="inline-block font-light text-xl hover-underline-animation after:bg-secondary"
                 >
                   Dashboard
                 </Link>
@@ -117,7 +112,7 @@ const Footer = () => {
                   to={EXTERNAL_LINKS.Docs}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-block font-light text-xl text-secondary hover-underline-animation after:bg-secondary"
+                  className="inline-block font-light text-xl hover-underline-animation after:bg-secondary"
                 >
                   Docs
                 </Link>
@@ -129,11 +124,10 @@ const Footer = () => {
 
       <BrandTextIcon className="w-full h-auto" />
 
-      <div className="flex flex-col-reverse sm:flex-row items-center justify-between gap-4 sm:gap-0">
-        <p className="text-off-white font-light text-sm">{`©${new Date().getFullYear()} Harmonix`}</p>
+      <p className="absolute bottom-0 lg:bottom-4 font-light text-sm">{`©${new Date().getFullYear()} Harmonix Finance`}</p>
+      <div className={"absolute bottom-0 lg:bottom-4 right-0 lg:right-16"}>
         <BackToTop />
       </div>
-
       <FooterLineIcon className="absolute w-auto h-full bottom-0 right-0 z-10" />
 
       {/* <Legal />

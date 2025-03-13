@@ -1,3 +1,4 @@
+import BtnPrimary from "../BtnPrimary";
 import EarnItem from "./partials/EarnItem";
 import StakeItem from "./partials/StakeItem";
 import SwapItem from "./partials/SwapItem";
@@ -44,51 +45,75 @@ export default function Earn() {
     }
   }, [vault]);
 
+  const handleChangeVault = (type: Vault) => {
+    if (type !== vault) {
+      setVault(type);
+    }
+  };
+
   return (
-    <div className={"lg:px-60 sm:px-3 py-[120px] bg-white text-primary"}>
-      <div
-        className={
-          "text-[32px] lg:text-[64px] space-y-6 mb-16 text-center px-8"
-        }
-      >
-        <h1 className={"font-medium"}>Title</h1>
-        <h1 className={"text-2xl font-normal"}>
-          Dolor sit morbi nunc. Consequat in sit at iaculis. Turpis nibh
-          pellentesque turpis ac interdum ut.
-        </h1>
-      </div>
+    <div className={"lg:px-60 sm:px-3 py-[120px] bg-white text-dark-green"}>
       <div
         className={"lg:flex lg:justify-between lg:items-center px-8 lg:px-0"}
       >
-        <div className={"lg:w-2/5 my-24 lg:pl-16 space-y-6 sm:mx-2"}>
+        <div className={"lg:w-2/5 my-24 lg:pl-16 space-y-8 sm:mx-2"}>
           {data.map((item, index) => {
             if (item.type === vault) {
               return (
-                <div className={"space-y-4"}>
-                  <h1 className={"text-5xl font-medium uppercase"}>
-                    {item.title}
-                  </h1>
-                  <p className={"pr-4"}>{item.description}</p>
-                  <Button
-                    as={Link}
-                    color="primary"
-                    size="lg"
-                    className="rounded-full bg-secondary text-primary shadow-sm"
-                    to={EXTERNAL_LINKS.App}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Launch App
-                  </Button>
+                <div key={index} className={"flex space-x-6"}>
+                  <div className={"relative"}>
+                    <div
+                      className={
+                        "text-2xl w-[46px] h-[46px] rounded-full bg-light-yellow flex justify-center items-center"
+                      }
+                    >
+                      {index + 1}
+                    </div>
+                    {index !== data.length - 1 && (
+                      <div
+                        className={
+                          "before:absolute before:w-[1px] before:h-[80%] before:bg-gradient-line before:left-1/2 mt-[10px]"
+                        }
+                      ></div>
+                    )}
+                  </div>
+                  <div className={"space-y-4"}>
+                    <h1 className={"text-[40px] font-medium uppercase"}>
+                      {item.title}
+                    </h1>
+                    <p className={"pr-4 text-xl text-sub-title-2"}>
+                      {item.description}
+                    </p>
+                    <BtnPrimary title={"Launch App"} to={EXTERNAL_LINKS.App} />
+                  </div>
                 </div>
               );
             }
             return (
-              <div
-                className={"text-5xl cursor-pointer opacity-60"}
-                onClick={() => setVault(item.type)}
-              >
-                {item.title}
+              <div key={index} className={"flex space-x-6"}>
+                <div className={"relative"}>
+                  <div
+                    className={
+                      "text-2xl w-[46px] h-[46px] rounded-full bg-bg-grey flex justify-center items-center cursor-pointer"
+                    }
+                    onClick={() => handleChangeVault(item.type)}
+                  >
+                    {index + 1}
+                  </div>
+                  {index !== data.length - 1 && (
+                    <div
+                      className={
+                        "before:absolute before:w-[1px] before:h-[45%] before:bg-bg-grey before:left-1/2 mt-2"
+                      }
+                    ></div>
+                  )}
+                </div>
+                <div
+                  className={"text-5xl cursor-pointer opacity-60"}
+                  onClick={() => handleChangeVault(item.type)}
+                >
+                  {item.title}
+                </div>
               </div>
             );
           })}
