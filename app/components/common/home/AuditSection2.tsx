@@ -10,12 +10,15 @@ export default function AuditSection2() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
       viewport={{ once: true }}
-      className={"lg:px-60 py-[120px] bg-white text-dark-green space-y-16  px-8"}
+      className={
+        "lg:px-60 py-[120px] bg-white text-dark-green space-y-16  px-8"
+      }
     >
       <div
         className={
-          "py-[46px] space-y-6 text-center bg-light-yellow rounded-3xl flex flex-col items-center"
+          "py-[46px] space-y-6 text-center rounded-3xl flex flex-col items-center bg-gradient-to-[300deg] from-transparent via-[rgba(226,246,161,0.5)] to-[rgba(226,246,161,0.5)] bg-cover bg-center bg-lightgray"
         }
+        style={{backgroundImage: "url('/bg.png')"}}
       >
         <p className={"font-medium text-[32px] lg:text-[64px]"}>Audit</p>
         <p className={"font-normal text-2xl"}>

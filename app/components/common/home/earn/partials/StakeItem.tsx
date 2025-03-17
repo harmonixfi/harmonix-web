@@ -1,8 +1,8 @@
 import Alplaticks from "../../../../assets/images/alphaticks.png";
 import Nansen from "../../../../assets/images/nansen.png";
 import ValiDAO from "../../../../assets/images/valiDAO.png";
-import { VectorIcon } from "~/components/icons";
 import { motion } from "framer-motion";
+import { VectorIcon } from "~/components/icons";
 
 export default function StakeItem() {
   return (
@@ -12,7 +12,7 @@ export default function StakeItem() {
       transition={{ duration: 0.5, delay: 0.2 }}
       viewport={{ once: true }}
       className={
-        "rounded-3xl bg-bg-grey p-4 lg:px-10 lg:py-[97px] text-primary"
+        "rounded-3xl bg-grey-01 p-4 lg:px-10 lg:py-[97px] text-primary"
       }
     >
       <div className={"grid grid-cols-2 gap-2"}>
@@ -47,7 +47,7 @@ export default function StakeItem() {
                 "font-normal text-3xl lg:text-[40px] text-sub-title text-left lg:text-center pl-6 lg:pl-0"
               }
             >
-              4.39
+              0.43
             </h1>
             <p
               className={
@@ -60,29 +60,31 @@ export default function StakeItem() {
         </div>
       </div>
       <div className={"grid grid-cols-1 lg:grid-cols-3 gap-2 mt-2 text-center"}>
-        <div className={"py-6 px-4 bg-white rounded-3xl space-x-2"}>
+        <div className={"py-6 px-4 bg-white rounded-3xl space-y-2"}>
           <div className={"flex justify-center"}>
             <img src={ValiDAO} alt="" />
           </div>
-          <p>ValiDAO</p>
+          <p className={"bg-yellow-y20 rounded-3xl"}>ValiDAO</p>
           <p className={"text-lg font-bold"}>5,292</p>
         </div>
-        <div className={"py-6 px-4 bg-white rounded-3xl space-x-2"}>
+        <div className={"py-6 px-4 bg-white rounded-3xl space-y-2"}>
           <div className={"flex justify-center"}>
             <img src={Alplaticks} alt="" />
           </div>
-          <p>Alphaticks</p>
+          <p className={"bg-yellow-y20 rounded-3xl"}>Alphaticks</p>
           <p className={"text-lg font-bold"}>5,015</p>
         </div>
-        <div className={"py-6 px-4 bg-white rounded-3xl space-x-2"}>
-          <div className={"flex justify-center items-center h-[40px]"}>
-            <img src={Nansen} alt="" />
+        <div className={"py-6 px-4 bg-white rounded-3xl space-y-2"}>
+          <div className={"flex justify-center items-center h-[40px] space-x-2"}>
+            <div className={"bg-black"}>
+              <img src={Nansen} alt="" style={{background: `lightgray 50% / cover no-repeat`}} />
+            </div>
             <VectorIcon />
           </div>
-          <p>Nansen x Hypurr</p>
+          <p className={"bg-yellow-y20 rounded-3xl"}>Nansen x Hypurr</p>
           <p className={"text-lg font-bold"}>42,373</p>
         </div>
       </div>
-      </motion.div>
+    </motion.div>
   );
 }

@@ -102,7 +102,7 @@ const Navbar = () => {
               href={EXTERNAL_LINKS.Dashboard}
               target="_blank"
               rel="noreferrer"
-              className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
+              className="h-full px-4 py-2 rounded-full hover:bg-light-yellow hover:opacity-100"
             >
               Dashboard
             </NextUiLink>
@@ -113,7 +113,7 @@ const Navbar = () => {
               href={EXTERNAL_LINKS.Docs}
               target="_blank"
               rel="noreferrer"
-              className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
+              className="h-full px-4 py-2 rounded-full hover:bg-light-yellow hover:opacity-100"
             >
               Docs
             </NextUiLink>
@@ -127,7 +127,7 @@ const Navbar = () => {
               target="_blank"
               rel="noreferrer"
               size="lg"
-              className="bg-transparent border border-primary rounded-full text-dark-green hover:bg-secondary hover:border-secondary"
+              className="bg-transparent border border-primary rounded-full text-dark-green hover:bg-light-yellow hover:border-secondary"
             >
               Launch App
             </Button>

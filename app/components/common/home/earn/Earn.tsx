@@ -56,7 +56,7 @@ export default function Earn() {
       <div
         className={"lg:flex lg:justify-between lg:items-center px-8 lg:px-0"}
       >
-        <div className={"lg:w-2/5 my-24 lg:pl-16 space-y-8 sm:mx-2"}>
+        <div className={"lg:w-1/2 my-24 lg:pl-16 space-y-8 sm:mx-2"}>
           {data.map((item, index) => {
             if (item.type === vault) {
               return (
@@ -118,7 +118,7 @@ export default function Earn() {
             );
           })}
         </div>
-        <div className={"lg:w-3/5"}>{renderUI()}</div>
+        <div className={"lg:w-1/2"}>{renderUI()}</div>
       </div>
     </div>
   );

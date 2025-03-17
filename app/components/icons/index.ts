@@ -61,3 +61,4 @@ export { default as SubtractIcon } from "./Subtract";
 export { default as Light1Icon } from "./coreTech/light1";
 export { default as Light2Icon } from "./coreTech/light2";
 export { default as Light3Icon } from "./coreTech/light3";
+export { default as KernelIcon } from "./Kernel";

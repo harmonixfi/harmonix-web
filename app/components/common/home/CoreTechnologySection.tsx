@@ -7,11 +7,17 @@ import YieldOptimization from "~/components/icons/YieldOptimization";
 export default function CoreTechnologySection() {
   return (
     <div
-      className={"px-8 py-[60px] lg:py-[120px] lg:px-60 bg-primary space-y-16"}
+      className={
+        "px-8 py-[60px] lg:py-[120px] lg:px-60 space-y-16 bg-gradient-to-r from-[#f1f0eb80] via-[#e2f6a180] to-[#e2f6a180] bg-cover bg-center bg-lightgray"
+      }
+      style={{
+        backgroundImage:
+          "linear-gradient(300deg, rgba(241, 240, 235, 0.50) 7.75%, rgba(226, 246, 161, 0.50) 92.25%), url('/bg.png'); background-blend-mode: color, normal",
+      }}
     >
       <h1
         className={
-          "text-[32px] lg:text-[64px] font-medium text-white text-center"
+          "text-[32px] lg:text-[64px] font-medium text-dark-green text-center"
         }
       >
         Core Technology
@@ -23,7 +29,7 @@ export default function CoreTechnologySection() {
         viewport={{ once: true }}
         className={"lg:grid lg:grid-cols-3 lg:gap-x-10 space-y-5 lg:space-y-0"}
       >
-        <div className={"px-8 py-[46px] rounded-3xl bg-white"}>
+        <div className={"px-8 py-[46px] rounded-3xl bg-bg-grey"}>
           <div
             className={
               "relative bg-[#EDF9F2] py-[35px] rounded-3xl  flex justify-center items-center"
@@ -33,7 +39,7 @@ export default function CoreTechnologySection() {
             <div className={"absolute -right-[8px] -bottom-[10px]"}>
               <Light1Icon />
             </div>
-            <div className={"absolute -right-[8px] -bottom-[40px]"}>
+            <div className={"absolute -right-[8px] -bottom-[10px]"}>
               <Light2Icon />
             </div>
             <div className={"absolute -right-[8px] -bottom-[10px]"}>
@@ -48,8 +54,23 @@ export default function CoreTechnologySection() {
             </div>
           </div>
         </div>
-        <div className={"px-8 py-[46px] rounded-3xl bg-white"}>
-          <BearMarketYield />
+        <div className={"px-8 py-[46px] rounded-3xl bg-bg-grey"}>
+          <div
+            className={
+              "relative bg-[#EDF9F2] py-[15px] rounded-3xl  flex justify-center items-center"
+            }
+          >
+            <BearMarketYield />
+            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+              <Light1Icon />
+            </div>
+            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+              <Light2Icon />
+            </div>
+            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+              <Light3Icon />
+            </div>
+          </div>
           <div className={"mt-[46px]"}>
             <div className={"text-2xl font-bold"}>Bear Market Yield</div>
             <div className={"mt-4 font-normal text-sub-title-2"}>
@@ -59,7 +80,22 @@ export default function CoreTechnologySection() {
           </div>
         </div>
         <div className={"px-8 py-[46px] rounded-3xl bg-white"}>
+        <div
+            className={
+              "relative bg-[#EDF9F2] py-[15px] rounded-3xl  flex justify-center items-center"
+            }
+          >
           <PreciseExecution />
+            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+              <Light1Icon />
+            </div>
+            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+              <Light2Icon />
+            </div>
+            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+              <Light3Icon />
+            </div>
+          </div>
           <div className={"mt-[46px]"}>
             <div className={"text-2xl font-bold"}>Precise Execution</div>
             <div className={"mt-4 font-normal text-sub-title-2"}>

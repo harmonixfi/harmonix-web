@@ -25,7 +25,20 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="bg-[#F5F5F5] font-outfit">
+    <html
+      lang="en"
+      className="font-outfit bg-lightgray bg-cover bg-center"
+      style={{
+        backgroundImage: `url('/bg2.png'), 
+                          linear-gradient(300deg, rgba(241, 240, 235, 0.30) 7.75%, rgba(88, 191, 110, 0.30) 92.25%), 
+                          linear-gradient(300deg, rgba(241, 240, 235, 0.30) 7.75%, rgba(226, 246, 161, 0.30) 92.25%)`,
+        backgroundPosition: "0px 0px",
+        backgroundSize: "131.13% 121.008%",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "#F1F1EB",
+        backgroundBlendMode: "soft-light, hue, normal, normal",
+      }}
+    >
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

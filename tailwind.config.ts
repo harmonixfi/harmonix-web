@@ -17,7 +17,7 @@ export default {
         "gradient-earn":
           "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 2.63%, #FFF 50.29%, rgba(255, 255, 255, 0.00) 97.01%)",
         "gradient-earn2":
-          "linear-gradient(180deg, #FFF -25.7%, rgba(255, 255, 255, 0.00) 100%)",
+          "linear-gradient(179deg, #FFF -24.81%, rgba(255, 255, 255, 0.00) 120.95%)",
         "gradient-text":
           "linear-gradient(180deg, #171918 2.78%, rgba(23, 25, 24, 0.00) 100.56%)",
         "gradient-main":
@@ -52,6 +52,9 @@ export default {
         },
         "yellow-y20": {
           DEFAULT: "#F8FEDA",
+        },
+        "grey-01": {
+          DEFAULT: "#F5F6F6",
         },
       },
       fontFamily: {
