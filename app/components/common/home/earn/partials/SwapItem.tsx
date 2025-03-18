@@ -12,7 +12,7 @@ export default function SwapItem() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
       viewport={{ once: true }}
-      className={"rounded-3xl bg-grey-01 py-4 px-12 lg:py-[97px]"}
+      className={"rounded-3xl bg-grey-01 py-4 px-12 lg:px-[80px] lg:py-[97px]"}
     >
       <div className={"flex items-center justify-between"}>
         <div className={"relative mr-6"}>

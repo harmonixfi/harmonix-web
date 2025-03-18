@@ -146,7 +146,7 @@ const Navbar = () => {
                 base: "py-3",
                 trigger: "p-0",
                 titleWrapper: "flex-none",
-                indicator: "-rotate-90 text-black data-[open=true]:rotate-90",
+                indicator: "-rotate-90 text-dark-green data-[open=true]:rotate-90",
               }}
             >
               <AccordionItem key="about" aria-label="About" title="About">

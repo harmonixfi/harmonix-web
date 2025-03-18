@@ -1,5 +1,13 @@
 import { motion } from "framer-motion";
-import { Light1Icon, Light2Icon, Light3Icon } from "~/components/icons";
+import {
+  CircleIcon,
+  Light1Icon,
+  Light2Icon,
+  Light3Icon,
+  Light4Icon,
+  Light5Icon,
+  Light6Icon,
+} from "~/components/icons";
 import BearMarketYield from "~/components/icons/BearMarketYield";
 import PreciseExecution from "~/components/icons/PreciseExecution";
 import YieldOptimization from "~/components/icons/YieldOptimization";
@@ -36,14 +44,29 @@ export default function CoreTechnologySection() {
             }
           >
             <YieldOptimization />
-            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+            <div className={"absolute right-[0px] bottom-[0px]"}>
               <Light1Icon />
             </div>
-            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+            <div className={"absolute right-[0px] bottom-[0px]"}>
               <Light2Icon />
             </div>
-            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+            <div className={"absolute right-[0px] bottom-[0px]"}>
               <Light3Icon />
+            </div>
+            <div className={"absolute left-[0px] bottom-[0px]"}>
+              <Light4Icon />
+            </div>
+            <div className={"absolute left-[0px] bottom-[0px]"}>
+              <Light5Icon />
+            </div>
+            <div className={"absolute left-[0px] bottom-[0px]"}>
+              <Light6Icon />
+            </div>
+            <div className={"absolute left-[12px] top-[12px]"}>
+              <CircleIcon />
+            </div>
+            <div className={"absolute right-[12px] top-[12px]"}>
+              <CircleIcon />
             </div>
           </div>
           <div className={"mt-[46px] text-center"}>
@@ -61,17 +84,32 @@ export default function CoreTechnologySection() {
             }
           >
             <BearMarketYield />
-            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+            <div className={"absolute right-[0px] bottom-[0px]"}>
               <Light1Icon />
             </div>
-            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+            <div className={"absolute right-[0px] bottom-[0px]"}>
               <Light2Icon />
             </div>
-            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+            <div className={"absolute right-[0px] bottom-[0px]"}>
               <Light3Icon />
             </div>
+            <div className={"absolute left-[0px] bottom-[0px]"}>
+              <Light4Icon />
+            </div>
+            <div className={"absolute left-[0px] bottom-[0px]"}>
+              <Light5Icon />
+            </div>
+            <div className={"absolute left-[0px] bottom-[0px]"}>
+              <Light6Icon />
+            </div>
+            <div className={"absolute left-[12px] top-[12px]"}>
+              <CircleIcon />
+            </div>
+            <div className={"absolute right-[12px] top-[12px]"}>
+              <CircleIcon />
+            </div>
           </div>
-          <div className={"mt-[46px]"}>
+          <div className={"mt-[46px] text-center"}>
             <div className={"text-2xl font-bold"}>Bear Market Yield</div>
             <div className={"mt-4 font-normal text-sub-title-2"}>
               Harmonix's key differentiator - generating consistent yield even
@@ -80,23 +118,38 @@ export default function CoreTechnologySection() {
           </div>
         </div>
         <div className={"px-8 py-[46px] rounded-3xl bg-white"}>
-        <div
+          <div
             className={
               "relative bg-[#EDF9F2] py-[15px] rounded-3xl  flex justify-center items-center"
             }
           >
-          <PreciseExecution />
-            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+            <PreciseExecution />
+            <div className={"absolute right-[0px] bottom-[0px]"}>
               <Light1Icon />
             </div>
-            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+            <div className={"absolute right-[0px] bottom-[0px]"}>
               <Light2Icon />
             </div>
-            <div className={"absolute -right-[8px] -bottom-[10px]"}>
+            <div className={"absolute right-[0px] bottom-[0px]"}>
               <Light3Icon />
             </div>
+            <div className={"absolute left-[0px] bottom-[0px]"}>
+              <Light4Icon />
+            </div>
+            <div className={"absolute left-[0px] bottom-[0px]"}>
+              <Light5Icon />
+            </div>
+            <div className={"absolute left-[0px] bottom-[0px]"}>
+              <Light6Icon />
+            </div>
+            <div className={"absolute left-[12px] top-[12px]"}>
+              <CircleIcon />
+            </div>
+            <div className={"absolute right-[12px] top-[12px]"}>
+              <CircleIcon />
+            </div>
           </div>
-          <div className={"mt-[46px]"}>
+          <div className={"mt-[46px] text-center"}>
             <div className={"text-2xl font-bold"}>Precise Execution</div>
             <div className={"mt-4 font-normal text-sub-title-2"}>
               Minimizing slippage and optimizing transaction efficiency for

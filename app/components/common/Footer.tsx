@@ -83,7 +83,7 @@ const Footer = () => {
                         to={item.link}
                         target={item.isExternal ? "_blank" : undefined}
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 font-light text-xl hover-underline-animation after:bg-white"
+                        className="inline-flex items-center gap-2 font-light text-xl hover-underline-animation after:bg-dark-green"
                       >
                         {"icon" in item && <item.icon className="w-5 h-5" />}
                         {item.text}
@@ -125,7 +125,7 @@ const Footer = () => {
       <BrandTextIcon className="w-full h-auto" />
 
       <p className="absolute bottom-0 lg:bottom-4 font-light text-sm">{`©${new Date().getFullYear()} Harmonix Finance`}</p>
-      <div className={"absolute bottom-0 lg:bottom-4 right-0 lg:right-16"}>
+      <div className={"absolute bottom-0 lg:bottom-4 right-0 lg:right-16 z-50"}>
         <BackToTop />
       </div>
       <FooterLineIcon className="absolute w-auto h-full bottom-0 right-0 z-10" />

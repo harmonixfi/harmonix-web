@@ -22,7 +22,7 @@ export default function EarnItem() {
           </p>
           <span
             className={
-              "absolute bg-[#67FCC2] text-xs lg:text-sm top-0 -right-[25px] lg:right-0 py-1 px-1 lg:px-3 rounded-3xl -rotate-6"
+              "absolute bg-[#67FCC2] text-xs lg:text-sm top-0 -right-[25px] lg:right-[20px] py-1 px-1 lg:px-3 rounded-3xl -rotate-6"
             }
           >
             PnL(+3 33 USDC)

@@ -27,7 +27,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
-      className="font-outfit bg-lightgray bg-cover bg-center"
+      className="font-outfit"
       style={{
         backgroundImage: `url('/bg2.png'), 
                           linear-gradient(300deg, rgba(241, 240, 235, 0.30) 7.75%, rgba(88, 191, 110, 0.30) 92.25%), 

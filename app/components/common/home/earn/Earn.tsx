@@ -4,6 +4,7 @@ import StakeItem from "./partials/StakeItem";
 import SwapItem from "./partials/SwapItem";
 import { Button } from "@nextui-org/react";
 import { Link } from "@remix-run/react";
+import { motion } from "framer-motion";
 import { useCallback, useState } from "react";
 import { Vault } from "~/@types/common";
 import { EXTERNAL_LINKS } from "~/constants/url";
@@ -52,7 +53,7 @@ export default function Earn() {
   };
 
   return (
-    <div className={"lg:px-60 sm:px-3 py-[120px] bg-white text-dark-green"}>
+    <div className={"lg:px-48 sm:px-3 py-[120px] bg-white text-dark-green"}>
       <div
         className={"lg:flex lg:justify-between lg:items-center px-8 lg:px-0"}
       >
@@ -62,13 +63,17 @@ export default function Earn() {
               return (
                 <div key={index} className={"flex space-x-6"}>
                   <div className={"relative"}>
-                    <div
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.5 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, ease: "easeInOut" }}
+                      viewport={{ once: true }}
                       className={
                         "text-2xl w-[46px] h-[46px] rounded-full bg-light-yellow flex justify-center items-center"
                       }
                     >
                       {index + 1}
-                    </div>
+                    </motion.div>
                     {index !== data.length - 1 && (
                       <div
                         className={
@@ -77,7 +82,13 @@ export default function Earn() {
                       ></div>
                     )}
                   </div>
-                  <div className={"space-y-4"}>
+                  <motion.div
+                    initial={{ opacity: 0, y: 200 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className={"space-y-4"}
+                  >
                     <h1 className={"text-[40px] font-medium uppercase"}>
                       {item.title}
                     </h1>
@@ -85,7 +96,7 @@ export default function Earn() {
                       {item.description}
                     </p>
                     <BtnPrimary title={"Launch App"} to={EXTERNAL_LINKS.App} />
-                  </div>
+                  </motion.div>
                 </div>
               );
             }

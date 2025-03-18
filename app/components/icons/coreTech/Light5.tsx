@@ -1,27 +1,28 @@
 import { IconProps } from "~/@types/common";
 
-export default function Light1({ className }: IconProps) {
+export default function Light5({ className }: IconProps) {
   return (
     <svg
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
-      width="104"
-      height="81"
-      viewBox="0 0 104 81"
+      width="239"
+      height="49"
+      viewBox="0 0 239 49"
       fill="none"
     >
       <g style={{ mixBlendMode: "screen" }} opacity="0.5">
         <path
-          d="M118.9 143.729V-1.52588e-05L0.203751 143.729H118.9Z"
-          fill="url(#paint0_linear_158_3681)"
+          d="M-13.9999 61.0174L-14 0.143448L238.591 113.688L-13.9999 61.0174Z"
+          fill="url(#paint0_linear_209_3736)"
         />
       </g>
       <defs>
         <linearGradient
-          id="paint0_linear_158_3681"
-          x1="59.5519"
-          y1="143.729"
-          x2="59.5519"
-          y2="-1.52588e-05"
+          id="paint0_linear_209_3736"
+          x1="112.296"
+          y1="113.688"
+          x2="112.296"
+          y2="0.143448"
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="white" stop-opacity="0" />
