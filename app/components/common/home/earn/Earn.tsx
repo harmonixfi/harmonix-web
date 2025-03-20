@@ -129,7 +129,15 @@ export default function Earn() {
             );
           })}
         </div>
-        <div className={"lg:w-1/2"}>{renderUI()}</div>
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className={"lg:w-1/2"}
+        >
+          {renderUI()}
+        </motion.div>
       </div>
     </div>
   );

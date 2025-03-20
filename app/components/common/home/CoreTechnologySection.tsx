@@ -35,7 +35,7 @@ export default function CoreTechnologySection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
-        className={"lg:grid lg:grid-cols-3 lg:gap-x-10 space-y-5 lg:space-y-0"}
+        className={"lg:grid lg:grid-cols-3 lg:gap-x-12 space-y-5 lg:space-y-0"}
       >
         <div className={"px-8 py-[46px] rounded-3xl bg-bg-grey"}>
           <div
@@ -77,7 +77,9 @@ export default function CoreTechnologySection() {
             </div>
           </div>
         </div>
-        <div className={"px-8 py-[46px] rounded-3xl bg-bg-grey"}>
+        <div
+          className={"px-8 py-[46px] rounded-3xl bg-bg-grey lg:-translate-y-7"}
+        >
           <div
             className={
               "relative bg-[#EDF9F2] py-[15px] rounded-3xl  flex justify-center items-center"

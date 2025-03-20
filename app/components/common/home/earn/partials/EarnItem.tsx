@@ -3,11 +3,7 @@ import { HarmonixPointIcon, KernelIcon } from "~/components/icons";
 
 export default function EarnItem() {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 200 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-      viewport={{ once: true }}
+    <div
       className={"rounded-3xl bg-grey-01 p-4 lg:p-10 space-y-6 text-dark-green"}
     >
       <div
@@ -81,6 +77,6 @@ export default function EarnItem() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

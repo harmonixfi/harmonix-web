@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Purr from "~/components/assets/images/purr.png";
 import ArrowDown from "~/components/icons/ArrowDown";
 import Dai from "~/components/icons/Dai";
@@ -7,11 +6,7 @@ import Usdt from "~/components/icons/Usdt";
 
 export default function SwapItem() {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 200 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5, delay: 0.2 }}
-      viewport={{ once: true }}
+    <div
       className={"rounded-3xl bg-grey-01 py-4 px-12 lg:px-[80px] lg:py-[97px]"}
     >
       <div className={"flex items-center justify-between"}>
@@ -69,6 +64,6 @@ export default function SwapItem() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
