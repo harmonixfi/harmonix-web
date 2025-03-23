@@ -12,8 +12,8 @@ export default function SwapItem() {
       <div className={"flex items-center justify-between"}>
         <div className={"relative mr-6"}>
           <div className={"p-4 lg:py-7 lg:px-9 bg-white rounded-3xl mb-1"}>
-            <div className={"text-sm opacity-50"}>Swap</div>
-            <h1 className={"text-4xl lg:text-7xl font-normal text-sub-title"}>
+            <div className={"text-sm opacity-50  font-outfit"}>Swap</div>
+            <h1 className={"text-4xl lg:text-7xl font-normal font-outfit text-sub-title"}>
               1000
             </h1>
           </div>
@@ -24,8 +24,8 @@ export default function SwapItem() {
                 "linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.00) 100%)",
             }}
           >
-            <div className={"text-sm opacity-50"}>You receive</div>
-            <h1 className={"text-4xl lg:text-7xl font-normal"}>1028</h1>
+            <div className={"text-sm opacity-50  font-outfit"}>You receive</div>
+            <h1 className={"text-4xl lg:text-7xl font-normal font-outfit"}>1028</h1>
           </div>
           <div
             className={
@@ -42,25 +42,25 @@ export default function SwapItem() {
             <div className={"w-10 h-10"}>
               <img src={Purr} className={"w-8 h-8"} />
             </div>
-            <span>PURR</span>
+            <span className={'font-outfit'}>PURR</span>
           </div>
           <div className={"flex space-x-1 lg:justify-between items-center"}>
             <div className={"w-10 h-10"}>
               <Usdc className={"w-8 h-8"} />
             </div>
-            <span>USDC</span>
+            <span className={'font-outfit'}>USDC</span>
           </div>
           <div className={"flex space-x-1 lg:justify-between items-center"}>
             <div className={"w-10 h-10"}>
               <Usdt className={"w-8 h-8"} />
             </div>
-            <span>USDT</span>
+            <span className={'font-outfit'}>USDT</span>
           </div>
-          <div className={"flex space-x-1 lg:justify-between items-center"}>
+          <div className={"flex space-x-1 items-center"}>
             <div className={"w-10 h-10"}>
               <Dai className={"w-8 h-8"} />
             </div>
-            <span>DAI</span>
+            <span className={'font-outfit'}>DAI</span>
           </div>
         </div>
       </div>

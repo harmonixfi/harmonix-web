@@ -16,7 +16,7 @@ export default function PlusFaqs({ className }: IconProps) {
         x2="24"
         y2="13.2334"
         stroke="#171918"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <line
         x1="12.25"
@@ -24,7 +24,7 @@ export default function PlusFaqs({ className }: IconProps) {
         x2="12.25"
         y2="0.983398"
         stroke="#171918"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
     </svg>
   );

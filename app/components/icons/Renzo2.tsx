@@ -10,7 +10,7 @@ export default function Renzo2({ className }: IconProps) {
       viewBox="0 0 64 65"
       fill="none"
     >
-      <g clip-path="url(#clip0_67_3885)">
+      <g clipPath="url(#clip0_67_3885)">
         <circle cx="32" cy="32.48" r="31.5162" fill="white" />
         <path
           d="M56 34.7217C56 34.7689 56 34.8161 56 34.8633C54.9624 46.3715 45.8124 55.3801 34.6343 56.5121C34.5399 56.5121 34.4927 56.5121 34.3983 56.5121L56 34.7217Z"

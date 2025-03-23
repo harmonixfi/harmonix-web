@@ -36,7 +36,7 @@ const Navbar = () => {
         isMenuOpen={isMenuOpen}
         shouldHideOnScroll
         classNames={{
-          base: "w-full sm:px-12 sm:py-0 lg:px-6 lg:py-4 bg-white lg:rounded-3xl",
+          base: "w-full sm:px-12 sm:py-0 lg:px-2  bg-white lg:rounded-3xl",
           wrapper: "px-4 sm:px-0",
         }}
         maxWidth="full"

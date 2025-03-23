@@ -10,14 +10,14 @@ export default function EigenLayerPoint({ className }: IconProps) {
       viewBox="0 0 65 65"
       fill="none"
     >
-      <g clip-path="url(#clip0_67_3890)">
+      <g clipPath="url(#clip0_67_3890)">
         <path
           d="M64.5 32.4805C64.5 14.8074 50.1731 0.480469 32.5 0.480469C14.8269 0.480469 0.5 14.8074 0.5 32.4805C0.5 50.1536 14.8269 64.4805 32.5 64.4805C50.1731 64.4805 64.5 50.1536 64.5 32.4805Z"
           fill="#190C6D"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M27.8437 33.2317V18.4805H20.5V33.2317V47.9829H42.531V40.6073H35.1874V33.2317H42.531V25.8561H38.8528V18.4805H31.6492V22.1747H35.1746V33.2317H31.4964V40.6073H27.8437V33.2317ZM42.531 25.8561H46.2092V18.4805H42.531V25.8561Z"
           fill="white"
         />

@@ -10,7 +10,7 @@ export default function Eth ({ className }: IconProps) {
       viewBox="0 0 64 65"
       fill="none"
     >
-      <g clip-path="url(#clip0_67_3884)">
+      <g clipPath="url(#clip0_67_3884)">
         <path
           d="M64 32.4805C64 14.8074 49.6731 0.480469 32 0.480469C14.3269 0.480469 0 14.8074 0 32.4805C0 50.1536 14.3269 64.4805 32 64.4805C49.6731 64.4805 64 50.1536 64 32.4805Z"
           fill="#241352"
@@ -29,9 +29,9 @@ export default function Eth ({ className }: IconProps) {
           y2="26.277"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#29BCFA" />
-          <stop offset="0.43" stop-color="#6464E4" />
-          <stop offset="1" stop-color="#B45AFA" />
+          <stop stopColor="#29BCFA" />
+          <stop offset="0.43" stopColor="#6464E4" />
+          <stop offset="1" stopColor="#B45AFA" />
         </linearGradient>
         <clipPath id="clip0_67_3884">
           <rect

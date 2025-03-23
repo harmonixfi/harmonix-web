@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { HarmonixPointIcon, KernelIcon } from "~/components/icons";
 
 export default function EarnItem() {
@@ -8,24 +7,25 @@ export default function EarnItem() {
     >
       <div
         className={
-          "py-6 px-10 text-center bg-[#ffffffb3] w-full rounded-3xl shadow-[30px_30px_60px_0px_rgba(229, 241, 231, 0.50)]"
+          "py-6 px-5 lg:px-10 font-outfit text-center bg-[#ffffffb3] w-full rounded-3xl shadow-[30px_30px_60px_0px_rgba(229, 241, 231, 0.50)]"
         }
       >
         <p className={"text-[15px] font-medium"}>Your Position</p>
-        <div className={"mt-2 relative"}>
-          <p className={"text-5xl lg:text-[78px]"}>
-            63.59 <span className={"text-lg lg:text-[32px]"}>USDC</span>
-          </p>
-          <span
-            className={
-              "absolute bg-[#67FCC2] text-xs lg:text-sm top-0 -right-[25px] lg:right-[20px] py-1 px-1 lg:px-3 rounded-3xl -rotate-6"
-            }
-          >
-            PnL(+3 33 USDC)
-          </span>
+        <div className={"mt-2 flex items-center justify-center"}>
+          <p className={"text-5xl lg:text-[78px]"}>63.59</p>
+          <div className={'ml-1'}>
+            <div
+              className={
+                "bg-[#67FCC2] text-xs lg:text-sm p-1 rounded-3xl -rotate-6 lg:mb-2"
+              }
+            >
+              PnL(+3 33 USDC)
+            </div>
+            <p className={"text-lg lg:text-[32px] text-left ml-3"}>USDC</p>
+          </div>
         </div>
       </div>
-      <div className={"grid grid-cols-1 lg:grid-cols-2 gap-2 text-center"}>
+      <div className={"grid grid-cols-2 gap-2 text-center"}>
         <div
           className={"bg-white rounded-3xl px-4 py-6 space-y-2 text-main-green"}
         >
@@ -34,7 +34,7 @@ export default function EarnItem() {
               "flex items-center justify-center bg-yellow-y20 rounded-[64px]"
             }
           >
-            <p className={"text-sm"}>Initial deposit</p>
+            <p className={"text-sm font-outfit"}>Initial deposit</p>
           </div>
           <p className={"text-lg font-medium"}>30 USDC</p>
         </div>
@@ -46,7 +46,7 @@ export default function EarnItem() {
               "flex items-center justify-center bg-yellow-y20 rounded-[64px]"
             }
           >
-            <p className={"text-sm"}>Pending withdrawal</p>
+            <p className={"text-sm font-outfit"}>Pending withdrawal</p>
           </div>
           <p className={"text-lg font-medium"}>10 USDC</p>
         </div>
@@ -64,7 +64,7 @@ export default function EarnItem() {
                 Harmonix points
               </span>
             </div>
-            <p className={"text-2xl lg:text-[36px] font-bold"}>2,207.9</p>
+            <p className={"text-2xl lg:text-[36px] font-bold font-outfit"}>2,207.9</p>
           </div>
           <div className={"space-y-1"}>
             <div className={"flex items-center justify-center space-x-2"}>
@@ -73,7 +73,7 @@ export default function EarnItem() {
                 Kernel Points
               </span>
             </div>
-            <p className={"text-2xl lg:text-[36px] font-bold"}>33.48K</p>
+            <p className={"text-2xl lg:text-[36px] font-bold font-outfit"}>33.48K</p>
           </div>
         </div>
       </div>

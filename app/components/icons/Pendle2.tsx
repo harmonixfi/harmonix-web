@@ -13,7 +13,7 @@ export default function Pendle2({ className }: IconProps) {
       <path
         d="M30.5392 50.1258C39.8229 50.1258 47.3487 42.6 47.3487 33.3163C47.3487 24.0327 39.8229 16.5068 30.5392 16.5068C21.2556 16.5068 13.7297 24.0327 13.7297 33.3163C13.7297 42.6 21.2556 50.1258 30.5392 50.1258Z"
         fill="#173132"
-        fill-opacity="0.5"
+        fillOpacity="0.5"
       />
       <path
         d="M22.977 58.5282C28.0843 58.5282 32.2245 54.388 32.2245 49.2807C32.2245 44.1735 28.0843 40.0332 22.977 40.0332C17.8697 40.0332 13.7295 44.1735 13.7295 49.2807C13.7295 54.388 17.8697 58.5282 22.977 58.5282Z"
@@ -29,8 +29,8 @@ export default function Pendle2({ className }: IconProps) {
         height="26"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M21.9597 42.2434V17.46H24.0212V42.2434H21.9597Z"
           fill="white"
         />

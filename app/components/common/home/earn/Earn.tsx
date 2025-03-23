@@ -2,8 +2,6 @@ import BtnPrimary from "../BtnPrimary";
 import EarnItem from "./partials/EarnItem";
 import StakeItem from "./partials/StakeItem";
 import SwapItem from "./partials/SwapItem";
-import { Button } from "@nextui-org/react";
-import { Link } from "@remix-run/react";
 import { motion } from "framer-motion";
 import { useCallback, useState } from "react";
 import { Vault } from "~/@types/common";
@@ -89,7 +87,7 @@ export default function Earn() {
                     viewport={{ once: true }}
                     className={"space-y-4"}
                   >
-                    <h1 className={"text-[40px] font-medium uppercase"}>
+                    <h1 className={"text-[40px] font-medium capitalize"}>
                       {item.title}
                     </h1>
                     <p className={"pr-4 text-xl text-sub-title-2"}>
@@ -108,6 +106,7 @@ export default function Earn() {
                       "text-2xl w-[46px] h-[46px] rounded-full bg-bg-grey flex justify-center items-center cursor-pointer"
                     }
                     onClick={() => handleChangeVault(item.type)}
+                    onMouseEnter={() => handleChangeVault(item.type)}
                   >
                     {index + 1}
                   </div>
@@ -120,8 +119,9 @@ export default function Earn() {
                   )}
                 </div>
                 <div
-                  className={"text-5xl cursor-pointer opacity-60"}
+                  className={"text-5xl cursor-pointer opacity-60 capitalize"}
                   onClick={() => handleChangeVault(item.type)}
+                  onMouseEnter={() => handleChangeVault(item.type)}
                 >
                   {item.title}
                 </div>
@@ -130,8 +130,8 @@ export default function Earn() {
           })}
         </div>
         <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
           className={"lg:w-1/2"}

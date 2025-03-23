@@ -24,8 +24,8 @@ export default function Swell2({ className }: IconProps) {
           y2="82.8102"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#3068EF" />
-          <stop offset="1" stop-color="#1322AC" />
+          <stop stopColor="#3068EF" />
+          <stop offset="1" stopColor="#1322AC" />
         </linearGradient>
       </defs>
     </svg>

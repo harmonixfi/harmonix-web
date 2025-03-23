@@ -16,11 +16,12 @@ export default function CoreTechnologySection() {
   return (
     <div
       className={
-        "px-8 py-[60px] lg:py-[120px] lg:px-60 space-y-16 bg-gradient-to-r from-[#f1f0eb80] via-[#e2f6a180] to-[#e2f6a180] bg-cover bg-center bg-lightgray"
+        "px-8 py-[60px] lg:py-[120px] lg:px-60 space-y-16"
       }
       style={{
         backgroundImage:
-          "linear-gradient(300deg, rgba(241, 240, 235, 0.50) 7.75%, rgba(226, 246, 161, 0.50) 92.25%), url('/bg.png'); background-blend-mode: color, normal",
+          "linear-gradient(300deg, rgba(241, 240, 235, 0.50) 7.75%, rgba(226, 246, 161, 0.50) 92.25%), url('/bg.png') lightgray 50% / cover no-repeat",
+        backgroundBlendMode: "color, normal",
       }}
     >
       <h1

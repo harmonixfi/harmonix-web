@@ -67,10 +67,10 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className={"lg:w-1/3 space-y-6"}
+          className={"lg:w-1/2 space-y-6"}
         >
           <p className={"text-[64px] font-medium"}>FAQs</p>
-          <p className={"text-base font-normal"}>
+          <p className={"text-2xl font-normal"}>
             Don't see the answer you're looking for?
           </p>
           <BtnPrimary to={EXTERNAL_LINKS.App} title={"Get in touch"} />
@@ -80,12 +80,12 @@ export default function FAQSection() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className={"lg:w-2/3"}
+          className={"lg:w-1/2"}
         >
           <Accordion
             selectionMode={"multiple"}
             itemClasses={{
-              base: "bg-[#edf9f24d] px-4 py-3 lg:px-8 lg:py-6 text-primary rounded-3xl border border-solid border-[#F1F1EB]",
+              base: "bg-[#edf9f24d] px-4 py-1 text-primary rounded-3xl border border-solid border-[#F1F1EB]",
             }}
             showDivider={false}
             className={"space-y-3"}
@@ -96,7 +96,7 @@ export default function FAQSection() {
                   key={index}
                   aria-label={"What is Harmonix Finance?"}
                   title={
-                    <p className={"text-lg lg:text-2xl text-dark-green"}>
+                    <p className={"text-lg text-dark-green"}>
                       {item.title}
                     </p>
                   }

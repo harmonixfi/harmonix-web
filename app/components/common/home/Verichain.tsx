@@ -5,7 +5,7 @@ export default function Verichain() {
     <div className={"flex justify-center text-primary "}>
       <div
         className={
-          "p-6 bg-linear bg-white w-[343px] rounded-3xl flex items-center"
+          "p-6 bg-linear bg-white rounded-3xl flex items-center"
         }
       >
         <div className={"space-x-2"}>
@@ -15,7 +15,7 @@ export default function Verichain() {
         <div className={"w-[1px] h-[25px] mx-6 bg-black"}></div>
         <div className={"flex items-center gap-[10px]"}>
           <div>Audit</div>
-          <VerichainIcon />
+          <VerichainIcon className={"w-28 h-[35px] lg:w-full lg:h-[50px]"} />
         </div>
       </div>
     </div>

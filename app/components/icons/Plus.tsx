@@ -15,7 +15,7 @@ export default function Plus({ className }: IconProps) {
         x2="76"
         y2="37.4902"
         stroke="#173132"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <line
         x1="37.25"
@@ -23,7 +23,7 @@ export default function Plus({ className }: IconProps) {
         x2="37.25"
         y2="0.240234"
         stroke="#173132"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
     </svg>
   );

@@ -12,21 +12,25 @@ export default function StakeItem() {
       }
     >
       <div className={"grid grid-cols-2 gap-2"}>
-        <div className={"px-3 py-6 lg:py-6 lg:px-10 bg-white rounded-3xl"}>
-          <p className={"font-medium text-center text-[15px] text-main-green"}>
+        <div
+          className={
+            "px-3 py-6 lg:py-6 lg:px-10 bg-white rounded-3xl"
+          }
+        >
+          <p className={"font-medium text-center text-[15px] text-main-green font-outfit"}>
             Staking Balance
           </p>
-          <div className={"relative text-center mt-1"}>
+          <div className={"flex justify-center text-center mt-1"}>
             <h1
               className={
-                "font-normal text-3xl lg:text-[40px] text-sub-title text-left lg:text-center pl-6 lg:pl-0"
+                "font-normal font-outfit text-3xl lg:text-[40px] text-sub-title text-left lg:text-center pl-6 lg:pl-0"
               }
             >
               4.39
             </h1>
             <p
               className={
-                "uppercase text-green absolute top-[4px] -right-[1px] lg:top-[0px] lg:-right-[5px] text-sm lg:text-base"
+                "uppercase font-outfit text-green text-sm lg:text-base ml-1"
               }
             >
               hype
@@ -34,20 +38,24 @@ export default function StakeItem() {
           </div>
         </div>
         <div className={"px-3 py-6 lg:py-6 lg:px-10 bg-white rounded-3xl"}>
-          <p className={"font-medium text-center text-[15px] text-main-green"}>
+          <p
+            className={
+              "font-medium text-center text-[15px] text-main-green font-outfit"
+            }
+          >
             Total Staked
           </p>
-          <div className={"relative text-center mt-1"}>
+          <div className={"flex justify-center mt-1"}>
             <h1
               className={
-                "font-normal text-3xl lg:text-[40px] text-sub-title text-left lg:text-center pl-6 lg:pl-0"
+                "font-normal font-outfit text-3xl lg:text-[40px] text-sub-title text-left lg:text-center pl-6 lg:pl-0"
               }
             >
               0.43
             </h1>
             <p
               className={
-                "uppercase text-green absolute top-[4px] -right-[1px] lg:top-[0px] lg:-right-[5px] text-sm lg:text-base"
+                "uppercase font-outfit text-green text-sm lg:text-base ml-1"
               }
             >
               hype
@@ -55,7 +63,7 @@ export default function StakeItem() {
           </div>
         </div>
       </div>
-      <div className={"grid grid-cols-1 lg:grid-cols-3 gap-2 mt-2 text-center"}>
+      <div className={"grid grid-cols-2 lg:grid-cols-3 gap-2 mt-2 text-center"}>
         <div
           className={
             "py-6 px-4 rounded-3xl space-y-2 bg-gradient-to-b from-white via-white to-transparent"

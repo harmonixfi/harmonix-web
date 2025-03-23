@@ -107,7 +107,7 @@ export default function Index() {
     ) || 27;
 
   return (
-    <div className="pt-16 sm:pt-28">
+    <div className="pt-16 sm:pt-20">
       <div className="w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center space-y-6 text-dark-green">
         <div className="text-center space-y-6">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold">
@@ -130,9 +130,9 @@ export default function Index() {
         </Button>
       </div>
 
-      <div className={"relative h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[715px] overflow-hidden"}>
+      <div className={"relative h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[330px] overflow-hidden"}>
         <MainBanner />
-        <div className={'absolute left-1/2 -translate-x-1/2 bottom-[45px] lg:bottom-[65px]'}>
+        <div className={'absolute left-1/2 -translate-x-1/2 bottom-[45px] lg:bottom-5'}>
         <Verichain />
         </div>
       </div>
