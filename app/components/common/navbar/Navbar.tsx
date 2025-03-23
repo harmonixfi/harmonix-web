@@ -36,7 +36,7 @@ const Navbar = () => {
         isMenuOpen={isMenuOpen}
         shouldHideOnScroll
         classNames={{
-          base: "w-full sm:px-12 sm:py-0 lg:px-2  bg-white lg:rounded-3xl",
+          base: "w-full sm:px-12 sm:py-0 lg:px-6 lg:py-1 bg-white lg:rounded-3xl",
           wrapper: "px-4 sm:px-0",
         }}
         maxWidth="full"
@@ -146,7 +146,8 @@ const Navbar = () => {
                 base: "py-3",
                 trigger: "p-0",
                 titleWrapper: "flex-none",
-                indicator: "-rotate-90 text-dark-green data-[open=true]:rotate-90",
+                indicator:
+                  "-rotate-90 text-dark-green data-[open=true]:rotate-90",
               }}
             >
               <AccordionItem key="about" aria-label="About" title="About">

@@ -27,7 +27,7 @@ export default function Subtract({ className }: IconProps) {
           y2="301.92"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#97FCE4" />
+          <stop stopColor="#ffffff" />
           <stop offset="1" stopColor="#E2F6A1" stopOpacity="0" />
         </linearGradient>
       </defs>

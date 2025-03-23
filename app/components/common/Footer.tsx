@@ -8,6 +8,7 @@ import {
   TwitterIcon,
 } from "../icons";
 import BackToTop from "./BackToTop";
+import BlendBackground from "./BlendBackground";
 // import Legal from "./Legal";
 // import { Button } from "@nextui-org/react";
 import { Link } from "@remix-run/react";
@@ -56,7 +57,8 @@ const menuItems = [
 
 const Footer = () => {
   return (
-    <footer className="relative bg-white text-dark-green px-4 sm:px-12 lg:px-24 pt-12 space-y-16 overflow-hidden">
+    <footer className="relative blend-bg text-dark-green px-4 sm:px-12 lg:px-24 pt-12 space-y-16 overflow-hidden">
+      <BlendBackground />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-6 mt-8 sm:mt-14">
         <div className="lg:col-span-5">
           <FlatLogoIcon className="w-auto h-16 mb-6 mx-auto sm:mx-0" />
