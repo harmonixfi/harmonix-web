@@ -16,9 +16,19 @@ export default function AuditSection2() {
     >
       <div
         className={
-          "py-[46px] space-y-6 text-center rounded-3xl flex flex-col items-center bg-gradient-to-[300deg] from-transparent via-[rgba(226,246,161,0.5)] to-[rgba(226,246,161,0.5)] bg-cover bg-center bg-lightgray"
+          "py-[46px] space-y-6 text-center rounded-3xl flex flex-col items-center"
         }
-        style={{backgroundImage: "url('/bg.png')"}}
+        style={{
+          backgroundImage: `
+            linear-gradient(300deg, rgba(241, 240, 235, 0) 7.75%, rgba(226, 246, 161, 0.5) 92.25%),
+            url('bg.png')
+          `,
+          backgroundPosition: "50%",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundColor: "lightgray",
+          backgroundBlendMode: "color, normal",
+        }}
       >
         <p className={"font-medium text-[32px] lg:text-[64px]"}>Audit</p>
         <p className={"font-normal text-2xl"}>
