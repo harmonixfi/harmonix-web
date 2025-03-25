@@ -19,13 +19,10 @@
     "@remix-run/react": "^2.11.2",
     "@remix-run/serve": "^2.11.2",
     "@tanstack/react-query": "^5.53.2",
-    "@types/react-slick": "^0.23.13",
     "framer-motion": "^11.3.31",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-slick": "^0.30.3",
-    "slick-carousel": "^1.8.1",
     "sst": "3.0.91"
   },
   "devDependencies": {

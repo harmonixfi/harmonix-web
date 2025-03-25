@@ -51,11 +51,11 @@ export default function Earn() {
   };
 
   return (
-    <div className={"lg:px-48 sm:px-3 py-[120px] bg-white text-dark-green"}>
-      <div
-        className={"lg:flex lg:justify-between lg:items-center px-8 lg:px-0"}
-      >
-        <div className={"lg:w-1/2 my-24 lg:pl-16 space-y-8 sm:mx-2"}>
+    <div
+      className={"px-8 lg:px-8 xl:px-48 sm:px-3 py-28 bg-white text-dark-green"}
+    >
+      <div className={"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6"}>
+        <div className={"lg:pl-16 space-y-8 sm:mx-2"}>
           {data.map((item, index) => {
             if (item.type === vault) {
               return (
@@ -134,7 +134,6 @@ export default function Earn() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className={"lg:w-1/2"}
         >
           {renderUI()}
         </motion.div>

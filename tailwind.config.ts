@@ -59,6 +59,7 @@ export default {
       },
       fontFamily: {
         outfit: ["outfit", "sans-serif"],
+        poppins: ["Poppins","sans-serif"]
       },
     },
   },

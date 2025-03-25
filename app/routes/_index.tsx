@@ -109,8 +109,8 @@ export default function Index() {
     ) || 27;
 
   return (
-    <div>
-      <div className="relative h-screen pt-10 blend-bg overflow-hidden">
+    <div className={"font-poppins"}>
+      <div className={"relative h-screen lg:pt-10 blend-bg overflow-hidden"}>
         <BlendBackground />
         <Navbar />
         <div className="relative w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center space-y-6 text-dark-green mt-16 z-30">

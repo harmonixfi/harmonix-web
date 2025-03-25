@@ -7,7 +7,7 @@ import YieldOptimization from "~/components/icons/YieldOptimization";
 export default function CoreTechnologySection() {
   return (
     <div
-      className={"px-8 py-[60px] lg:py-[120px] lg:px-60 space-y-20"}
+      className={"px-8 md:px-8 sm:px-8 py-[60px] lg:py-[120px] lg:px-8 xl:px-60 space-y-20"}
       style={{
         backgroundImage: `
           linear-gradient(300deg, rgba(241, 240, 235, 0.5) 7.75%, rgba(226, 246, 161, 0.5) 92.25%),
@@ -32,7 +32,9 @@ export default function CoreTechnologySection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
-        className={"lg:grid lg:grid-cols-3 lg:gap-x-12 space-y-5 lg:space-y-0"}
+        className={
+          "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8 lg:gap-12"
+        }
       >
         <TechnologyItem
           title="Yield Optimization"
@@ -40,7 +42,7 @@ export default function CoreTechnologySection() {
               sophisticated yield optimizer."
           icon={<YieldOptimization className="w-auto h-16" />}
         />
-        <div className="-translate-y-7">
+        <div className={"lg:-translate-y-7"}>
           <TechnologyItem
             title="Bear Market Yield"
             description={`Harmonix's key differentiator - generating consistent yield even

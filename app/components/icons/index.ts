@@ -1,6 +1,3 @@
-import { NodeKitIcon } from "~/components/icons";
-import { KyberNetworkIcon } from "~/components/icons";
-
 export { default as LogoIcon } from "./Logo";
 export { default as LogoWithTextIcon } from "./LogoWithText";
 export { default as FlatLogoIcon } from "./FlatLogo";
@@ -61,7 +58,7 @@ export { default as SubtractIcon } from "./Subtract";
 export { default as Light1Icon } from "./coreTech/Light1";
 export { default as Light2Icon } from "./coreTech/Light2";
 export { default as Light3Icon } from "./coreTech/Light3";
-export { default as Light4Icon } from "./coreTech/light4";
+export { default as Light4Icon } from "./coreTech/Light4";
 export { default as Light5Icon } from "./coreTech/Light5";
 export { default as Light6Icon } from "./coreTech/Light6";
 export { default as CircleIcon } from "./coreTech/Circle";

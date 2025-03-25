@@ -1,118 +1,94 @@
-import { Settings, default as Slider } from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
+import PartnerItem from "./PartnerItem";
 import {
   GoldLink2Icon,
   HyperLiquidIcon2,
   KelpIcon,
   KyberNetwork2Icon,
-  KyberNetworkIcon,
   NodeKit2Icon,
-  NodeKitIcon,
   Pendle2Icon,
 } from "~/components/icons";
 
 export default function PartnerSection() {
-  const settings: Settings = {
-    className: "slider variable-width center",
-    centerMode: true,
-    infinite: false,
-    centerPadding: "8px",
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    speed: 500,
-    rows: 2,
-    slidesPerRow: 1,
-    variableWidth: true,
-    adaptiveHeight: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-        },
-      },
-    ],
-  };
-
-  // @ts-ignore
-  const SliderComponent = !!Slider.default ? Slider.default : Slider;
   return (
     <div
-      className={"lg:px-60 py-[120px] bg-bg-grey text-primary space-y-16  px-8"}
+      className={
+        "xl:px-32 2xl:px-32 pt-[120px] pb-6 bg-white text-primary px-8"
+      }
     >
-      <div className={"text-[32px] lg:text-[64px] space-y-6 mb-16 text-center"}>
+      <div className={"text-[32px] lg:text-[64px] text-center"}>
         <h1 className={"font-medium"}>Partner</h1>
       </div>
-      <div className={"slider-container"}>
-        <SliderComponent {...settings}>
-          <div className={"pr-1 pb-1"}>
-            <div
-              className={
-                "w-full h-[100px] flex justify-center items-center bg-white rounded-2xl"
-              }
-            >
-              <KelpIcon />
-            </div>
-          </div>
-          <div className={"pr-1 pb-1"}>
-            <div
-              className={
-                "w-full h-[100px] flex justify-center items-center bg-white rounded-2xl"
-              }
-            >
-              <KyberNetwork2Icon />
-            </div>
-          </div>
-          <div className={"pr-1 pb-1"}>
-            <div
-              className={
-                "w-full h-[100px] flex justify-center items-center bg-white rounded-2xl"
-              }
-            >
-              <NodeKit2Icon />
-            </div>
-          </div>
-          <div className={"pr-1 pb-1"}>
-            <div
-              className={
-                "w-full h-[100px] flex justify-center items-center bg-white rounded-2xl"
-              }
-            >
-              <HyperLiquidIcon2 />
-            </div>
-          </div>
-          <div className={"pr-1 pb-1"}>
-            <div
-              className={
-                "w-full h-[100px] flex justify-center items-center bg-white rounded-2xl"
-              }
-            >
-              <Pendle2Icon />
-            </div>
-          </div>
-          <div className={"pr-1 pb-1"}>
-            <div
-              className={
-                "w-full h-[100px] flex justify-center items-center bg-white rounded-2xl"
-              }
-            >
-              <GoldLink2Icon />
-            </div>
-          </div>
-        </SliderComponent>
+      <div className={"block xl:hidden 2xl:hidden"}>
+        <div
+          className={
+            "bg-bg-grey grid grid-cols-4 grid-rows-5 gap-1 relative after:content-[''] after:absolute after:w-full after:h-full after:inset-0 after:border-[50px] lg:after:border-x-[100px] lg:after:border-y-[75px] after:border-solid after:border-white after:blur-[10px]"
+          }
+        >
+          {[...Array(5)].map((_, index) => {
+            return <PartnerItem key={index} />;
+          })}
+          <PartnerItem
+            icon={<KelpIcon className={"w-20 h-10 md:w-28 lg:w-32 lg:h-11"} />}
+          />
+          <PartnerItem
+            icon={
+              <KyberNetwork2Icon
+                className={"w-16 h-10 md:w-28 lg:w-32 lg:h-11"}
+              />
+            }
+          />
+          <PartnerItem />
+          <PartnerItem />
+          <PartnerItem
+            icon={
+              <NodeKit2Icon className={"w-20 h-10 md:w-28 lg:w-32 lg:h-11"} />
+            }
+          />
+          <PartnerItem
+            icon={
+              <HyperLiquidIcon2
+                className={"w-20 h-10 md:w-28 lg:w-32 lg:h-11"}
+              />
+            }
+          />
+          <PartnerItem />
+          <PartnerItem />
+          <PartnerItem
+            icon={
+              <Pendle2Icon className={"w-20 h-10 md:w-28 lg:w-32 lg:h-11"} />
+            }
+          />
+          <PartnerItem
+            icon={
+              <GoldLink2Icon className={"w-20 h-10 md:w-28 lg:w-32 lg:h-11"} />
+            }
+          />
+          {[...Array(5)].map((_, index) => {
+            return <PartnerItem key={index} />;
+          })}
+        </div>
+      </div>
+      <div className={"hidden xl:block 2xl:block"}>
+        <div
+          className={
+            "bg-bg-grey grid grid-cols-5 grid-rows-3 gap-1 relative after:content-[''] after:absolute after:w-full after:h-full after:inset-0 after:border-[50px] lg:after:border-x-[100px] lg:after:border-y-[75px] after:border-solid after:border-white after:blur-[10px]"
+          }
+        >
+          {[...Array(6)].map((_, index) => {
+            return <PartnerItem key={index} />;
+          })}
+          <PartnerItem icon={<KelpIcon />} />
+          <PartnerItem icon={<KyberNetwork2Icon />} />
+          <PartnerItem icon={<NodeKit2Icon />} />
+          <PartnerItem />
+          <PartnerItem />
+          <PartnerItem icon={<HyperLiquidIcon2 />} />
+          <PartnerItem icon={<Pendle2Icon />} />
+          <PartnerItem icon={<GoldLink2Icon />} />
+          {[...Array(6)].map((_, index) => {
+            return <PartnerItem key={index} />;
+          })}
+        </div>
       </div>
     </div>
   );

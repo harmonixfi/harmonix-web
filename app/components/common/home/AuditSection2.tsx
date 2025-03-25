@@ -11,7 +11,7 @@ export default function AuditSection2() {
       transition={{ duration: 0.5, delay: 0.2 }}
       viewport={{ once: true }}
       className={
-        "lg:px-60 py-[120px] bg-white text-dark-green space-y-16  px-8"
+        "px-8 lg:px-8 xl:px-60 2xl:px-60 py-[120px] bg-white text-dark-green space-y-16"
       }
     >
       <div

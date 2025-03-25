@@ -55,19 +55,17 @@ const data = [
 export default function FAQSection() {
   return (
     <div
-      className={"lg:px-60 py-[120px] bg-white text-primary space-y-16  px-8"}
+      className={
+        "px-8  2xl:px-60 xl:px-60 py-[120px] bg-white text-primary space-y-16"
+      }
     >
-      <div
-        className={
-          "flex flex-col lg:flex-row justify-between space-y-6 lg:space-y-0"
-        }
-      >
+      <div className={"grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-6"}>
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className={"lg:w-1/2 space-y-6"}
+          className={"space-y-6"}
         >
           <p className={"text-[64px] font-medium"}>FAQs</p>
           <p className={"text-2xl font-normal"}>
@@ -76,11 +74,10 @@ export default function FAQSection() {
           <BtnPrimary to={EXTERNAL_LINKS.App} title={"Get in touch"} />
         </motion.div>
         <motion.div
-          initial={{ opacity: 0, x: 200 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 200 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className={"lg:w-1/2"}
         >
           <Accordion
             selectionMode={"multiple"}
@@ -96,9 +93,7 @@ export default function FAQSection() {
                   key={index}
                   aria-label={"What is Harmonix Finance?"}
                   title={
-                    <p className={"text-lg text-dark-green"}>
-                      {item.title}
-                    </p>
+                    <p className={"text-lg text-dark-green"}>{item.title}</p>
                   }
                   indicator={({ isOpen }) =>
                     isOpen ? (
@@ -110,9 +105,7 @@ export default function FAQSection() {
                     )
                   }
                 >
-                  <p className={"text-sub-title text-lg"}>
-                    {item.description}
-                  </p>
+                  <p className={"text-sub-title text-lg"}>{item.description}</p>
                 </AccordionItem>
               );
             })}

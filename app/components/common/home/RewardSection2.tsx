@@ -3,6 +3,7 @@ import {
   ChainLinkIcon,
   EthIcon,
   HarmonixPointIcon,
+  KernelIcon,
   PlusIcon,
   ReEthIcon,
   Swell2Icon,
@@ -10,17 +11,14 @@ import {
   VerichainIcon,
   ZircuitPointIcon,
 } from "~/components/icons";
-import EigenLayerPoint from "~/components/icons/EigenLayerPoint";
 import FishPoint from "~/components/icons/FishPoint";
 import Renzo2 from "~/components/icons/Renzo2";
-import RewardPercent from "~/components/icons/RewardPercent";
-import Verichain from "~/components/icons/Verichain";
 
 export default function RewardSection2() {
   return (
     <div
       className={
-        "px-8 py-[60px] lg:py-[120px] lg:px-60 text-primary space-y-16 bg-[#F9FBF8]"
+        "px-8 py-[60px] lg:py-[120px] lg:px-8 xl:px-60 text-primary space-y-16 bg-[#F9FBF8]"
       }
     >
       <div className={"text-[32px] lg:text-[64px] space-y-6 mb-16 text-center"}>
@@ -81,9 +79,9 @@ export default function RewardSection2() {
         <div className={"flex justify-center"}>
           <div className={"flex items-center"}>
             <div className={"flex flex-col items-center"}>
-              <EigenLayerPoint className={"w-10 h-10 lg:w-16 lg:h-16"} />
+              <KernelIcon className={"w-10 h-10 lg:w-16 lg:h-16"} />
               <p className={"mt-2 text-sm text-center lg:text-2xl font-normal"}>
-                EigenLayer points
+                Kernel Points
               </p>
             </div>
             <div className={"mx-3 lg:mx-16"}>
