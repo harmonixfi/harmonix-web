@@ -7,7 +7,9 @@ import YieldOptimization from "~/components/icons/YieldOptimization";
 export default function CoreTechnologySection() {
   return (
     <div
-      className={"px-8 md:px-8 sm:px-8 py-[60px] lg:py-[120px] lg:px-8 xl:px-60 space-y-20"}
+      className={
+        "px-8 md:px-8 sm:px-8 py-[60px] lg:py-[120px] lg:px-8 xl:px-60 2xl:px-60 space-y-20"
+      }
       style={{
         backgroundImage: `
           linear-gradient(300deg, rgba(241, 240, 235, 0.5) 7.75%, rgba(226, 246, 161, 0.5) 92.25%),

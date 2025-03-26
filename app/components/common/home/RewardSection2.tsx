@@ -18,7 +18,7 @@ export default function RewardSection2() {
   return (
     <div
       className={
-        "px-8 py-[60px] lg:py-[120px] lg:px-8 xl:px-60 text-primary space-y-16 bg-[#F9FBF8]"
+        "px-8 py-[60px] lg:py-[120px] lg:px-8 xl:px-60 2xl:px-60 text-primary space-y-16 bg-[#F9FBF8]"
       }
     >
       <div className={"text-[32px] lg:text-[64px] space-y-6 mb-16 text-center"}>

@@ -9,7 +9,7 @@ export default function PartnerItem(props: PartnerItemProps) {
   return (
     <div
       className={
-        "w-full h-[100px] flex justify-center items-center bg-white rounded-2xl" +
+        "w-full h-16 lg:h-24 xl:h-24 2xl:h-24 flex justify-center items-center bg-white rounded-2xl" +
         props.className
       }
     >

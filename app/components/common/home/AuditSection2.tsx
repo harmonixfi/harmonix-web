@@ -16,7 +16,7 @@ export default function AuditSection2() {
     >
       <div
         className={
-          "py-[46px] space-y-6 text-center rounded-3xl flex flex-col items-center"
+          "py-8 xl:py-12 2xl:py-12 px-9 space-y-6 text-center rounded-3xl flex flex-col items-center"
         }
         style={{
           backgroundImage: `

@@ -56,7 +56,7 @@ export default function FAQSection() {
   return (
     <div
       className={
-        "px-8  2xl:px-60 xl:px-60 py-[120px] bg-white text-primary space-y-16"
+        "px-8 py-8 2xl:px-60 xl:px-60 xl:py-32 2xl:py-32 bg-white text-primary space-y-16"
       }
     >
       <div className={"grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-6"}>
