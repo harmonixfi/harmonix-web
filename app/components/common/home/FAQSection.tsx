@@ -67,7 +67,7 @@ export default function FAQSection() {
           viewport={{ once: true }}
           className={"space-y-6"}
         >
-          <p className={"text-[64px] font-medium"}>FAQs</p>
+          <p className={"text-[64px] font-medium font-outfit"}>FAQs</p>
           <p className={"text-2xl font-normal"}>
             Don't see the answer you're looking for?
           </p>
@@ -105,7 +105,7 @@ export default function FAQSection() {
                     )
                   }
                 >
-                  <p className={"text-sub-title text-lg"}>{item.description}</p>
+                  <p className={"text-sub-title text-lg font-lato"}>{item.description}</p>
                 </AccordionItem>
               );
             })}

@@ -45,7 +45,7 @@ export default function RewardSection2() {
         </div>
         <div
           className={
-            "bg-[#F9FBF8] py-8 flex flex-col space-y-6 lg:space-y-0 lg:flex-row lg:justify-between items-center rounded-3xl"
+            "bg-[#F9FBF8] py-8 flex flex-col space-y-6 md:space-y-0 md:flex-row md:justify-between lg:space-y-0 lg:flex-row lg:justify-between items-center rounded-3xl"
           }
         >
           <div className={"flex-1"}>
