@@ -8,7 +8,7 @@ export default function CoreTechnologySection() {
   return (
     <div
       className={
-        "px-8 md:px-8 sm:px-8 py-[60px] lg:py-[120px] lg:px-8 xl:px-60 2xl:px-60 space-y-20"
+        "px-8 md:px-8 sm:px-8 py-[60px] lg:py-[120px] lg:px-8 xl:px-32 2xl:px-60 space-y-20"
       }
       style={{
         backgroundImage: `

@@ -61,7 +61,7 @@ export const meta: MetaFunction = () => {
 
 export default function AboutUs() {
   return (
-    <div className="blend-bg pt-10">
+    <div className="blend-bg lg:pt-10">
       <Navbar />
       <div className="relative w-full flex flex-col gap-32 pt-16 sm:pt-28">
         <What />

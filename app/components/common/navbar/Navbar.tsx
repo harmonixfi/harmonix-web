@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={"px-0 lg:px-60"}>
+    <div className={"px-0 lg:px-8 xl:px-8 2xl:px-60"}>
       <NextUiNavbar
         isMenuOpen={isMenuOpen}
         shouldHideOnScroll

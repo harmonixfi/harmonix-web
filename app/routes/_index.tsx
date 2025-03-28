@@ -4,25 +4,15 @@ import { Link } from "@remix-run/react";
 import { useQuery } from "@tanstack/react-query";
 import { GetVaultOverviewResponse } from "~/@types/vault";
 import BlendBackground from "~/components/common/BlendBackground";
-import AuditSection from "~/components/common/home/AuditSection";
-import AuditSection2 from "~/components/common/home/AuditSection2";
+import AuditSection2 from "~/components/common/home/AuditSection";
 import CoreTechnology from "~/components/common/home/CoreTechnologySection";
-import FAQ from "~/components/common/home/FAQ";
 import FAQSection from "~/components/common/home/FAQSection";
-// import BackerSection from "~/components/common/home/BackerSection";
-import MainBanner from "~/components/common/home/MainBanner";
 import Partner from "~/components/common/home/PartnerSection";
-import PlusPartnerSection from "~/components/common/home/PlusPartnerSection";
-import RewardSection from "~/components/common/home/RewardSection";
-import RewardSection2 from "~/components/common/home/RewardSection2";
+import RewardSection2 from "~/components/common/home/RewardSection";
 import Verichain from "~/components/common/home/Verichain";
-// import What from "~/components/common/home/What";
-// import WhatWeSolve from "~/components/common/home/WhatWeSolve";
-import WhatYouCanDo from "~/components/common/home/WhatYouCanDo";
 import Earn from "~/components/common/home/earn/Earn";
 import Navbar from "~/components/common/navbar/Navbar";
 import { SubtractIcon, VerichainIcon } from "~/components/icons";
-// import Why from "~/components/common/home/Why";
 import { METADATA } from "~/constants/metadata";
 import { EXTERNAL_LINKS } from "~/constants/url";
 
@@ -166,27 +156,13 @@ export default function Index() {
 
       <Earn />
       <CoreTechnology />
-      <RewardSection2 />
-      <Partner />
-      <AuditSection2 />
-      <FAQSection />
-      {/* <div className="flex flex-col gap-20 py-24"> */}
-      {/* <What />
-        <Why /> */}
-      {/* <WhatWeSolve /> */}
-      {/* <WhatYouCanDo /> */}
-      {/* </div> */}
-
-      {/* <RewardSection
+      <RewardSection2
         optionsVaultApy={optionsVaultApy}
         deltaNeutralVaultApy={deltaNeutralVaultApy}
       />
-      <PlusPartnerSection />
-      <AuditSection /> */}
-      {/* <div className="py-24">
-        <FAQ />
-      </div> */}
-      {/* <BackerSection /> */}
+      <Partner />
+      <AuditSection2 />
+      <FAQSection />
     </div>
   );
 }

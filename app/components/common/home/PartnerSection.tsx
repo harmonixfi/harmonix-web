@@ -28,12 +28,12 @@ export default function PartnerSection() {
             return <PartnerItem key={index} />;
           })}
           <PartnerItem
-            icon={<KelpIcon className={"w-20 h-10 md:w-28 lg:w-32 lg:h-11"} />}
+            icon={<KelpIcon className={"w-20 h-10 md:w-28 lg:w-40 lg:h-16"} />}
           />
           <PartnerItem
             icon={
               <KyberNetwork2Icon
-                className={"w-16 h-10 md:w-28 lg:w-32 lg:h-11"}
+                className={"w-16 h-10 md:w-28 lg:w-48 lg:h-14"}
               />
             }
           />
@@ -41,13 +41,13 @@ export default function PartnerSection() {
           <PartnerItem />
           <PartnerItem
             icon={
-              <NodeKit2Icon className={"w-20 h-10 md:w-28 lg:w-32 lg:h-11"} />
+              <NodeKit2Icon className={"w-20 h-10 md:w-28 lg:w-48 lg:h-14"} />
             }
           />
           <PartnerItem
             icon={
               <HyperLiquidIcon2
-                className={"w-20 h-10 md:w-28 lg:w-32 lg:h-11"}
+                className={"w-20 h-10 md:w-28 lg:w-48 lg:h-14"}
               />
             }
           />
@@ -55,12 +55,12 @@ export default function PartnerSection() {
           <PartnerItem />
           <PartnerItem
             icon={
-              <Pendle2Icon className={"w-20 h-10 md:w-28 lg:w-32 lg:h-11"} />
+              <Pendle2Icon className={"w-20 h-10 md:w-28 lg:w-56 lg:h-24"} />
             }
           />
           <PartnerItem
             icon={
-              <GoldLink2Icon className={"w-20 h-10 md:w-28 lg:w-32 lg:h-11"} />
+              <GoldLink2Icon className={"w-20 h-10 md:w-28 lg:w-48 lg:h-20"} />
             }
           />
           {[...Array(5)].map((_, index) => {
