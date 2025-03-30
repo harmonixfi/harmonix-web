@@ -12,7 +12,7 @@ import RewardSection2 from "~/components/common/home/RewardSection";
 import Verichain from "~/components/common/home/Verichain";
 import Earn from "~/components/common/home/earn/Earn";
 import Navbar from "~/components/common/navbar/Navbar";
-import { SubtractIcon, VerichainIcon } from "~/components/icons";
+import { SubtractIcon } from "~/components/icons";
 import { METADATA } from "~/constants/metadata";
 import { EXTERNAL_LINKS } from "~/constants/url";
 
@@ -88,9 +88,6 @@ export default function Index() {
 
   const vaults = data?.vaults || [];
 
-  const optionsVaultApy =
-    vaults.find((x) => x.slug.toLowerCase().includes("option"))?.apy_1y || 119;
-
   const deltaNeutralVaultApy =
     Math.max(
       ...vaults
@@ -156,10 +153,7 @@ export default function Index() {
 
       <Earn />
       <CoreTechnology />
-      <RewardSection2
-        optionsVaultApy={optionsVaultApy}
-        deltaNeutralVaultApy={deltaNeutralVaultApy}
-      />
+      <RewardSection2 deltaNeutralVaultApy={deltaNeutralVaultApy} />
       <Partner />
       <AuditSection2 />
       <FAQSection />

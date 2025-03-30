@@ -12,7 +12,7 @@ export default function PartnerSection() {
   return (
     <div
       className={
-        "xl:px-32 2xl:px-32 pt-[120px] pb-6 bg-white text-primary px-8"
+        "xl:px-32 2xl:px-32 pt-[120px] pb-6 bg-white text-primary px-0 md:px-8 lg:px-8"
       }
     >
       <div className={"text-[32px] lg:text-[64px] text-center"}>
@@ -21,51 +21,61 @@ export default function PartnerSection() {
       <div className={"block xl:hidden 2xl:hidden"}>
         <div
           className={
-            "bg-bg-grey grid grid-cols-4 grid-rows-5 gap-1 relative after:content-[''] after:absolute after:w-full after:h-full after:inset-0 after:border-[50px] lg:after:border-x-[100px] lg:after:border-y-[75px] after:border-solid after:border-white after:blur-[10px]"
+            "bg-bg-grey grid grid-cols-8 grid-rows-5 gap-1 relative after:content-[''] after:absolute after:w-full after:h-full after:inset-0 after:border-x-[30px] after:border-y-[40px] lg:after:border-x-[100px] lg:after:border-y-[75px] after:border-solid after:border-white after:blur-[10px]"
           }
         >
-          {[...Array(5)].map((_, index) => {
-            return <PartnerItem key={index} />;
-          })}
+          <PartnerItem/>
+          <PartnerItem className={'col-span-3'}/>
+          <PartnerItem className={'col-span-3'}/>
+          <PartnerItem/>
+          <PartnerItem/>
           <PartnerItem
-            icon={<KelpIcon className={"w-20 h-10 md:w-28 lg:w-40 lg:h-16"} />}
+            className={"col-span-3"}
+            icon={<KelpIcon />}
           />
           <PartnerItem
+            className={"col-span-3"}
             icon={
               <KyberNetwork2Icon
-                className={"w-16 h-10 md:w-28 lg:w-48 lg:h-14"}
+                
               />
             }
           />
           <PartnerItem />
           <PartnerItem />
           <PartnerItem
+            className={"col-span-3"}
             icon={
-              <NodeKit2Icon className={"w-20 h-10 md:w-28 lg:w-48 lg:h-14"} />
+              <NodeKit2Icon  />
             }
           />
           <PartnerItem
+            className={"col-span-3"}
             icon={
               <HyperLiquidIcon2
-                className={"w-20 h-10 md:w-28 lg:w-48 lg:h-14"}
+              className={"w-36 md:w-28 lg:w-48 lg:h-20"}
               />
             }
           />
           <PartnerItem />
           <PartnerItem />
           <PartnerItem
+            className={"col-span-3"}
             icon={
-              <Pendle2Icon className={"w-20 h-10 md:w-28 lg:w-56 lg:h-24"} />
+              <Pendle2Icon  />
             }
           />
           <PartnerItem
+            className={"col-span-3"}
             icon={
-              <GoldLink2Icon className={"w-20 h-10 md:w-28 lg:w-48 lg:h-20"} />
+              <GoldLink2Icon className={"w-36 md:w-28 lg:w-48 lg:h-20"} />
             }
           />
-          {[...Array(5)].map((_, index) => {
-            return <PartnerItem key={index} />;
-          })}
+          <PartnerItem/>
+          <PartnerItem/>
+          <PartnerItem className={'col-span-3'}/>
+          <PartnerItem className={'col-span-3'}/>
+          <PartnerItem/>
         </div>
       </div>
       <div className={"hidden xl:block 2xl:block"}>

@@ -7,7 +7,6 @@ import {
   PlusIcon,
   ReEthIcon,
   Swell2Icon,
-  VaultValueIcon,
   VerichainIcon,
   ZircuitPointIcon,
 } from "~/components/icons";
@@ -15,12 +14,11 @@ import FishPoint from "~/components/icons/FishPoint";
 import Renzo2 from "~/components/icons/Renzo2";
 
 type RewardSectionProps = {
-  optionsVaultApy: number;
   deltaNeutralVaultApy: number;
 };
 
 export default function RewardSection2(props: RewardSectionProps) {
-  const { optionsVaultApy, deltaNeutralVaultApy } = props;
+  const { deltaNeutralVaultApy } = props;
 
   return (
     <div
@@ -59,7 +57,7 @@ export default function RewardSection2(props: RewardSectionProps) {
             <p className={"text-center text-2xl text-sub-title"}>Vault APY</p>
             <div className={"mt-6 flex justify-center"}>
               <p className={"text-4xl xl:text-7xl 2xl:text-7xl font-bold font-outfit"}>
-                {optionsVaultApy.toLocaleString("en-US", {
+                {deltaNeutralVaultApy.toLocaleString("en-US", {
                   maximumFractionDigits: 2,
                 })}
                 %
