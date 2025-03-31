@@ -35,7 +35,7 @@ export default function CoreTechnologySection() {
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
         className={
-          "grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-8 lg:gap-12"
+          "grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-8 lg:gap-12 px-2 sm:px-16 md:px-36 lg:px-0"
         }
       >
         <TechnologyItem

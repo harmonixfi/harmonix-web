@@ -48,7 +48,7 @@ export default function SwapItem() {
         >
           <div className={"flex space-x-1 lg:justify-between items-center"}>
             <div className={"w-10 h-10"}>
-              <img src={Purr} className={"w-8 h-8"} />
+              <img src={Purr} className={"w-8 h-8"} alt="swap" />
             </div>
             <span className={"font-outfit"}>PURR</span>
           </div>

@@ -15,4 +15,8 @@ export const EXTERNAL_LINKS = {
 
   TwitterChainLinkPost:
     "https://x.com/harmonixfi/status/1800143725232013353?s=46",
+
+  Earn: "https://app.harmonix.fi/earn",
+  Stake: "https://app.harmonix.fi/staking",
+  Swap: "https://app.harmonix.fi/swap",
 };

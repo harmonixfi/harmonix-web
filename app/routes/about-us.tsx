@@ -61,7 +61,20 @@ export const meta: MetaFunction = () => {
 
 export default function AboutUs() {
   return (
-    <div className="blend-bg lg:pt-10">
+    <div
+      className="lg:pt-10"
+      style={{
+        backgroundImage: `
+        linear-gradient(300deg, rgba(241, 240, 235, 0.5) 7.75%, rgba(226, 246, 161, 0.5) 92.25%),
+        url('bg.png')
+      `,
+        backgroundPosition: "50%",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "lightgray",
+        backgroundBlendMode: "color, normal",
+      }}
+    >
       <Navbar />
       <div className="relative w-full flex flex-col gap-32 pt-16 sm:pt-28">
         <What />

@@ -30,13 +30,13 @@ export default function AuditSection2() {
           backgroundBlendMode: "color, normal",
         }}
       >
-        <p className={"font-medium text-[32px] lg:text-[64px]"}>Audit</p>
-        <p className={"font-normal text-2xl"}>
+        <p className={"font-medium text-4xl lg:text-5xl"}>Audit</p>
+        <p className={"font-normal text-lg sm:text-xl xl:w-2/3 2xl:w-1/2"}>
           Ensuring the security of Harmonix is our top priority. Discover more
           in our security reports.
         </p>
         <div>
-          <VerichainIcon className={"w-64 h-24"} />
+          <VerichainIcon className={"w-auto h-16 sm:h-20 md:h-24"} />
         </div>
         <BtnPrimary to={EXTERNAL_LINKS.Audit} title={"See Full Report"} />
       </div>

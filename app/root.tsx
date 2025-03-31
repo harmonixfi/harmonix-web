@@ -1,6 +1,4 @@
 import Footer from "./components/common/Footer";
-// import LegalAlert from "./components/common/LegalAlert";
-import Navbar from "./components/common/navbar/Navbar";
 import "./tailwind.css";
 import { NextUIProvider } from "@nextui-org/react";
 import { LinksFunction } from "@remix-run/node";
@@ -43,7 +41,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <NextUIProvider>
           <QueryClientProvider client={queryClient}>
-            {/* <Navbar /> */}
             <main>{children}</main>
             {/* <LegalAlert /> */}
             <Footer />

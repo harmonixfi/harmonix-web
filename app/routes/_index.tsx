@@ -4,11 +4,11 @@ import { Link } from "@remix-run/react";
 import { useQuery } from "@tanstack/react-query";
 import { GetVaultOverviewResponse } from "~/@types/vault";
 import BlendBackground from "~/components/common/BlendBackground";
-import AuditSection2 from "~/components/common/home/AuditSection";
+import AuditSection from "~/components/common/home/AuditSection";
 import CoreTechnology from "~/components/common/home/CoreTechnologySection";
 import FAQSection from "~/components/common/home/FAQSection";
 import Partner from "~/components/common/home/PartnerSection";
-import RewardSection2 from "~/components/common/home/RewardSection";
+import RewardSection from "~/components/common/home/RewardSection";
 import Verichain from "~/components/common/home/Verichain";
 import Earn from "~/components/common/home/earn/Earn";
 import Navbar from "~/components/common/navbar/Navbar";
@@ -72,7 +72,7 @@ export default function Index() {
     queryKey: ["GET_VAULT_STATISTICS"],
     queryFn: async () => {
       const response = await fetch(
-        "https://api.rockonyx.xyz/api/v1/statistics/"
+        "https://api.harmonix.fi/api/v1/statistics/"
       );
 
       if (!response.ok) {
@@ -129,7 +129,7 @@ export default function Index() {
         >
           <Verichain />
         </div>
-        <SubtractIcon className="absolute bottom-0 right-1/2 translate-x-1/2 w-full aspect-[2] translate-y-2" />
+        <SubtractIcon className="absolute bottom-0 right-1/2 translate-x-1/2 w-2/3 sm:w-3/4 xl:w-2/3 h-auto translate-y-2" />
         <div
           className="absolute -top-1/2 -right-1/2 w-3/4 aspect-[1.3] rotate-12 opacity-10"
           style={{
@@ -140,7 +140,7 @@ export default function Index() {
             backgroundBlendMode: "soft-light",
           }}
         />
-        <div className="absolute bottom-0 right-1/2 translate-x-1/2 w-full aspect-[2] bg-[url('blur-logo.png')] bg-center bg-cover mix-blend-overlay z-10" />
+        <div className="absolute bottom-0 right-1/2 translate-x-1/2 w-full aspect-[1.2] sm:aspect-[1.5] xl:aspect-[2] bg-[url('blur-logo.png')] bg-center bg-cover mix-blend-overlay z-10" />
         <div
           className="w-full h-40 absolute bottom-0 right-0 z-20"
           style={{
@@ -153,9 +153,9 @@ export default function Index() {
 
       <Earn />
       <CoreTechnology />
-      <RewardSection2 deltaNeutralVaultApy={deltaNeutralVaultApy} />
+      <RewardSection deltaNeutralVaultApy={deltaNeutralVaultApy} />
       <Partner />
-      <AuditSection2 />
+      <AuditSection />
       <FAQSection />
     </div>
   );

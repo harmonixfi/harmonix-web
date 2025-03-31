@@ -1,7 +1,6 @@
-import Alplaticks from "../../../../assets/images/alphaticks.png";
-import Nansen from "../../../../assets/images/nansen.png";
-import ValiDAO from "../../../../assets/images/valiDAO.png";
-import { motion } from "framer-motion";
+import Alplaticks from "~/components/assets/images/alphaticks.png";
+import Nansen from "~/components/assets/images/nansen.png";
+import ValiDAO from "~/components/assets/images/valiDAO.png";
 import { VectorIcon } from "~/components/icons";
 
 export default function StakeItem() {
@@ -12,12 +11,12 @@ export default function StakeItem() {
       }
     >
       <div className={"grid grid-cols-2 gap-2"}>
-        <div
-          className={
-            "px-3 py-6 lg:py-6 lg:px-10 bg-white rounded-3xl"
-          }
-        >
-          <p className={"font-medium text-center text-[15px] text-main-green font-outfit"}>
+        <div className={"px-3 py-6 lg:py-6 lg:px-10 bg-white rounded-3xl"}>
+          <p
+            className={
+              "font-medium text-center text-[15px] text-main-green font-outfit"
+            }
+          >
             Staking Balance
           </p>
           <div className={"flex justify-center text-center mt-1"}>

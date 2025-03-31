@@ -2,16 +2,16 @@ import { motion } from "framer-motion";
 import {
   ChainLinkIcon,
   EthIcon,
+  FishPointIcon,
   HarmonixPointIcon,
   KernelIcon,
   PlusIcon,
   ReEthIcon,
-  Swell2Icon,
+  RenzoIcon,
+  SwellIcon,
   VerichainIcon,
   ZircuitPointIcon,
 } from "~/components/icons";
-import FishPoint from "~/components/icons/FishPoint";
-import Renzo2 from "~/components/icons/Renzo2";
 
 type RewardSectionProps = {
   deltaNeutralVaultApy: number;
@@ -56,7 +56,11 @@ export default function RewardSection2(props: RewardSectionProps) {
           <div className={"flex-1"}>
             <p className={"text-center text-2xl text-sub-title"}>Vault APY</p>
             <div className={"mt-6 flex justify-center"}>
-              <p className={"text-4xl xl:text-7xl 2xl:text-7xl font-bold font-outfit"}>
+              <p
+                className={
+                  "text-4xl xl:text-7xl 2xl:text-7xl font-bold font-outfit"
+                }
+              >
                 {deltaNeutralVaultApy.toLocaleString("en-US", {
                   maximumFractionDigits: 2,
                 })}
@@ -73,15 +77,15 @@ export default function RewardSection2(props: RewardSectionProps) {
               <div className={"flex items-center space-x-1"}>
                 <ReEthIcon className={"w-10 h-10 lg:w-16 lg:h-16"} />
                 <EthIcon className={"w-10 h-10 lg:w-16 lg:h-16"} />
-                <Renzo2 className={"w-10 h-10 lg:w-16 lg:h-16"} />
+                <RenzoIcon className={"w-10 h-10 lg:w-16 lg:h-16"} />
                 <div
                   className={
                     "w-10 h-10 lg:w-16 lg:h-16 bg-white rounded-full flex justify-center items-center"
                   }
                 >
-                  <FishPoint />
+                  <FishPointIcon />
                 </div>
-                <Swell2Icon className={"w-10 h-10 lg:w-16 lg:h-16"} />
+                <SwellIcon className={"w-10 h-10 lg:w-16 lg:h-16"} />
               </div>
             </div>
           </div>

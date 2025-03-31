@@ -1,7 +1,7 @@
 import BtnPrimary from "./BtnPrimary";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import { MinusIcon, PlusFaqsIcon, PlusIcon } from "~/components/icons";
+import { MinusIcon, PlusFaqsIcon } from "~/components/icons";
 import { EXTERNAL_LINKS } from "~/constants/url";
 
 const data = [
@@ -55,8 +55,8 @@ const data = [
         </li>
         <li>
           Pendle Hedging Vault: Utilizes Pt ETH from Pendle to create a hedge
-          option for Pendle's Pt ETH holders against drawdown, while earning the
-          same APY from Pendle and incentives from Harmonix.
+          option for Pendle&apos;s Pt ETH holders against drawdown, while
+          earning the same APY from Pendle and incentives from Harmonix.
         </li>
       </ul>
     ),
@@ -82,7 +82,7 @@ export default function FAQSection() {
   return (
     <div
       className={
-        "px-8 py-8 2xl:px-60 xl:px-60 xl:py-32 2xl:py-32 bg-white text-primary space-y-16"
+        "px-8 py-8 2xl:px-60 xl:px-32 xl:py-32 2xl:py-32 bg-white text-primary space-y-16"
       }
     >
       <div
@@ -99,7 +99,7 @@ export default function FAQSection() {
         >
           <p className={"text-[64px] font-medium font-outfit"}>FAQs</p>
           <p className={"text-2xl font-normal"}>
-            Don't see the answer you're looking for?
+            Don&apos;t see the answer you&apos;re looking for?
           </p>
           <BtnPrimary to={EXTERNAL_LINKS.App} title={"Get in touch"} />
         </motion.div>

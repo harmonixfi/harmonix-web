@@ -13,18 +13,21 @@ const data = [
     description:
       "Earn attractive yields with vaults leveraging hedge fund strategies effective in all market conditions.",
     type: Vault.EARN,
+    link: EXTERNAL_LINKS.Earn,
   },
   {
     title: Vault.STAKE,
     description:
-      "Earn attractive yields with vaults leveraging hedge fund strategies effective in all market conditions.",
+      "Stake your $HYPE into validators like ValiDAO, Alphaticks, HyperStake, Nansen x HypurrCollective to receive stHype and generate yields.",
     type: Vault.STAKE,
+    link: EXTERNAL_LINKS.Stake,
   },
   {
     title: Vault.SWAP,
     description:
-      "Earn attractive yields with vaults leveraging hedge fund strategies effective in all market conditions.",
+      "Swap popular token pairs directly on Hyperliquid. Enjoy seamless swaps with minimal slippage.",
     type: Vault.SWAP,
+    link: EXTERNAL_LINKS.Swap,
   },
 ];
 
@@ -52,7 +55,9 @@ export default function Earn() {
 
   return (
     <div
-      className={"px-8 lg:px-8 xl:px-48 2xl:px-48 sm:px-3 py-28 bg-white text-dark-green"}
+      className={
+        "px-8 lg:px-8 xl:px-24 2xl:px-48 sm:px-3 py-28 bg-white text-dark-green"
+      }
     >
       <div className={"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6"}>
         <div className={"lg:pl-16 space-y-8 sm:mx-2"}>
@@ -93,7 +98,7 @@ export default function Earn() {
                     <p className={"pr-4 text-xl text-sub-title-2"}>
                       {item.description}
                     </p>
-                    <BtnPrimary title={"Launch App"} to={EXTERNAL_LINKS.App} />
+                    <BtnPrimary title={"Launch App"} to={item.link} />
                   </motion.div>
                 </div>
               );
@@ -101,7 +106,7 @@ export default function Earn() {
             return (
               <div key={index} className={"flex space-x-6"}>
                 <div className={"relative"}>
-                  <div
+                  <button
                     className={
                       "text-2xl w-[46px] h-[46px] rounded-full bg-bg-grey flex justify-center items-center cursor-pointer"
                     }
@@ -109,7 +114,7 @@ export default function Earn() {
                     onMouseEnter={() => handleChangeVault(item.type)}
                   >
                     {index + 1}
-                  </div>
+                  </button>
                   {index !== data.length - 1 && (
                     <div
                       className={
@@ -118,13 +123,13 @@ export default function Earn() {
                     ></div>
                   )}
                 </div>
-                <div
+                <button
                   className={"text-5xl cursor-pointer opacity-60 capitalize"}
                   onClick={() => handleChangeVault(item.type)}
                   onMouseEnter={() => handleChangeVault(item.type)}
                 >
                   {item.title}
-                </div>
+                </button>
               </div>
             );
           })}

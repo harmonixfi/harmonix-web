@@ -16,7 +16,7 @@ export default function Minus({ className }: IconProps) {
         x2="24"
         y2="12.2334"
         stroke="#171918"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
     </svg>
   );

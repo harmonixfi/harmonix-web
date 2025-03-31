@@ -7,15 +7,15 @@ const Why = () => {
       <p className="text-[#171918] text-lg font-light text-center">
         Traditional finance has long gate kept sophisticated trading strategies
         like delta neutral and options. These strategies offer sustainable
-        returns and risk mitigation to regular users who often don’t have access
-        to the required financial infrastructure. Our permissionless vaults
-        continuously execute strategies based on market conditions, aiming to
-        maximize yields with minimal user intervention. Harmonix was born from a
-        desire to democratize financial access. We believe everyone deserves
-        access to powerful tools that can help them achieve their financial
-        goals. By leveraging the transparency and accessibility of DeFi, we're
-        making these strategies available to all, regardless of background or
-        investment size.
+        returns and risk mitigation to regular users who often don&apos;t have
+        access to the required financial infrastructure. Our permissionless
+        vaults continuously execute strategies based on market conditions,
+        aiming to maximize yields with minimal user intervention. Harmonix was
+        born from a desire to democratize financial access. We believe everyone
+        deserves access to powerful tools that can help them achieve their
+        financial goals. By leveraging the transparency and accessibility of
+        DeFi, we&apos;re making these strategies available to all, regardless of
+        background or investment size.
       </p>
     </div>
   );

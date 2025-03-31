@@ -8,7 +8,7 @@ type PartnerItemProps = {
 export default function PartnerItem(props: PartnerItemProps) {
   return (
     <div
-      className={`h-16 lg:h-24 xl:h-24 2xl:h-24 flex justify-center items-center bg-white rounded-2xl ${
+      className={`h-32 sm:h-40 lg:h-32 xl:h-28 2xl:h-32 flex justify-center items-center bg-white rounded-2xl ${
         props.className || ""
       }`}
     >
