@@ -3,9 +3,9 @@ import CoreValues from "~/components/about-us/CoreValues";
 import JoinUs from "~/components/about-us/JoinUs";
 import Mission from "~/components/about-us/Mission";
 import Vision from "~/components/about-us/Vision";
+import BlendBackground from "~/components/common/BlendBackground";
 import What from "~/components/common/home/What";
 import Why from "~/components/common/home/Why";
-import Navbar from "~/components/common/navbar/Navbar";
 import { HomeGridIcon } from "~/components/icons";
 import { METADATA } from "~/constants/metadata";
 
@@ -61,22 +61,9 @@ export const meta: MetaFunction = () => {
 
 export default function AboutUs() {
   return (
-    <div
-      className="lg:pt-10"
-      style={{
-        backgroundImage: `
-        linear-gradient(300deg, rgba(241, 240, 235, 0.5) 7.75%, rgba(226, 246, 161, 0.5) 92.25%),
-        url('bg.png')
-      `,
-        backgroundPosition: "50%",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundColor: "lightgray",
-        backgroundBlendMode: "color, normal",
-      }}
-    >
-      <Navbar />
-      <div className="relative w-full flex flex-col gap-32 pt-16 sm:pt-28">
+    <div className="blend-bg -translate-y-[64px] lg:-translate-y-[72px]">
+      <BlendBackground />
+      <div className="relative w-full flex flex-col gap-32 pt-28 sm:pt-40">
         <What />
         <Why />
         <div className="space-y-16 px-6 sm:px-12 lg:px-24">

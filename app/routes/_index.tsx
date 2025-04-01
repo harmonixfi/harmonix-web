@@ -7,11 +7,10 @@ import BlendBackground from "~/components/common/BlendBackground";
 import AuditSection from "~/components/common/home/AuditSection";
 import CoreTechnology from "~/components/common/home/CoreTechnologySection";
 import FAQSection from "~/components/common/home/FAQSection";
+import MetaBadge from "~/components/common/home/MetaBadge";
 import Partner from "~/components/common/home/PartnerSection";
 import RewardSection from "~/components/common/home/RewardSection";
-import Verichain from "~/components/common/home/Verichain";
 import Earn from "~/components/common/home/earn/Earn";
-import Navbar from "~/components/common/navbar/Navbar";
 import { SubtractIcon } from "~/components/icons";
 import { METADATA } from "~/constants/metadata";
 import { EXTERNAL_LINKS } from "~/constants/url";
@@ -97,12 +96,15 @@ export default function Index() {
 
   return (
     <div className={"font-poppins"}>
-      <div className={"relative h-screen lg:pt-10 blend-bg overflow-hidden"}>
+      <div
+        className={
+          "relative h-[calc(100vh)] blend-bg overflow-hidden -translate-y-[64px] lg:-translate-y-[72px]"
+        }
+      >
         <BlendBackground />
-        <Navbar />
-        <div className="relative w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center space-y-6 text-dark-green mt-16 z-30">
+        <div className="relative w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center space-y-6 pt-40 text-dark-green z-30">
           <div className="text-center space-y-6">
-            <h1 className="text-4xl sm:text-6xl lg:text-6xl font-semibold">
+            <h1 className="text-5xl sm:text-6xl font-semibold">
               Reshaping Yield Optimization
             </h1>
             <h1 className="text-2xl lg:text-xl font-light mt-2">
@@ -127,7 +129,7 @@ export default function Index() {
             "absolute left-1/2 -translate-x-1/2 bottom-4 lg:bottom-6 z-30"
           }
         >
-          <Verichain />
+          <MetaBadge apy={deltaNeutralVaultApy} />
         </div>
         <SubtractIcon className="absolute bottom-0 right-1/2 translate-x-1/2 w-2/3 sm:w-3/4 xl:w-2/3 h-auto translate-y-2" />
         <div
