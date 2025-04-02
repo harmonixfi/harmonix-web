@@ -1,11 +1,16 @@
 import PartnerItem from "./PartnerItem";
 import {
-  GoldLinkIcon,
   KelpIcon,
   KyberNetworkIcon,
-  NodeKitIcon,
   PendleIcon,
   HyperLiquidIcon,
+  FelixIcon,
+  WormholeIcon,
+  AsxnIcon,
+  PythNetworkIcon,
+  AlphaTicksIcon,
+  ValidaoIcon,
+  PendleWithTextIcon,
 } from "~/components/icons";
 
 export default function PartnerSection() {
@@ -29,31 +34,58 @@ export default function PartnerSection() {
           <PartnerItem />
           <PartnerItem
             className="col-span-5"
-            icon={<KelpIcon className="w-auto h-12 sm:h-16" />}
+            icon={<KelpIcon className="w-auto h-10 sm:h-16" />}
           />
           <PartnerItem
             className="col-span-5"
-            icon={<KyberNetworkIcon className="w-auto h-16 sm:h-20 lg:h-24" />}
-          />
-          <PartnerItem />
-          <PartnerItem />
-          <PartnerItem
-            className="col-span-5"
-            icon={<NodeKitIcon className="w-auto h-14 sm:h-16 lg:h-20" />}
-          />
-          <PartnerItem
-            className="col-span-5"
-            icon={<HyperLiquidIcon className={"w-auto h-6 sm:h-8 lg:h-12"} />}
+            icon={<KyberNetworkIcon className="w-auto h-14 sm:h-20 lg:h-24" />}
           />
           <PartnerItem />
           <PartnerItem />
           <PartnerItem
             className="col-span-5"
-            icon={<PendleIcon className="w-auto h-20 sm:h-24" />}
+            icon={
+              <div className="flex items-center gap-3">
+                <FelixIcon className="w-auto h-12 sm:h-16" />
+                <span className="text-primary text-3xl sm:text-5xl font-light font-poppins translate-y-1 sm:translate-y-2">
+                  Felix
+                </span>
+              </div>
+            }
           />
           <PartnerItem
             className="col-span-5"
-            icon={<GoldLinkIcon className={"w-auto h-8 sm:h-10 lg:h-14"} />}
+            icon={<HyperLiquidIcon className={"w-auto h-6 sm:h-10 lg:h-12"} />}
+          />
+          <PartnerItem />
+          <PartnerItem />
+          <PartnerItem
+            className="col-span-5"
+            icon={<PendleIcon className="w-auto h-16 sm:h-20 lg:h-24" />}
+          />
+          <PartnerItem
+            className="col-span-5"
+            icon={<WormholeIcon className={"w-auto h-3 sm:h-6 lg:h-8"} />}
+          />
+          <PartnerItem />
+          <PartnerItem />
+          <PartnerItem
+            className="col-span-5"
+            icon={<PythNetworkIcon className="w-auto h-10 sm:h-16 lg:h-20" />}
+          />
+          <PartnerItem
+            className="col-span-5"
+            icon={<ValidaoIcon className={"w-auto h-6 sm:h-12 lg:h-14"} />}
+          />
+          <PartnerItem />
+          <PartnerItem />
+          <PartnerItem
+            className="col-span-5"
+            icon={<AsxnIcon className="w-auto h-10 sm:h-16 lg:h-20" />}
+          />
+          <PartnerItem
+            className="col-span-5"
+            icon={<AlphaTicksIcon className={"w-auto h-8 sm:h-12 lg:h-14"} />}
           />
           <PartnerItem />
           <PartnerItem />
@@ -72,18 +104,44 @@ export default function PartnerSection() {
             return <PartnerItem key={index} />;
           })}
           <PartnerItem icon={<KelpIcon className="w-auto h-14 2xl:h-16" />} />
-          <PartnerItem icon={<KyberNetworkIcon className="w-auto h-16" />} />
-          <PartnerItem icon={<NodeKitIcon className="w-auto h-16" />} />
+          <PartnerItem
+            icon={<KyberNetworkIcon className="w-auto h-16 2xl:h-20" />}
+          />
+          <PartnerItem
+            icon={
+              <div className="flex items-center gap-3">
+                <FelixIcon className="w-auto h-16" />
+                <span className="text-primary text-4xl font-light font-poppins translate-y-2">
+                  Felix
+                </span>
+              </div>
+            }
+          />
           <PartnerItem />
           <PartnerItem />
           <PartnerItem
             icon={<HyperLiquidIcon className="w-auto h-8 2xl:h-10" />}
           />
-          <PartnerItem icon={<PendleIcon className="w-auto h-16" />} />
           <PartnerItem
-            icon={<GoldLinkIcon className="w-auto h-8 2xl:h-10" />}
+            icon={<PendleWithTextIcon className="w-auto h-20 2xl:h-24" />}
           />
-          {[...Array(6)].map((_, index) => {
+          <PartnerItem icon={<WormholeIcon className="w-auto h-5 2xl:h-6" />} />
+          <PartnerItem />
+          <PartnerItem />
+          <PartnerItem
+            icon={<PythNetworkIcon className="w-auto h-10 2xl:h-12" />}
+          />
+          <PartnerItem
+            icon={<ValidaoIcon className="w-auto h-10 2xl:h-12" />}
+          />
+          <PartnerItem icon={<AsxnIcon className="w-auto h-10 2xl:h-12" />} />
+          <PartnerItem />
+          <PartnerItem />
+          <PartnerItem />
+          <PartnerItem
+            icon={<AlphaTicksIcon className="w-auto h-10 2xl:h-12" />}
+          />
+          {[...Array(7)].map((_, index) => {
             return <PartnerItem key={index} />;
           })}
         </div>
