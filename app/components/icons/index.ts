@@ -42,7 +42,7 @@ export { default as Light4Icon } from "./Light4";
 export { default as Light5Icon } from "./Light5";
 export { default as Light6Icon } from "./Light6";
 export { default as CircleIcon } from "./Circle";
-export { default as HyperLiquidIcon } from "./HyperLiquid";
+export { default as HyperLiquidIcon } from "./Hyperliquid";
 export { default as ValidaoIcon } from "./Validao";
 export { default as PythNetworkIcon } from "./PythNetwork";
 export { default as AsxnIcon } from "./Asxn";
