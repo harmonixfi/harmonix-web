@@ -106,7 +106,7 @@ export default function Index() {
         <BlendBackground />
         <div className="relative w-[calc(100%-16px)] sm:w-3/4 xl:w-4/5 2xl:w-[1060px] mx-auto flex flex-col items-center space-y-6 pt-40 text-dark-green z-30">
           <div className="text-center space-y-6">
-            <h1 className="text-5xl sm:text-6xl font-semibold">
+            <h1 className="text-5xl sm:text-6xl font-semibold leading-tight">
               Reshaping Yield Optimization
             </h1>
             <h1 className="text-2xl lg:text-xl font-light mt-2">

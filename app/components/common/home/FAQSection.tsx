@@ -82,7 +82,7 @@ export default function FAQSection() {
   return (
     <div
       className={
-        "px-8 py-8 2xl:px-60 xl:px-32 xl:py-32 2xl:py-32 bg-white text-primary space-y-16"
+        "px-4 sm:px-8 py-8 2xl:px-60 xl:px-32 xl:py-32 2xl:py-32 bg-white text-primary space-y-16"
       }
     >
       <div

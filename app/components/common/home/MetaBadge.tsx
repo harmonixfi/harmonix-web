@@ -16,7 +16,7 @@ export default function MetaBadge(props: MetaBadgeProps) {
       >
         <div className={"flex items-baseline gap-2"}>
           <span className={"uppercase text-base"}>APY</span>
-          <span className={"text-2xl font-semibold"}>
+          <span className={"text-xl sm:text-2xl font-semibold"}>
             {apy.toLocaleString("en-US", {
               maximumFractionDigits: 2,
             })}
@@ -26,7 +26,7 @@ export default function MetaBadge(props: MetaBadgeProps) {
         <div className={"w-[1px] h-6 mx-6 bg-black"}></div>
         <div className={"flex items-center gap-2.5"}>
           <div>Audit</div>
-          <VerichainIcon className="w-auto h-9" />
+          <VerichainIcon className="w-auto h-7 sm:h-9" />
         </div>
       </div>
     </div>

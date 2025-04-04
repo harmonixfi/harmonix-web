@@ -56,7 +56,7 @@ export default function Earn() {
   return (
     <div
       className={
-        "px-8 lg:px-8 xl:px-24 2xl:px-48 sm:px-3 py-28 bg-white text-dark-green"
+        "px-8 lg:px-8 xl:px-24 2xl:px-48 sm:px-3 py-12 sm:py-28 bg-white text-dark-green"
       }
     >
       <div className={"grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6"}>

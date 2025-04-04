@@ -79,7 +79,7 @@ export default function RewardSection2(props: RewardSectionProps) {
           </div>
         </div>
         <div className={"flex justify-center"}>
-          <div className={"flex items-center gap-3 lg:gap-12"}>
+          <div className={"flex items-center gap-1 sm:gap-3 lg:gap-12"}>
             <div className={"flex flex-col items-center"}>
               <HarmonixPointIcon
                 className={"w-8 h-8 sm:w-10 sm:h-10 lg:w-16 lg:h-16"}
@@ -90,7 +90,7 @@ export default function RewardSection2(props: RewardSectionProps) {
             </div>
 
             <div>
-              <PlusIcon className={"w-3 h-3 lg:w-8 lg:h-8"} />
+              <PlusIcon className={"w-2 h-2 sm:w-3 sm:h-3 lg:w-8 lg:h-8"} />
             </div>
             <div className={"flex flex-col items-center"}>
               <HyperliquidLogoIcon
@@ -101,7 +101,7 @@ export default function RewardSection2(props: RewardSectionProps) {
               </p>
             </div>
             <div>
-              <PlusIcon className={"w-3 h-3 lg:w-8 lg:h-8"} />
+              <PlusIcon className={"w-2 h-2 sm:w-3 sm:h-3 lg:w-8 lg:h-8"} />
             </div>
             <div className="flex flex-col items-center">
               <div
@@ -116,7 +116,7 @@ export default function RewardSection2(props: RewardSectionProps) {
               </p>
             </div>
             <div>
-              <PlusIcon className={"w-3 h-3 lg:w-8 lg:h-8"} />
+              <PlusIcon className={"w-2 h-2 sm:w-3 sm:h-3 lg:w-8 lg:h-8"} />
             </div>
             <div className={"flex flex-col items-center"}>
               <div

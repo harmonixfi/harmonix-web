@@ -34,7 +34,7 @@ const Navbar = () => {
 
   const handleScrollPositionChange = (position: number) => {
     if (navRef.current) {
-      if (position === 0) {
+      if (position === 0 && window.innerWidth >= 1024) {
         navRef.current.style.top = "24px";
       } else {
         navRef.current.style.top = "0";
@@ -49,7 +49,7 @@ const Navbar = () => {
       isBlurred={false}
       shouldHideOnScroll
       classNames={{
-        base: "w-full lg:w-[1024px] xl:w-[1260px] 2xl:w-[1400px] mx-auto bg-white lg:rounded-3xl sm:px-12 sm:py-0 lg:px-6 lg:py-1 top-6",
+        base: "w-full lg:w-[1024px] xl:w-[1260px] 2xl:w-[1400px] mx-auto bg-white lg:rounded-3xl sm:px-12 sm:py-0 lg:px-6 lg:py-1 lg:top-6",
         wrapper: "px-4 sm:px-0",
       }}
       maxWidth="full"
@@ -141,7 +141,7 @@ const Navbar = () => {
             target="_blank"
             rel="noreferrer"
             size="lg"
-            className="bg-transparent border border-primary rounded-full text-dark-green hover:bg-light-yellow hover:border-secondary"
+            className="bg-transparent border border-primary rounded-full text-dark-green h-10 sm:h-12 hover:bg-light-yellow hover:border-secondary"
           >
             Launch App
           </Button>
