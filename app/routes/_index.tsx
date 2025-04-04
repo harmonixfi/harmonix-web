@@ -144,7 +144,12 @@ export default function Index() {
             backgroundBlendMode: "soft-light",
           }}
         />
-        <div className="absolute bottom-0 right-1/2 translate-x-1/2 w-full aspect-[1.2] sm:aspect-[1.5] xl:aspect-[2] bg-[url('blur-logo.png')] bg-center bg-cover mix-blend-overlay z-10" />
+        <div
+          className="absolute bottom-0 right-1/2 translate-x-1/2 w-full aspect-[1.2] sm:aspect-[1.5] xl:aspect-[2] bg-center bg-cover mix-blend-overlay z-10"
+          style={{
+            backgroundImage: "url('blur-logo.png')",
+          }}
+        />
         <div
           className="w-full h-40 absolute bottom-0 right-0 z-20"
           style={{
