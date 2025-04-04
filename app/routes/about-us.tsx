@@ -3,6 +3,7 @@ import CoreValues from "~/components/about-us/CoreValues";
 import JoinUs from "~/components/about-us/JoinUs";
 import Mission from "~/components/about-us/Mission";
 import Vision from "~/components/about-us/Vision";
+import BlendBackground from "~/components/common/BlendBackground";
 import What from "~/components/common/home/What";
 import Why from "~/components/common/home/Why";
 import { HomeGridIcon } from "~/components/icons";
@@ -60,16 +61,19 @@ export const meta: MetaFunction = () => {
 
 export default function AboutUs() {
   return (
-    <div className="relative w-full flex flex-col gap-32 pt-16 sm:pt-28">
-      <What />
-      <Why />
-      <div className="space-y-16 px-6 sm:px-12 lg:px-24">
-        <Mission />
-        <Vision />
-        <CoreValues />
+    <div className="blend-bg -translate-y-[64px] lg:-translate-y-[72px]">
+      <BlendBackground />
+      <div className="relative w-full flex flex-col gap-32 pt-28 sm:pt-40">
+        <What />
+        <Why />
+        <div className="space-y-16 px-6 sm:px-12 lg:px-24">
+          <Mission />
+          <Vision />
+          <CoreValues />
+        </div>
+        <JoinUs />
+        <HomeGridIcon className="absolute -bottom-[1%] sm:-bottom-[2%] 2xl:-bottom-[10%] right-0 w-full h-auto" />
       </div>
-      <JoinUs />
-      <HomeGridIcon className="absolute -bottom-[1%] sm:-bottom-[2%] 2xl:-bottom-[10%] right-0 w-full h-auto" />
     </div>
   );
 }

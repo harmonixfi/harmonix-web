@@ -38,7 +38,7 @@ const NavbarDropdown = (props: NavbarDropdownProps) => {
         <DropdownTrigger>
           <Button
             disableRipple
-            className="h-full px-4 py-2 text-base text-black border-none rounded-full !opacity-100 hover:bg-secondary"
+            className="h-full px-4 py-2 text-base text-dark-green border-none rounded-full !opacity-100 hover:bg-secondary"
             variant="bordered"
             endContent={<ChevronDownIcon className="w-5 h-5" />}
             onMouseEnter={() => {
@@ -58,7 +58,7 @@ const NavbarDropdown = (props: NavbarDropdownProps) => {
         aria-label={title}
         color="secondary"
         itemClasses={{
-          title: "flex items-center gap-3 !text-black",
+          title: "flex items-center gap-3 !text-dark-green",
         }}
         onMouseEnter={() => {
           clearTimeout(timeoutId);

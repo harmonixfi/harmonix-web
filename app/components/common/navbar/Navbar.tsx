@@ -20,31 +20,46 @@ import {
   Navbar as NextUiNavbar,
 } from "@nextui-org/react";
 import { Link } from "@remix-run/react";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { EXTERNAL_LINKS } from "~/constants/url";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const navRef = useRef<HTMLDivElement>(null);
+
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
   };
 
+  const handleScrollPositionChange = (position: number) => {
+    if (navRef.current) {
+      if (position === 0) {
+        navRef.current.style.top = "24px";
+      } else {
+        navRef.current.style.top = "0";
+      }
+    }
+  };
+
   return (
     <NextUiNavbar
+      ref={navRef}
       isMenuOpen={isMenuOpen}
+      isBlurred={false}
       shouldHideOnScroll
       classNames={{
-        base: "w-full sm:px-12 lg:px-24 bg-white lg:bg-transparent",
+        base: "w-full lg:w-[1024px] xl:w-[1260px] 2xl:w-[1400px] mx-auto bg-white lg:rounded-3xl sm:px-12 sm:py-0 lg:px-6 lg:py-1 top-6",
         wrapper: "px-4 sm:px-0",
       }}
       maxWidth="full"
       onMenuOpenChange={setIsMenuOpen}
+      onScrollPositionChange={handleScrollPositionChange}
     >
       <NavbarContent>
         <NavbarBrand>
           <Link to="/" onClick={handleCloseMenu}>
-            <LogoWithTextIcon className="w-auto h-10 sm:h-12 " />
+            <LogoWithTextIcon className="w-auto h-10 sm:h-12" />
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -101,7 +116,7 @@ const Navbar = () => {
             href={EXTERNAL_LINKS.Dashboard}
             target="_blank"
             rel="noreferrer"
-            className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
+            className="h-full px-4 py-2 rounded-full hover:bg-light-yellow hover:opacity-100"
           >
             Dashboard
           </NextUiLink>
@@ -112,7 +127,7 @@ const Navbar = () => {
             href={EXTERNAL_LINKS.Docs}
             target="_blank"
             rel="noreferrer"
-            className="h-full px-4 py-2 rounded-full hover:bg-secondary hover:opacity-100"
+            className="h-full px-4 py-2 rounded-full hover:bg-light-yellow hover:opacity-100"
           >
             Docs
           </NextUiLink>
@@ -126,7 +141,7 @@ const Navbar = () => {
             target="_blank"
             rel="noreferrer"
             size="lg"
-            className="bg-transparent border border-primary rounded-full text-black hover:bg-secondary hover:border-secondary"
+            className="bg-transparent border border-primary rounded-full text-dark-green hover:bg-light-yellow hover:border-secondary"
           >
             Launch App
           </Button>
@@ -145,7 +160,8 @@ const Navbar = () => {
               base: "py-3",
               trigger: "p-0",
               titleWrapper: "flex-none",
-              indicator: "-rotate-90 text-black data-[open=true]:rotate-90",
+              indicator:
+                "-rotate-90 text-dark-green data-[open=true]:rotate-90",
             }}
           >
             <AccordionItem key="about" aria-label="About" title="About">
