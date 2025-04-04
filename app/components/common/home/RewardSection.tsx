@@ -1,16 +1,12 @@
 import { motion } from "framer-motion";
 import {
   ChainLinkIcon,
-  EthIcon,
-  FishPointIcon,
   HarmonixPointIcon,
-  KernelIcon,
+  HyperliquidLogoIcon,
+  NansenLogoIcon,
   PlusIcon,
-  ReEthIcon,
-  RenzoIcon,
-  SwellIcon,
+  ValidaoLogoIcon,
   VerichainIcon,
-  ZircuitPointIcon,
 } from "~/components/icons";
 
 type RewardSectionProps = {
@@ -23,7 +19,7 @@ export default function RewardSection2(props: RewardSectionProps) {
   return (
     <div
       className={
-        "px-8 py-[60px] lg:py-[120px] lg:px-8 xl:px-60 2xl:px-60 text-primary space-y-16 bg-[#F9FBF8]"
+        "px-0 sm:px-8 py-[60px] lg:py-[120px] lg:px-8 xl:px-40 2xl:px-60 text-primary space-y-16 bg-[#F9FBF8]"
       }
     >
       <div className={"text-[32px] lg:text-[64px] space-y-6 mb-16 text-center"}>
@@ -42,9 +38,7 @@ export default function RewardSection2(props: RewardSectionProps) {
           <div className={"flex items-center space-x-6"}>
             <p className={"text-lg lg:text-2xl font-normal"}>Audited by</p>
             <div>
-              <VerichainIcon
-                className={"w-28 h-[35px] lg:w-full lg:h-[70px]"}
-              />
+              <VerichainIcon className={"w-28 h-9 lg:w-full lg:h-20"} />
             </div>
           </div>
         </div>
@@ -58,7 +52,7 @@ export default function RewardSection2(props: RewardSectionProps) {
             <div className={"mt-6 flex justify-center"}>
               <p
                 className={
-                  "text-4xl xl:text-7xl 2xl:text-7xl font-bold font-outfit"
+                  "text-5xl xl:text-6xl 2xl:text-7xl font-bold font-outfit"
                 }
               >
                 {deltaNeutralVaultApy.toLocaleString("en-US", {
@@ -69,57 +63,71 @@ export default function RewardSection2(props: RewardSectionProps) {
             </div>
           </div>
           <div>
-            <PlusIcon className={"w-[38px] h-[38px] "} />
+            <PlusIcon className="w-6 h-6 sm:w-9 sm:h-9" />
           </div>
           <div className={"flex-1"}>
-            <p className={"text-center text-2xl text-sub-title"}>LRT points</p>
+            <p className={"text-center text-2xl text-sub-title"}>Staking APR</p>
             <div className={"mt-6 flex justify-center"}>
-              <div className={"flex items-center space-x-1"}>
-                <ReEthIcon className={"w-10 h-10 lg:w-16 lg:h-16"} />
-                <EthIcon className={"w-10 h-10 lg:w-16 lg:h-16"} />
-                <RenzoIcon className={"w-10 h-10 lg:w-16 lg:h-16"} />
-                <div
-                  className={
-                    "w-10 h-10 lg:w-16 lg:h-16 bg-white rounded-full flex justify-center items-center"
-                  }
-                >
-                  <FishPointIcon />
-                </div>
-                <SwellIcon className={"w-10 h-10 lg:w-16 lg:h-16"} />
-              </div>
+              <p
+                className={
+                  "text-5xl xl:text-6xl 2xl:text-7xl font-bold font-outfit"
+                }
+              >
+                2.28%
+              </p>
             </div>
           </div>
         </div>
         <div className={"flex justify-center"}>
-          <div className={"flex items-center"}>
+          <div className={"flex items-center gap-3 lg:gap-12"}>
             <div className={"flex flex-col items-center"}>
-              <KernelIcon className={"w-10 h-10 lg:w-16 lg:h-16"} />
+              <HarmonixPointIcon
+                className={"w-8 h-8 sm:w-10 sm:h-10 lg:w-16 lg:h-16"}
+              />
               <p className={"mt-2 text-sm text-center lg:text-2xl font-normal"}>
-                Kernel Points
+                Harmonix points
               </p>
             </div>
-            <div className={"mx-3 lg:mx-16"}>
+
+            <div>
+              <PlusIcon className={"w-3 h-3 lg:w-8 lg:h-8"} />
+            </div>
+            <div className={"flex flex-col items-center"}>
+              <HyperliquidLogoIcon
+                className={"w-8 h-8 sm:w-10 sm:h-10 lg:w-16 lg:h-16"}
+              />
+              <p className={"mt-2 text-sm text-center lg:text-2xl font-normal"}>
+                Hyperliquid points
+              </p>
+            </div>
+            <div>
+              <PlusIcon className={"w-3 h-3 lg:w-8 lg:h-8"} />
+            </div>
+            <div className="flex flex-col items-center">
+              <div
+                className={
+                  "w-8 h-8 sm:w-10 sm:h-10 lg:w-16 lg:h-16 flex justify-center items-center bg-primary rounded-full"
+                }
+              >
+                <ValidaoLogoIcon className="w-auto h-6 lg:h-9" />
+              </div>
+              <p className={"mt-2 text-sm text-center lg:text-2xl font-normal"}>
+                ValiDAO points
+              </p>
+            </div>
+            <div>
               <PlusIcon className={"w-3 h-3 lg:w-8 lg:h-8"} />
             </div>
             <div className={"flex flex-col items-center"}>
               <div
                 className={
-                  "w-10 h-10 lg:w-16 lg:h-16 flex justify-center items-center bg-[#2E8040] rounded-full"
+                  "w-8 h-8 sm:w-10 sm:h-10 lg:w-16 lg:h-16 flex justify-center items-center bg-primary rounded-full"
                 }
               >
-                <ZircuitPointIcon />
+                <NansenLogoIcon className="w-6 h-6 sm:w-8 sm:h-8 lg:w-12 lg:h-12" />
               </div>
               <p className={"mt-2 text-sm text-center lg:text-2xl font-normal"}>
-                Zircuit points
-              </p>
-            </div>
-            <div className={"mx-3 lg:mx-16"}>
-              <PlusIcon className={"w-3 h-3 lg:w-8 lg:h-8"} />
-            </div>
-            <div className={"flex flex-col items-center"}>
-              <HarmonixPointIcon className={"w-10 h-10 lg:w-16 lg:h-16"} />
-              <p className={"mt-2 text-sm text-center lg:text-2xl font-normal"}>
-                Harmonix points
+                Nansen points
               </p>
             </div>
           </div>

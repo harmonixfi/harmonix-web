@@ -87,12 +87,14 @@ export default function Index() {
 
   const vaults = data?.vaults || [];
 
-  const deltaNeutralVaultApy =
-    Math.max(
-      ...vaults
-        .filter((x) => !x.slug.toLowerCase().includes("option"))
-        .map((x) => x.apy_1y)
-    ) || 27;
+  const apyList = [
+    ...vaults
+      .filter((x) => !x.slug.toLowerCase().includes("option"))
+      .map((x) => x.apy_1y),
+    10.68,
+  ];
+
+  const deltaNeutralVaultApy = Math.max(...apyList);
 
   return (
     <div className={"font-poppins"}>

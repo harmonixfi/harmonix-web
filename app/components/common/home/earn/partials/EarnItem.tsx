@@ -1,4 +1,4 @@
-import { HarmonixPointIcon, KernelIcon } from "~/components/icons";
+import { HarmonixPointIcon, HyperliquidLogoIcon } from "~/components/icons";
 
 export default function EarnItem() {
   return (
@@ -13,7 +13,7 @@ export default function EarnItem() {
         <p className={"text-[15px] font-medium"}>Your Position</p>
         <div className={"mt-2 flex items-center justify-center"}>
           <p className={"text-5xl lg:text-[78px]"}>63.59</p>
-          <div className={'ml-1'}>
+          <div className={"ml-1"}>
             <div
               className={
                 "bg-[#67FCC2] text-xs lg:text-sm p-1 rounded-3xl -rotate-6 lg:mb-2"
@@ -64,16 +64,20 @@ export default function EarnItem() {
                 Harmonix points
               </span>
             </div>
-            <p className={"text-2xl lg:text-[36px] font-bold font-outfit"}>2,207.9</p>
+            <p className={"text-2xl lg:text-[36px] font-bold font-outfit"}>
+              2,207.9
+            </p>
           </div>
           <div className={"space-y-1"}>
             <div className={"flex items-center justify-center space-x-2"}>
-              <KernelIcon className={"w-6 h-6 lg:w-8 lg:h-8"} />
+              <HyperliquidLogoIcon className={"w-6 h-6 lg:w-8 lg:h-8"} />
               <span className={"text-main-green text-sm font-normal"}>
-                Kernel Points
+                Hyperliquid Points
               </span>
             </div>
-            <p className={"text-2xl lg:text-[36px] font-bold font-outfit"}>33.48K</p>
+            <p className={"text-2xl lg:text-[36px] font-bold font-outfit"}>
+              33.48K
+            </p>
           </div>
         </div>
       </div>
