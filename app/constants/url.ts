@@ -6,6 +6,7 @@ export const EXTERNAL_LINKS = {
   Twitter: "https://twitter.com/harmonixfi",
   Github: "https://github.com/harmonixfi",
   Discord: "https://discord.gg/sNgbWFJ9Bw",
+  Shieldify:"https://github.com/shieldify-security/audits-portfolio/blob/main/reports/HarmonixFinance-Hyperliquid-Security-Review.pdf",
 
   Docs: "https://harmonix-finance.gitbook.io/harmonix-docs",
   Blog: "https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04",

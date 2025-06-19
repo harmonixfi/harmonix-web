@@ -4,6 +4,7 @@ import {
   FlatLogoIcon,
   FooterLineIcon,
   GithubIcon,
+  ShieldifyIcon,
   TelegramIcon,
   TwitterIcon,
 } from "../icons";
@@ -49,6 +50,12 @@ const menuItems = [
         icon: DiscordIcon,
         text: "Discord",
         link: EXTERNAL_LINKS.Discord,
+        isExternal: true,
+      },
+      {
+        icon: ShieldifyIcon,
+        text: "Shieldify",
+        link: EXTERNAL_LINKS.Shieldify,
         isExternal: true,
       },
     ],

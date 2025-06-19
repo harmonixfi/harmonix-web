@@ -2,6 +2,7 @@ import {
   DiscordIcon,
   GithubIcon,
   LogoWithTextIcon,
+  ShieldifyIcon,
   TelegramIcon,
   TwitterIcon,
 } from "../../icons";
@@ -106,6 +107,12 @@ const Navbar = () => {
               icon: DiscordIcon,
               text: "Discord",
               link: EXTERNAL_LINKS.Discord,
+              isExternal: true,
+            },
+            {
+              icon: ShieldifyIcon,
+              text: "Shieldify",
+              link: EXTERNAL_LINKS.Shieldify,
               isExternal: true,
             },
           ]}
