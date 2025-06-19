@@ -22,7 +22,7 @@ const menuItems = [
       { text: "Faq", link: "/#faq" },
       { text: "Blog", link: EXTERNAL_LINKS.Blog, isExternal: true },
       { text: "About Us", link: "/about-us" },
-      { text: "Audit", link: EXTERNAL_LINKS.Audit, isExternal: true },
+      { text: "Audit", link: "#audit-section", isExternal: false },
     ],
   },
   {
@@ -50,12 +50,6 @@ const menuItems = [
         icon: DiscordIcon,
         text: "Discord",
         link: EXTERNAL_LINKS.Discord,
-        isExternal: true,
-      },
-      {
-        icon: ShieldifyIcon,
-        text: "Shieldify",
-        link: EXTERNAL_LINKS.Shieldify,
         isExternal: true,
       },
     ],

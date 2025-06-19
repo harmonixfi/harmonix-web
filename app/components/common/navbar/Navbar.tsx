@@ -77,8 +77,8 @@ const Navbar = () => {
             { text: "About Us", link: "/about-us" },
             {
               text: "Audit",
-              link: EXTERNAL_LINKS.Audit,
-              isExternal: true,
+              link: "#audit-section",
+              isExternal: false,
             },
           ]}
         />
@@ -108,13 +108,7 @@ const Navbar = () => {
               text: "Discord",
               link: EXTERNAL_LINKS.Discord,
               isExternal: true,
-            },
-            {
-              icon: ShieldifyIcon,
-              text: "Shieldify",
-              link: EXTERNAL_LINKS.Shieldify,
-              isExternal: true,
-            },
+            }
           ]}
         />
         <NavbarItem className="h-full">

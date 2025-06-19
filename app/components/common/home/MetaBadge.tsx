@@ -1,4 +1,4 @@
-import { VerichainIcon } from "~/components/icons";
+import { ShieldifyIcon, VerichainIcon } from "~/components/icons";
 
 type MetaBadgeProps = {
   apy: number;
@@ -27,6 +27,7 @@ export default function MetaBadge(props: MetaBadgeProps) {
         <div className={"flex items-center gap-2.5"}>
           <div>Audit</div>
           <VerichainIcon className="w-auto h-7 sm:h-9" />
+          <ShieldifyIcon className="w-auto h-7 sm:h-9" />
         </div>
       </div>
     </div>

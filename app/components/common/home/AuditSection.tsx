@@ -1,6 +1,6 @@
 import BtnPrimary from "./BtnPrimary";
 import { motion } from "framer-motion";
-import { VerichainIcon } from "~/components/icons";
+import { ShieldifyIcon, VerichainIcon } from "~/components/icons";
 import { EXTERNAL_LINKS } from "~/constants/url";
 
 export default function AuditSection2() {
@@ -13,6 +13,7 @@ export default function AuditSection2() {
       className={
         "px-8 lg:px-8 xl:px-60 2xl:px-60 py-[120px] bg-white text-dark-green space-y-16"
       }
+      id="audit-section"
     >
       <div
         className={
@@ -36,9 +37,20 @@ export default function AuditSection2() {
           in our security reports.
         </p>
         <div>
-          <VerichainIcon className={"w-auto h-16 sm:h-20 md:h-24"} />
+          <div className="mb-4">
+            <VerichainIcon className={"w-auto h-16 sm:h-20 md:h-24"} />
+          </div>
+          <BtnPrimary to={EXTERNAL_LINKS.Audit} title={"See Full Report"} />
         </div>
-        <BtnPrimary to={EXTERNAL_LINKS.Audit} title={"See Full Report"} />
+        <div>
+          <div>
+            <ShieldifyIcon
+              style={{ width: "100%", height: "100%" }}
+              className={"w-auto h-20 sm:h-20 md:h-24"}
+            />
+          </div>
+          <BtnPrimary to={EXTERNAL_LINKS.Shieldify} title={"See Full Report"} />
+        </div>
       </div>
     </motion.div>
   );
