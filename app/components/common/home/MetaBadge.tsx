@@ -27,7 +27,7 @@ export default function MetaBadge(props: MetaBadgeProps) {
         <div className={"flex items-center gap-2.5"}>
           <div>Audit</div>
           <VerichainIcon className="w-auto h-7 sm:h-9" />
-          <ShieldifyIcon className="w-auto h-7 sm:h-9" />
+          <ShieldifyIcon className="w-28 md:w-36 lg:w-36" />
         </div>
       </div>
     </div>

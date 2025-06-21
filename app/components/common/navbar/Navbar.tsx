@@ -108,7 +108,7 @@ const Navbar = () => {
               text: "Discord",
               link: EXTERNAL_LINKS.Discord,
               isExternal: true,
-            }
+            },
           ]}
         />
         <NavbarItem className="h-full">
@@ -189,10 +189,9 @@ const Navbar = () => {
                 </Link>
                 <Link
                   color="foreground"
-                  to={EXTERNAL_LINKS.Audit}
-                  target="_blank"
-                  rel="noreferrer"
+                  to="#audit-section"
                   className="px-4"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Audit
                 </Link>
