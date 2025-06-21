@@ -4,6 +4,7 @@ import {
   FlatLogoIcon,
   FooterLineIcon,
   GithubIcon,
+  ShieldifyIcon,
   TelegramIcon,
   TwitterIcon,
 } from "../icons";
@@ -21,7 +22,7 @@ const menuItems = [
       { text: "Faq", link: "/#faq" },
       { text: "Blog", link: EXTERNAL_LINKS.Blog, isExternal: true },
       { text: "About Us", link: "/about-us" },
-      { text: "Audit", link: EXTERNAL_LINKS.Audit, isExternal: true },
+      { text: "Audit", link: "#audit-section", isExternal: false },
     ],
   },
   {

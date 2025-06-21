@@ -2,6 +2,7 @@ import {
   DiscordIcon,
   GithubIcon,
   LogoWithTextIcon,
+  ShieldifyIcon,
   TelegramIcon,
   TwitterIcon,
 } from "../../icons";
@@ -76,8 +77,8 @@ const Navbar = () => {
             { text: "About Us", link: "/about-us" },
             {
               text: "Audit",
-              link: EXTERNAL_LINKS.Audit,
-              isExternal: true,
+              link: "#audit-section",
+              isExternal: false,
             },
           ]}
         />
@@ -188,10 +189,9 @@ const Navbar = () => {
                 </Link>
                 <Link
                   color="foreground"
-                  to={EXTERNAL_LINKS.Audit}
-                  target="_blank"
-                  rel="noreferrer"
+                  to="#audit-section"
                   className="px-4"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Audit
                 </Link>
