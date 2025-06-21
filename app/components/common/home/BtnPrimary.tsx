@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/react";
+import { Button, cn } from "@nextui-org/react";
 import { Link } from "@remix-run/react";
 
 interface BtnPrimaryProps {
@@ -15,10 +15,10 @@ export default function BtnPrimary(props: BtnPrimaryProps) {
       as={Link}
       color="primary"
       size="lg"
-      className={
-        className +
-        "rounded-full bg-primary text-light-yellow font-medium text-base"
-      }
+      className={cn(
+        "rounded-full bg-primary text-light-yellow font-medium text-base",
+        className
+      )}
       to={to}
       target="_blank"
       rel="noreferrer"
