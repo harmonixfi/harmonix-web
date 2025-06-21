@@ -12,7 +12,7 @@ export default function MetaBadge(props: MetaBadgeProps) {
   return (
     <div className={"flex justify-center text-primary"}>
       <div
-        className={"px-6 py-4 bg-linear bg-white rounded-3xl flex items-center"}
+        className={"px-6 py-4 bg-linear bg-white rounded-3xl flex flex-col md:flex-row items-center space-y-2"}
       >
         <div className={"flex items-baseline gap-2"}>
           <span className={"uppercase text-base"}>APY</span>
@@ -23,7 +23,7 @@ export default function MetaBadge(props: MetaBadgeProps) {
             %
           </span>
         </div>
-        <div className={"w-[1px] h-6 mx-6 bg-black"}></div>
+        <div className={"w-[1px] h-6 mx-6 bg-black hidden md:block"}></div>
         <div className={"flex items-center gap-2.5"}>
           <div>Audit</div>
           <VerichainIcon className="w-auto h-7 sm:h-9" />

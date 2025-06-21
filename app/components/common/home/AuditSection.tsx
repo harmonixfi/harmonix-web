@@ -32,7 +32,7 @@ export default function AuditSection2() {
           Ensuring the security of Harmonix is our top priority. Discover more
           in our security reports.
         </p>
-        <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row 2xl:flex-row md:justify-around lg:justify-around justify-between items-center w-full space-y-6">
+        <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row 2xl:flex-row md:justify-around lg:justify-around justify-between items-center w-full space-y-8">
           <div className="space-y-2">
             <VerichainIcon className="w-auto h-16 sm:h-20 md:h-24" />
             <BtnPrimary
