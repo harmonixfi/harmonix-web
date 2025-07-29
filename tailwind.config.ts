@@ -56,11 +56,14 @@ export default {
         "grey-01": {
           DEFAULT: "#F5F6F6",
         },
+        highlight: {
+          DEFAULT: "#076EDE",
+        },
       },
       fontFamily: {
         outfit: ["outfit", "sans-serif"],
-        poppins: ["Poppins","sans-serif"],
-        lato: ["Lato","sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
     },
   },
