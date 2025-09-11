@@ -6,13 +6,6 @@ export default $config({
       name: "harmonix-remix-web",
       removal: input?.stage === "production" ? "retain" : "remove",
       home: "aws",
-      providers: {
-        aws: {
-          region: "us-east-1",
-          version: "6.66.1",
-        },
-        "@pulumi/aws": "6.66.1",
-      },
     };
   },
 
