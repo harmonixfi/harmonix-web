@@ -21,9 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Install SST CLI
-        run: curl -fsSL https://sst.dev/install | bash
-
       - name: Set up AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -42,4 +39,4 @@ jobs:
         run: sst secret set DomainCert ${{ secrets.DOMAIN_CERT }}
 
       - name: Deploy with SST
-        run: sst deploy
+        run: npx sst deploy
