@@ -24,6 +24,9 @@ jobs:
       - name: Install SST CLI
         run: curl -fsSL https://sst.dev/install | bash
 
+      - name: Deduplicate SST Platform dependencies
+        run: cd .sst/platform && npm dedupe && cd ../..
+
       - name: Set up AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
