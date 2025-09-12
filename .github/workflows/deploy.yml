@@ -36,7 +36,7 @@ jobs:
           echo "$parameter" >> .env
 
       - name: Set SST Secret
-        run: npx sst secret set DomainCert ${{ secrets.DOMAIN_CERT }}
+        run: npx sst secret set DomainCert="${{ secrets.DOMAIN_CERT }}"
 
       - name: First deploy attempt
         id: deploy
