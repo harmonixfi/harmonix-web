@@ -38,5 +38,21 @@ jobs:
       - name: Set SST Secret
         run: npx sst secret set DomainCert ${{ secrets.DOMAIN_CERT }}
 
-      - name: Deploy with SST
+      - name: First deploy attempt
+        id: deploy
+        run: |
+          set +e
+          npx sst deploy
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
+          set -e
+
+      - name: Fix Pulumi mismatch (if needed)
+        if: steps.deploy.outputs.exit_code != '0'
+        run: |
+          cd .sst/platform
+          npm dedupe
+          cd ../..
+
+      - name: Retry deploy (after dedupe)
+        if: steps.deploy.outputs.exit_code != '0'
         run: npx sst deploy
