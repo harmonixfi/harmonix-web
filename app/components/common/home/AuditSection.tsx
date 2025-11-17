@@ -1,6 +1,6 @@
 import BtnPrimary from "./BtnPrimary";
 import { motion } from "framer-motion";
-import { ShieldifyIcon, VerichainIcon } from "~/components/icons";
+import { ShieldifyIcon, VerichainIcon, ZenithIcon } from "~/components/icons";
 import { EXTERNAL_LINKS } from "~/constants/url";
 
 export default function AuditSection2() {
@@ -32,7 +32,7 @@ export default function AuditSection2() {
           Ensuring the security of Harmonix is our top priority. Discover more
           in our security reports.
         </p>
-        <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row 2xl:flex-row md:justify-around lg:justify-around justify-between items-center w-full space-y-8">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap md:flex-row lg:flex-row xl:flex-row 2xl:flex-row sm:justify-around md:justify-around lg:justify-around justify-between items-center w-full space-y-8 md:space-y-0">
           <div className="space-y-2">
             <VerichainIcon className="w-auto h-16 sm:h-20 md:h-24" />
             <BtnPrimary
@@ -41,9 +41,16 @@ export default function AuditSection2() {
             />
           </div>
           <div className="space-y-2">
-            <ShieldifyIcon className="w-60 lg:w-80 xl:w-80 2xl:w-80" />
+            <ShieldifyIcon className="w-60 h-16 sm:h-20 md:h-24 lg:w-60 xl:w-80 2xl:w-80" />
             <BtnPrimary
               to={EXTERNAL_LINKS.ShieldifyAuditReport}
+              title="See Full Report"
+            />
+          </div>
+          <div className="space-y-2">
+            <ZenithIcon className="w-60 h-16 sm:h-20 md:h-24 lg:w-60 xl:w-80 2xl:w-80" />
+            <BtnPrimary
+              to={EXTERNAL_LINKS.ZenithAuditReport}
               title="See Full Report"
             />
           </div>
