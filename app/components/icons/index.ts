@@ -52,4 +52,5 @@ export { default as AlphaTicksIcon } from "./AlphaTicks";
 export { default as NansenLogoIcon } from "./NansenLogo";
 export { default as HyperliquidLogoIcon } from "./HyperliquidLogo";
 export { default as ValidaoLogoIcon } from "./ValidaoLogo";
-export { default as ShieldifyIcon } from './Shieldify';
+export { default as ShieldifyIcon } from "./Shieldify";
+export { default as ZenithIcon } from "./Zenith";
