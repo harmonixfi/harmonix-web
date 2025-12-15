@@ -5,7 +5,7 @@ export const EXTERNAL_LINKS = {
   Telegram: "https://t.me/harmonix_chat",
   Twitter: "https://twitter.com/harmonixfi",
   Github: "https://github.com/harmonixfi",
-  Discord: "https://discord.gg/sNgbWFJ9Bw",
+  Discord: "https://discord.com/invite/UqtmNj4Ryt",
   ShieldifyAuditReport:
     "https://github.com/shieldify-security/audits-portfolio/blob/main/reports/HarmonixFinance-Hyperliquid-Security-Review.pdf",
 
