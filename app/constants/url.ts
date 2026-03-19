@@ -9,7 +9,7 @@ export const EXTERNAL_LINKS = {
   ShieldifyAuditReport:
     "https://github.com/shieldify-security/audits-portfolio/blob/main/reports/HarmonixFinance-Hyperliquid-Security-Review.pdf",
 
-  Docs: "https://harmonix-finance.gitbook.io/harmonix-docs",
+  Docs: "https://harmonixfi.github.io/harmonix-docs-v2/harmonix-docs-v2.html",
   Blog: "https://mirror.xyz/0xBc76Ef781235ed6d9e58e566dD07fdB32b6bEF04",
 
   VerichainAuditReport: "https://verichains.io/?search=harmonix",
