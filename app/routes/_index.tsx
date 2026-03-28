@@ -10,6 +10,7 @@ import FAQSection from "~/components/common/home/FAQSection";
 import MetaBadge from "~/components/common/home/MetaBadge";
 import Partner from "~/components/common/home/PartnerSection";
 import RewardSection from "~/components/common/home/RewardSection";
+import WidgetHarmonix from "~/components/common/home/WigetHarmonixBuyback";
 import Earn from "~/components/common/home/earn/Earn";
 import { SubtractIcon } from "~/components/icons";
 import { METADATA } from "~/constants/metadata";
@@ -71,7 +72,7 @@ export default function Index() {
     queryKey: ["GET_VAULT_STATISTICS"],
     queryFn: async () => {
       const response = await fetch(
-        "https://api.harmonix.fi/api/v1/statistics/"
+        "https://api.harmonix.fi/api/v1/statistics/",
       );
 
       if (!response.ok) {
@@ -160,6 +161,7 @@ export default function Index() {
         />
       </div>
 
+      <WidgetHarmonix className="px-8 md:px-8 sm:px-8 pb-[60px] pt-2 lg:pt-3 lg:pb-[120px] lg:px-8 xl:px-32 2xl:px-60" />
       <Earn />
       <CoreTechnology />
       <RewardSection deltaNeutralVaultApy={deltaNeutralVaultApy} />

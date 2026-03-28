@@ -19,11 +19,12 @@
     "@remix-run/react": "^2.11.2",
     "@remix-run/serve": "^2.11.2",
     "@tanstack/react-query": "^5.53.2",
+    "date-fns-tz": "^3.2.0",
     "framer-motion": "^11.3.31",
     "isbot": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sst": "3.0.91"
+    "sst": "^3.19.3"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.11.2",
