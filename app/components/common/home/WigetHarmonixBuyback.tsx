@@ -20,19 +20,18 @@ const WidgetHarmonix = ({ className }: WidgetHarmonixProps) => {
   const {
     data: priceHar,
     isLoading: loadingGetPriceHar,
-    isSuccess: isSuccessGetPriceHar,
+    isFetching: isFetchingGetPriceHar,
   } = useQuery({
     queryKey: ["get-price-har"],
     queryFn: () =>
       getTokenDetailByTokenId("0x9325025f805731935c1df7f97e654cda"),
-    staleTime: 1000 * 60 * 3, // Invalidate after 3 minutes
   });
 
   useEffect(() => {
-    if (isSuccessGetPriceHar) {
+    if (!isFetchingGetPriceHar) {
       setUpdateTime(new Date());
     }
-  }, [isSuccessGetPriceHar]);
+  }, [isFetchingGetPriceHar]);
 
   const harBuybackAmount = Number(
     import.meta.env.VITE_BUYBACK_CONFIG_HAR_AMOUNT ?? 0,
@@ -77,10 +76,6 @@ const WidgetHarmonix = ({ className }: WidgetHarmonixProps) => {
     >
       <p className="text-[32px] lg:text-[64px] font-medium text-dark-green text-center">
         Treasury buyback overview
-      </p>
-      <p className="text-sm mt-1 opacity-60 dark:text-foreground text-center">
-        Simple homepage block for HAR price, Buy HAR CTA, HAR buyback, and HYPE
-        buyback.
       </p>
 
       <div className="mt-6 grid grid-cols-1 xl:grid-cols-3 gap-6">
@@ -221,15 +216,12 @@ const WidgetHarmonix = ({ className }: WidgetHarmonixProps) => {
               </p>
             )}
 
-            <p className="text-sm mt-1 opacity-60 dark:text-foreground">
-              Placeholder realtime value from API.
-            </p>
-
             <div className="mt-4">
               <Button
                 as={Link}
-                href="https://app.hyperliquid.xyz/trade/HAR/USDC"
                 target="_blank"
+                rel="noreferrer"
+                to="https://app.hyperliquid.xyz/trade/HAR/USDC"
                 className="w-full rounded-2xl font-semibold bg-gradient-to-r from-[#228F63] to-[#66D292] text-white"
                 endContent={<ArrowTopRightOnSquareIcon className="w-4 h-4" />}
               >
@@ -291,10 +283,6 @@ const WidgetHarmonix = ({ className }: WidgetHarmonixProps) => {
                   </p>
                 </a>
               </div>
-
-              <p className="text-xs mt-3 opacity-60 dark:text-foreground">
-                Quick actions for HAR utility and ecosystem participation.
-              </p>
             </div>
 
             <div className="mt-auto" />
