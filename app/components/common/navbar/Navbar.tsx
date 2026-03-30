@@ -2,7 +2,6 @@ import {
   DiscordIcon,
   GithubIcon,
   LogoWithTextIcon,
-  ShieldifyIcon,
   TelegramIcon,
   TwitterIcon,
 } from "../../icons";
