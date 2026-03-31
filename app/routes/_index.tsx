@@ -161,7 +161,7 @@ export default function Index() {
         />
       </div>
 
-      <WidgetHarmonix className="px-8 md:px-8 sm:px-8 pb-[60px] pt-2 lg:pt-3 lg:pb-[120px] lg:px-8 xl:px-32 2xl:px-60" />
+      <WidgetHarmonix className="px-8 md:px-8 sm:px-8 pb-[70px] pt-2 lg:pt-3 lg:pb-20 lg:px-8 xl:px-32 2xl:px-60" />
       <Earn />
       <CoreTechnology />
       <RewardSection deltaNeutralVaultApy={deltaNeutralVaultApy} />
