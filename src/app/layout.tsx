@@ -7,11 +7,14 @@ import {
   metaTwitterCard,
   metaTwitterSite,
 } from "@/lib/sharedMetadata";
+import { Providers } from "@/providers";
+import { Navbar } from "@/components/navbar";
 
 const metaTitle = "Harmonix Finance";
 const metaDescription = `Yield infrastructure built natively on Hyperliquid. Learn the fundamentals, explore our products, and start building.`;
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://harmonix.fi/"),
   title: metaTitle,
   description: metaDescription,
   twitter: {
@@ -43,8 +46,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fontPoppins.className} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html
+      lang="en"
+      className={`${fontPoppins.className} h-full antialiased`}
+      suppressHydrationWarning
+    >
+      <body className="bg-linear-to-r from-[#C8EBD3] to-[#F4FAF1]">
+        <Providers>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+        </Providers>
+      </body>
     </html>
   );
 }
