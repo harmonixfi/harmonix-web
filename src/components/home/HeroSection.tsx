@@ -1,9 +1,10 @@
 import { Typography } from "@/components/ui/typography";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="mt-36 space-y-10 mx-auto pb-10 px-4 max-w-7xl">
+    <div className="mt-36 space-y-8 mx-auto pb-10 px-4 max-w-7xl">
       <Typography align={"center"} variant={"h1"} className="">
         The future of{" "}
         <span className="bg-title-gradient bg-clip-text text-transparent">
@@ -31,13 +32,14 @@ export default function HeroSection() {
           Learn More
         </Button>
       </div>
-      <div className="bg-white rounded-t-[4rem] w-full relative h-160">
-        <div className="absolute top-10 left-10 flex gap-2">
-          <div className="w-5 h-5 rounded-full bg-gray-400"></div>
-          <div className="w-5 h-5 rounded-full bg-gray-400"></div>
-          <div className="w-5 h-5 rounded-full bg-gray-400"></div>
-        </div>
-      </div>
+      <Image
+        width={1100}
+        height={600}
+        loading="eager"
+        src="/images/heroSection/harmonix-dashboard.png"
+        alt="harmonix dashboard"
+        className="w-full"
+      />
     </div>
   );
 }

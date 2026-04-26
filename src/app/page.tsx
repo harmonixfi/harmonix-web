@@ -1,5 +1,8 @@
 import BoxStats from "@/components/home/BoxStats";
+import BuyHarSection from "@/components/home/BuyHarSection";
 import HeroSection from "@/components/home/HeroSection";
+import LandingSections from "@/components/home/LandingSections";
+import YieldSection from "@/components/home/YieldSection";
 import Image from "next/image";
 
 export default function Home() {
@@ -13,12 +16,15 @@ export default function Home() {
           loading="eager"
           src="/images/blur-line.png"
           alt="blur line"
-          className="absolute -bottom-40 left-0 right-0 w-full"
+          className="absolute -bottom-72 left-0 right-0 w-full"
         />
-        <div className="absolute bottom-3 left-0 right-0 w-1/2 mx-auto">
+        <div className="absolute -bottom-28 left-0 right-0 w-1/2 mx-auto">
           <BoxStats />
         </div>
       </div>
+      <YieldSection />
+      <BuyHarSection />
+      <LandingSections />
     </div>
   );
 }
