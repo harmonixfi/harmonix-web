@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div className="mt-36 space-y-8 mx-auto pb-10 px-4 max-w-7xl">
+    <section className="mt-36 space-y-8 mx-auto pb-10 px-4 max-w-7xl">
       <Typography align={"center"} variant={"h1"} className="">
         The future of{" "}
         <span className="bg-title-gradient bg-clip-text text-transparent">
@@ -40,6 +40,6 @@ export default function HeroSection() {
         alt="harmonix dashboard"
         className="w-full"
       />
-    </div>
+    </section>
   );
 }

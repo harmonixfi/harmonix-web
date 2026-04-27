@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function YieldSection() {
   return (
-    <div className="pt-60 bg-white">
+    <section className="pt-60 bg-white">
       <div className="space-y-12 mx-auto pb-10 px-4 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div>
@@ -61,7 +61,7 @@ export default function YieldSection() {
                 </CardHeader>
                 <CardContent className="py-8 px-6 rounded-3xl bg-linear-to-t from-[#F4FAF1] via-[#C8EBD3] to-[#F4FAF1] space-y-6">
                   <div className="flex justify-center items-center">
-                    <div className="h-16 w-16 bg-gray-300 rounded-full"></div>
+                    <div className="size-16 bg-gray-300 rounded-full"></div>
                   </div>
                   <Typography
                     align={"center"}
@@ -116,7 +116,7 @@ export default function YieldSection() {
                       {Array.from({ length: 3 }).map((_, index) => (
                         <div
                           key={`${index}-reward`}
-                          className="h-8 w-8 bg-gray-300 rounded-full"
+                          className="size-8 bg-gray-300 rounded-full"
                         ></div>
                       ))}
                     </div>
@@ -134,6 +134,6 @@ export default function YieldSection() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

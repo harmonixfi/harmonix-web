@@ -1,7 +1,8 @@
+import AllYourYieldSection from "@/components/home/AllYourYieldSection";
 import BoxStats from "@/components/home/BoxStats";
 import BuyHarSection from "@/components/home/BuyHarSection";
 import HeroSection from "@/components/home/HeroSection";
-import LandingSections from "@/components/home/LandingSections";
+import PoweredByHarmonix from "@/components/home/PoweredByHarmonix";
 import YieldSection from "@/components/home/YieldSection";
 import Image from "next/image";
 
@@ -24,7 +25,8 @@ export default function Home() {
       </div>
       <YieldSection />
       <BuyHarSection />
-      <LandingSections />
+      <AllYourYieldSection />
+      <PoweredByHarmonix />
     </div>
   );
 }

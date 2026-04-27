@@ -21,7 +21,7 @@ const stats = [
 
 export default function BoxStats() {
   return (
-    <div className="rounded-[24px] bg-white p-8 flex gap-24 items-center justify-center shadow-lg">
+    <section className="rounded-[24px] bg-white p-8 flex gap-24 items-center justify-center shadow-lg">
       {stats.map((stat) => (
         <div
           key={stat.title}
@@ -39,6 +39,6 @@ export default function BoxStats() {
           </Typography>
         </div>
       ))}
-    </div>
+    </section>
   );
 }

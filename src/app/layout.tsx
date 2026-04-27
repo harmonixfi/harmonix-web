@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import {
   metaImageUrl,
@@ -40,6 +40,12 @@ const fontPoppins = Poppins({
   variable: "--font-poppins",
 });
 
+const fontInter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fontPoppins.className} h-full antialiased`}
+      className={`${fontPoppins.className} h-full antialiased ${fontInter.variable}`}
       suppressHydrationWarning
     >
       <body className="bg-linear-to-r from-[#C8EBD3] to-[#F4FAF1]">

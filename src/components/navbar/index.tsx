@@ -1,36 +1,35 @@
 // apps/fe/components/navbar/index.tsx
 "use client";
 
-import { Menu } from "lucide-react";
+// import { Menu } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ThemeSwitcher } from "./ThemeSwitcher";
-import { Typography } from "../ui/typography";
+// import { Typography } from "../ui/typography";
 import { Button } from "../ui/button";
 import HarmonixLogo from "../icons/HarmonixLogo";
 import HarmonixText from "../icons/HarmonixText";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "../ui/drawer";
+// import {
+//   Drawer,
+//   DrawerClose,
+//   DrawerContent,
+//   DrawerFooter,
+//   DrawerHeader,
+//   DrawerTitle,
+//   DrawerTrigger,
+// } from "../ui/drawer";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
-  const navigation = [
-    {
-      name: "Home",
-      href: "/",
-      isDisabled: false,
-    },
-  ];
+  // const navigation = [
+  //   {
+  //     name: "Home",
+  //     href: "/",
+  //     isDisabled: false,
+  //   },
+  // ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,7 +73,7 @@ export function Navbar() {
     `}
     >
       <div className="container mx-auto px-4 py-4 sm:px-6 lg:py-4 lg:px-6 rounded-none lg:rounded-full bg-background">
-        <nav className="grid grid-cols-3">
+        <nav className="grid grid-cols-2">
           <div className="flex items-center col-span-1">
             <Link href="/" className="flex items-center space-x-3">
               <HarmonixLogo className="w-11 h-11" />
@@ -82,7 +81,7 @@ export function Navbar() {
             </Link>
           </div>
           {/* Desktop Navigation */}
-          <div
+          {/* <div
             className={`hidden md:flex items-center justify-center md:gap-10 lg:gap-16 col-span-1`}
           >
             <div>
@@ -116,13 +115,15 @@ export function Navbar() {
                 );
               })}
             </div>
-          </div>
+          </div> */}
 
           <div className="flex items-center justify-end gap-2 col-span-2 md:col-span-1">
-            <ThemeSwitcher />
+            <Button className={"rounded-full text-base p-6 cursor-pointer"}>
+              Launch App
+            </Button>
 
             {/* Mobile Menu */}
-            <Drawer direction={"left"}>
+            {/* <Drawer direction={"left"}>
               <DrawerTrigger asChild className="md:hidden">
                 <Button variant="ghost" size="icon">
                   <Menu className="h-7 w-7" />
@@ -169,7 +170,7 @@ export function Navbar() {
                   </DrawerClose>
                 </DrawerFooter>
               </DrawerContent>
-            </Drawer>
+            </Drawer> */}
           </div>
         </nav>
       </div>

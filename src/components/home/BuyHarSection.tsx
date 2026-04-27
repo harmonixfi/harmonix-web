@@ -4,12 +4,12 @@ import Image from "next/image";
 
 export default function BuyHarSection() {
   return (
-    <div className="bg-white">
+    <section className="bg-white">
       <div className="mx-auto max-w-7xl py-36">
         <div className="bg-primary-700 rounded-4xl h-150 flex justify-center items-center gap-40 px-20">
           <Image
             src="/images/buyHar/buy-har.png"
-            alt="Harmonix"
+            alt="Buy Harmonix"
             width={480}
             height={280}
             className="w-120 h-auto"
@@ -47,6 +47,6 @@ export default function BuyHarSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
