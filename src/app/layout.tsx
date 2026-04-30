@@ -9,6 +9,7 @@ import {
 } from "@/lib/sharedMetadata";
 import { Providers } from "@/providers";
 import { Navbar } from "@/components/navbar";
+import Footer from "@/components/common/Footer";
 
 const metaTitle = "Harmonix Finance";
 const metaDescription = `Yield infrastructure built natively on Hyperliquid. Learn the fundamentals, explore our products, and start building.`;
@@ -61,6 +62,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           <main className="flex-1">{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>

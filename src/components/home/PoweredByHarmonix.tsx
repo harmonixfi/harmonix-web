@@ -1,10 +1,16 @@
 import { Typography } from "@/components/ui/typography";
 import Image from "next/image";
+import FelixLogo from "../icons/FelixLogo";
+import HarmonixLogo from "../icons/HarmonixLogo";
+import HyperliquidLogo from "../icons/HyperliquidLogo";
+import UsdcAsset from "../icons/UsdcAsset";
+import HyEnaLogo from "../icons/HyEnaLogo";
+import TradeXYZLogo from "../icons/TradeXYZLogo";
 
 export default function PoweredByHarmonix() {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-7xl pb-36 space-y-8 h-150 flex flex-col items-center justify-center relative">
+      <div className="mx-auto max-w-7xl pb-36 space-y-8 h-175 flex flex-col items-center justify-center relative">
         <Typography align={"center"} variant={"h1"} className="leading-18">
           Powered by
           <br />
@@ -25,15 +31,15 @@ export default function PoweredByHarmonix() {
           loading="eager"
           src="/images/icons/dream-logo.png"
           alt="dream logo"
-          className=""
+          className="size-14 absolute rounded-full top-0 right-96 animate-float-1"
         />
         <Image
           width={56}
           height={56}
           loading="eager"
           src="/images/icons/hyperbeat-logo.png"
-          alt="dream logo"
-          className=""
+          alt="hyperbeat logo"
+          className="size-14 absolute rounded-full top-20 right-48 animate-float-2"
         />
         <Image
           width={56}
@@ -41,7 +47,7 @@ export default function PoweredByHarmonix() {
           loading="eager"
           src="/images/icons/hyperlend-logo.png"
           alt="hyperlend logo"
-          className=""
+          className="size-14 absolute rounded-full bottom-72 right-28 animate-float-3"
         />
         <Image
           width={56}
@@ -49,8 +55,22 @@ export default function PoweredByHarmonix() {
           loading="eager"
           src="/images/icons/matkets-xyz.png"
           alt="matkets xyz logo"
-          className=""
+          className="size-14 object-scale-down bg-gray-400 absolute rounded-full bottom-42 right-88 animate-float-4"
         />
+        <Image
+          width={56}
+          height={56}
+          loading="eager"
+          src="/images/icons/hypurrfi-logo.png"
+          alt="hypurrfi logo"
+          className="size-14 absolute rounded-full top-0 left-2/5 animate-float-2"
+        />
+        <FelixLogo className="size-14 absolute rounded-full bottom-72 left-33 animate-float-3" />
+        <HarmonixLogo className="size-14 absolute rounded-full bottom-40 left-88 animate-float-1" />
+        <HyperliquidLogo className="size-14 absolute rounded-full bottom-45 left-144 animate-float-4" />
+        <UsdcAsset className="size-14 absolute rounded-full top-50 right-66 animate-float-1" />
+        <HyEnaLogo className="size-14 absolute rounded-full top-45 left-80 animate-float-3" />
+        <TradeXYZLogo className="size-14 absolute rounded-full top-8 left-60 animate-float-2" />
       </div>
     </div>
   );

@@ -66,6 +66,20 @@
       transform: translateY(calc(-100% - var(--gap)));
     }
   }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) rotate(calc(var(--float-rot, 1deg) * -1));
+    }
+    50% {
+      transform: translate3d(
+          var(--float-x, 4px),
+          calc(var(--float-y, 10px) * -1),
+          0
+        )
+        rotate(var(--float-rot, 1deg));
+    }
+  }
 }
 
 :root {
@@ -154,5 +168,48 @@
   }
   html {
     @apply font-sans;
+  }
+}
+
+@layer utilities {
+  .animate-float-1 {
+    --float-x: 8px;
+    --float-y: 20px;
+    --float-rot: 1deg;
+    animation: float 7.2s ease-in-out infinite;
+  }
+
+  .animate-float-2 {
+    --float-x: -10px;
+    --float-y: 24px;
+    --float-rot: 1.5deg;
+    animation: float 8.4s ease-in-out infinite;
+    animation-delay: -1.3s;
+  }
+
+  .animate-float-3 {
+    --float-x: 6px;
+    --float-y: 16px;
+    --float-rot: 0.8deg;
+    animation: float 6.6s ease-in-out infinite;
+    animation-delay: -2.1s;
+  }
+
+  .animate-float-4 {
+    --float-x: -6px;
+    --float-y: 18px;
+    --float-rot: 1.2deg;
+    animation: float 9.2s ease-in-out infinite;
+    animation-delay: -0.7s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-1,
+  .animate-float-2,
+  .animate-float-3,
+  .animate-float-4 {
+    animation: none;
+    transform: none;
   }
 }

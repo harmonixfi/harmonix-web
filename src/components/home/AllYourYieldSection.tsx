@@ -32,6 +32,7 @@ const TabYieldComponent = () => {
         width={570}
         height={400}
         className="w-276 h-auto"
+        loading="eager"
       />
     </section>
   );

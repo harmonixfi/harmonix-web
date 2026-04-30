@@ -7,8 +7,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 // import { Typography } from "../ui/typography";
 import { Button } from "../ui/button";
-import HarmonixLogo from "../icons/HarmonixLogo";
+
 import HarmonixText from "../icons/HarmonixText";
+import HarmonixLogoWithoutBackground from "../icons/HarmonixLogoWithoutBackground";
 // import {
 //   Drawer,
 //   DrawerClose,
@@ -76,7 +77,7 @@ export function Navbar() {
         <nav className="grid grid-cols-2">
           <div className="flex items-center col-span-1">
             <Link href="/" className="flex items-center space-x-3">
-              <HarmonixLogo className="w-11 h-11" />
+              <HarmonixLogoWithoutBackground className="size-8" />
               <HarmonixText className="hidden md:block w-28 h-6" />
             </Link>
           </div>

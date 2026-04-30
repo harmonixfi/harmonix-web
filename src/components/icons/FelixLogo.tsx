@@ -6,7 +6,10 @@ export default function FelixLogo({ className }: IconProps) {
   return (
     <Typography
       variant={"body"}
-      className={cn("text-white bg-[#352219] font-inter", className)}
+      className={cn(
+        "text-[#EFEAD7] bg-[#352219] font-semibold font-inter flex items-center justify-center",
+        className,
+      )}
     >
       FELIX
     </Typography>
