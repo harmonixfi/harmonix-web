@@ -38,7 +38,7 @@ export default function StartEarningSection() {
             {startEarningHighlights.map((item) => (
               <div
                 key={item.value}
-                className="rounded-3xl border border-white bg-white/20 shadow p-8 shadow-white"
+                className="rounded-3xl border border-white bg-white/20 shadow-md p-8"
               >
                 <Typography
                   variant={"h5"}

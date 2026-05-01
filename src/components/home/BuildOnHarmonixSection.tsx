@@ -20,7 +20,7 @@ const features = [
 
 export default function BuildOnHarmonixSection() {
   return (
-    <section className="bg-white">
+    <section className="bg-muted">
       <div className="mx-auto py-36 px-4 max-w-7xl grid grid-cols-2 gap-14 items-center">
         <div className="bg-linear-to-t from-[#C8EBD3] to-[#F4FAF1] rounded-3xl h-149 relative">
           <Image

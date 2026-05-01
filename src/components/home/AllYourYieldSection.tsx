@@ -10,7 +10,7 @@ const TabYieldComponent = () => {
         <Typography
           align={"left"}
           variant={"h1"}
-          className="mt-8 text-primary  lg:text-5xl"
+          className="mt-8 text-primary lg:text-5xl"
         >
           Deposit and earn.
         </Typography>

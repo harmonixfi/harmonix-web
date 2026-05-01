@@ -3,8 +3,10 @@ import BlogsSection from "@/components/home/BlogsSection";
 import BoxStats from "@/components/home/BoxStats";
 import BuildOnHarmonixSection from "@/components/home/BuildOnHarmonixSection";
 import BuyHarSection from "@/components/home/BuyHarSection";
+import ContactUsSection from "@/components/home/ContactUsSection";
 import HeroSection from "@/components/home/HeroSection";
 import PoweredByHarmonix from "@/components/home/PoweredByHarmonix";
+import SecureDesignSection from "@/components/home/SecureDesignSection";
 import StartEarningSection from "@/components/home/StartEarningSection";
 import YieldSection from "@/components/home/YieldSection";
 import Image from "next/image";
@@ -32,6 +34,8 @@ export default function Home() {
       <PoweredByHarmonix />
       <BlogsSection />
       <BuildOnHarmonixSection />
+      <SecureDesignSection />
+      <ContactUsSection />
       <StartEarningSection />
     </div>
   );

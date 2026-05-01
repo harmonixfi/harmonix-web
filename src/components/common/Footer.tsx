@@ -41,7 +41,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#F5F5F5]">
       <div className="mx-auto max-w-7xl px-4 pt-24 pb-12">
-        <div className="grid gap-14 lg:grid-cols-5">
+        <div className="grid gap-4 lg:grid-cols-5">
           <div className="col-span-2">
             <Typography
               variant="h2"
@@ -87,7 +87,7 @@ const Footer = () => {
 
         <div className="mt-10 grid grid-cols-3 gap-6 border-t border-muted-foreground pt-8">
           <Typography variant="bodySmall" className="text-muted-foreground">
-            © Harmonix Finance. All rights reserved. 2026
+            @ Harmonix Finance. All rights reserved. 2026
           </Typography>
 
           <div className="flex items-center justify-center gap-4">
