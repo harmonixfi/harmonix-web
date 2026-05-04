@@ -64,8 +64,8 @@ const socialMedia = [
 const Footer = () => {
   return (
     <footer className="bg-[#F5F5F5]">
-      <div className="mx-auto max-w-7xl px-4 pt-24 pb-12">
-        <div className="grid gap-4 lg:grid-cols-5">
+      <div className="mx-auto max-w-7xl px-4 pt-12 lg:pt-24 pb-12">
+        <div className="grid gap-10 lg:gap-4 lg:grid-cols-5">
           <div className="col-span-2">
             <Typography
               variant="h2"
@@ -81,7 +81,7 @@ const Footer = () => {
             </Typography>
           </div>
 
-          <div className="col-span-3 grid grid-cols-2 gap-12 sm:grid-cols-3">
+          <div className="col-span-3 grid grid-cols-2 gap-8 lg:gap-12 sm:grid-cols-3">
             {footerColumns.map((group) => (
               <div key={group.heading} className="space-y-3">
                 <Typography variant="body">{group.heading}</Typography>
@@ -101,16 +101,19 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-20 flex items-end gap-13 pointer-events-none select-none">
+        <div className="mt-12 lg:mt-20 flex items-end gap-6 lg:gap-13 pointer-events-none select-none">
           <HarmonixLogoWithoutBackground
-            className="w-71"
+            className="w-25 lg:w-71"
             fillColor="fill-foreground/10"
           />
           <HarmonixText textColor="fill-foreground/10" className="w-full" />
         </div>
 
-        <div className="mt-10 grid grid-cols-3 gap-6 border-t border-muted-foreground pt-8">
-          <Typography variant="bodySmall" className="text-muted-foreground">
+        <div className="mt-5 lg:mt-10 grid grid-cols-1 lg:grid-cols-3 items-center gap-4 lg:gap-6 border-t border-muted-foreground pt-4 lg:pt-8">
+          <Typography
+            variant="bodySmall"
+            className="text-muted-foreground text-center lg:text-left"
+          >
             @ Harmonix Finance. All rights reserved. 2026
           </Typography>
 
@@ -129,7 +132,7 @@ const Footer = () => {
 
           <Link
             href="#"
-            className="text-sm text-right text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm  text-center lg:text-right text-muted-foreground transition-colors hover:text-foreground animate-bounce"
           >
             Back to top
           </Link>

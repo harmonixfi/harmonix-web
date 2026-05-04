@@ -75,13 +75,12 @@ export function Navbar() {
     `}
     >
       <div className="container mx-auto px-4 py-4 sm:px-6 lg:py-4 lg:px-6 rounded-none lg:rounded-full bg-background">
-        <nav className="grid grid-cols-2">
-          <div className="flex items-center col-span-1">
-            <Link href="/" className="flex items-center space-x-3">
-              <HarmonixLogoWithoutBackground className="size-8" />
-              <HarmonixText className="hidden md:block w-28 h-6" />
-            </Link>
-          </div>
+        <nav className="grid grid-cols-2 items-center">
+          <Link href="/" className="flex items-center space-x-3 col-span-1">
+            <HarmonixLogoWithoutBackground className="size-12 lg:size-8" />
+            <HarmonixText className="hidden md:block w-28 h-6" />
+          </Link>
+
           {/* Desktop Navigation */}
           {/* <div
             className={`hidden md:flex items-center justify-center md:gap-10 lg:gap-16 col-span-1`}
@@ -119,7 +118,7 @@ export function Navbar() {
             </div>
           </div> */}
 
-          <div className="flex items-center justify-end gap-2 col-span-2 md:col-span-1">
+          <div className="flex justify-end gap-2 col-span-1">
             <Link
               href={HARMONIX_CONFIG_LINK.launchApp}
               target="_blank"

@@ -1,11 +1,14 @@
 import { Typography } from "@/components/ui/typography";
 import Image from "next/image";
-import FelixLogo from "../icons/FelixLogo";
+
 import HarmonixLogo from "../icons/HarmonixLogo";
 import HyperliquidLogo from "../icons/HyperliquidLogo";
 import UsdcAsset from "../icons/UsdcAsset";
 import HyEnaLogo from "../icons/HyEnaLogo";
 import TradeXYZLogo from "../icons/TradeXYZLogo";
+import FelixLogo from "../icons/FelixLogo";
+import HypurrfiLogo from "../icons/HypurrfiLogo";
+import HyperlendLogo from "../icons/HyperlendLogo";
 
 export default function PoweredByHarmonix() {
   return (
@@ -45,26 +48,12 @@ export default function PoweredByHarmonix() {
           width={56}
           height={56}
           loading="eager"
-          src="/images/icons/hyperlend-logo.png"
-          alt="hyperlend logo"
-          className="size-14 absolute rounded-full bottom-72 right-28 animate-float-3"
-        />
-        <Image
-          width={56}
-          height={56}
-          loading="eager"
           src="/images/icons/matkets-xyz.png"
           alt="matkets xyz logo"
           className="size-14 object-scale-down bg-gray-400 absolute rounded-full bottom-42 right-88 animate-float-4"
         />
-        <Image
-          width={56}
-          height={56}
-          loading="eager"
-          src="/images/icons/hypurrfi-logo.png"
-          alt="hypurrfi logo"
-          className="size-14 absolute rounded-full top-0 left-2/5 animate-float-2"
-        />
+        <HyperlendLogo className="size-14 absolute rounded-full bottom-72 right-28 animate-float-3" />
+        <HypurrfiLogo className="size-14 absolute rounded-full top-0 left-2/5 animate-float-2" />
         <FelixLogo className="size-14 absolute rounded-full bottom-72 left-33 animate-float-3" />
         <HarmonixLogo className="size-14 absolute rounded-full bottom-40 left-88 animate-float-1" />
         <HyperliquidLogo className="size-14 absolute rounded-full bottom-45 left-144 animate-float-4" />

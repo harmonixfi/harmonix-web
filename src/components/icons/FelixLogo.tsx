@@ -1,17 +1,26 @@
-import { cn } from "@/lib/utils";
-import { Typography } from "../ui/typography";
 import { IconProps } from "./types";
 
 export default function FelixLogo({ className }: IconProps) {
   return (
-    <Typography
-      variant={"body"}
-      className={cn(
-        "text-[#EFEAD7] bg-[#352219] font-semibold font-inter flex items-center justify-center",
-        className,
-      )}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 64 64"
+      preserveAspectRatio="xMidYMid meet"
+      className={className}
     >
-      FELIX
-    </Typography>
+      <circle cx="32" cy="32" r="32" fill="#2D2118" />
+      <text
+        x="32"
+        y="41"
+        textAnchor="middle"
+        fontFamily="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+        fontSize="22"
+        fontWeight="800"
+        fill="#ECE7D5"
+        letterSpacing="-0.5"
+      >
+        Felix
+      </text>
+    </svg>
   );
 }

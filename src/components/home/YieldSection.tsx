@@ -77,9 +77,9 @@ export default function YieldSection() {
   const totalSlides = snapCount || vaultsResponse?.data?.length || 0;
 
   return (
-    <section className="pt-60 bg-white">
+    <section className="pt-10 lg:pt-30 xl:pt-40 bg-white">
       <div className="space-y-12 mx-auto pb-10 px-4 max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="grid gap-3 grid-cols-1 lg:grid-cols-2">
           <div>
             <Typography align={"left"} variant={"h1"} className="lg:text-5xl">
               Maximize{" "}
@@ -101,6 +101,7 @@ export default function YieldSection() {
               href={HARMONIX_CONFIG_LINK.exploreVault}
               target="_blank"
               rel="noopener noreferrer"
+              className="flex justify-end lg:justify-start"
             >
               <Button className={"rounded-full text-base p-6 cursor-pointer"}>
                 Explore all vaults
@@ -124,7 +125,7 @@ export default function YieldSection() {
                 vaultsResponse?.data?.map((item, index) => (
                   <CarouselItem
                     key={`index-${index}-${item.id}`}
-                    className="px-4 basis-lg"
+                    className="pl-4 pr-1 lg:px-4 lg:basis-lg"
                   >
                     <Card className="p-8 shadow-md rounded-3xl">
                       <CardHeader className="p-0">
@@ -165,7 +166,7 @@ export default function YieldSection() {
                         >
                           {item.attributes.name}
                         </Typography>
-                        <div className="bg-green-50 p-6 flex justify-between rounded-3xl">
+                        <div className="bg-green-50 p-6 flex justify-between gap-2 rounded-3xl">
                           <div>
                             <Typography
                               align={"left"}
@@ -275,7 +276,7 @@ export default function YieldSection() {
           </Carousel>
 
           {totalSlides > 1 ? (
-            <div className="mt-8 flex items-center justify-between">
+            <div className="mt-4 lg:mt-8 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 {Array.from({ length: totalSlides }).map((_, index) => (
                   <button
@@ -297,23 +298,23 @@ export default function YieldSection() {
                   type="button"
                   variant="outline"
                   size="icon-sm"
-                  className="rounded-full bg-white size-12"
+                  className="rounded-full bg-white size-10"
                   disabled={!canScrollPrev}
                   onClick={() => carouselApi?.scrollPrev()}
                   aria-label="Previous slide"
                 >
-                  <ArrowLeftIcon className="size-6" />
+                  <ArrowLeftIcon className="size-5" />
                 </Button>
                 <Button
                   type="button"
                   variant="outline"
                   size="icon-sm"
-                  className="rounded-full bg-white size-12"
+                  className="rounded-full bg-white size-10"
                   disabled={!canScrollNext}
                   onClick={() => carouselApi?.scrollNext()}
                   aria-label="Next slide"
                 >
-                  <ArrowRightIcon className="size-6" />
+                  <ArrowRightIcon className="size-5" />
                 </Button>
               </div>
             </div>

@@ -41,7 +41,7 @@ const TabYieldComponent = () => {
 export default function AllYourYieldSection() {
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-7xl pb-36 space-y-8">
+      <div className="mx-auto max-w-7xl pb-36 space-y-8 px-4">
         <Typography align={"center"} variant={"h1"} className="leading-18">
           All your yield.
           <br />

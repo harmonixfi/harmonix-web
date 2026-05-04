@@ -1,7 +1,10 @@
+
 import FelixLogo from "@/components/icons/FelixLogo";
 import HyEnaLogo from "@/components/icons/HyEnaLogo";
+import HyperlendLogo from "@/components/icons/HyperlendLogo";
 import HyperliquidLogo from "@/components/icons/HyperliquidLogo";
 import HyperUnitLogo from "@/components/icons/HyperUnitLogo";
+import HypurrfiLogo from "@/components/icons/HypurrfiLogo";
 import KinetiqLogo from "@/components/icons/KinetiqLogo";
 import TradeXYZLogo from "@/components/icons/TradeXYZLogo";
 import { RewardKey } from "@/constants/vault";
@@ -70,17 +73,9 @@ export const getRewardIcon = (
     case RewardKey.hip3Kinetiq:
       return { kind: "component", Component: KinetiqLogo };
     case RewardKey.hypurrfi:
-      return {
-        kind: "image",
-        src: "/images/icons/hypurrfi-logo.png",
-        alt: "Hypurrfi",
-      };
+      return { kind: "component", Component: HypurrfiLogo };
     case RewardKey.HYPERLEND:
-      return {
-        kind: "image",
-        src: "/images/icons/hyperlend-logo.png",
-        alt: "Hyperlend",
-      };
+      return { kind: "component", Component: HyperlendLogo };
     case RewardKey.kPoints:
       return { kind: "component", Component: KinetiqLogo };
     case RewardKey.hyperunit:

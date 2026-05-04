@@ -14,7 +14,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="">
-      <div className="relative min-h-screen">
+      <div className="relative min-h-auto lg:min-h-screen lg:pb-24">
         <HeroSection />
         <Image
           width={1000}
@@ -22,21 +22,21 @@ export default function Home() {
           loading="eager"
           src="/images/blur-line.png"
           alt="blur line"
-          className="absolute -bottom-72 left-0 right-0 w-full"
+          className="pointer-events-none hidden lg:block absolute top-full left-0 right-0 w-full -translate-y-[60%]"
         />
-        <div className="absolute -bottom-28 left-0 right-0 w-1/2 mx-auto">
+        <div className="relative mx-auto mb-10 w-full px-4 lg:absolute lg:top-full lg:left-1/2 lg:mb-0 lg:w-2/3 lg:-translate-x-1/2 lg:-translate-y-[80%] xl:w-1/2">
           <BoxStats />
         </div>
       </div>
       <YieldSection />
       <BuyHarSection />
       <AllYourYieldSection />
-      <PoweredByHarmonix />
-      <BlogsSection />
-      <BuildOnHarmonixSection />
-      <SecureDesignSection />
-      <ContactUsSection />
-      <StartEarningSection />
+      {/* <PoweredByHarmonix /> */}
+      {/* <BlogsSection /> */}
+      {/* <BuildOnHarmonixSection /> */}
+      {/* <SecureDesignSection /> */}
+      {/* <ContactUsSection /> */}
+      {/* <StartEarningSection /> */}
     </div>
   );
 }

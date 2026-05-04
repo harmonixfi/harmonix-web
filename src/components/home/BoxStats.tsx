@@ -21,7 +21,7 @@ const stats = [
 
 export default function BoxStats() {
   return (
-    <section className="rounded-[24px] bg-white p-8 flex gap-24 items-center justify-center shadow-lg">
+    <section className="rounded-[24px] bg-white p-4 xl:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-24 items-center shadow-lg">
       {stats.map((stat) => (
         <div
           key={stat.title}
@@ -30,7 +30,7 @@ export default function BoxStats() {
           <Typography
             align={"center"}
             variant={"large"}
-            className=" text-3xl font-bold"
+            className="text-2xl xl:text-3xl font-bold"
           >
             {stat.value}
           </Typography>

@@ -6,7 +6,7 @@ import { HARMONIX_CONFIG_LINK } from "@/constants/common";
 
 export default function HeroSection() {
   return (
-    <section className="mt-36 space-y-8 mx-auto pb-10 px-4 max-w-7xl">
+    <section className="mt-10 lg:mt-36 space-y-6 lg:space-y-8 mx-auto pb-6 lg:pb-10 px-4 max-w-7xl">
       <Typography align={"center"} variant={"h1"} className="">
         The future of{" "}
         <span className="bg-title-gradient bg-clip-text text-transparent">
@@ -20,7 +20,7 @@ export default function HeroSection() {
         className="text-muted-foreground"
       >
         Earn 7% APY with delta neutral yield bearing stablecoins.
-        <br />
+        <br className="hidden lg:block" />
         Secure, automated, institutional-grade.
       </Typography>
       <div className="flex gap-3 justify-center">

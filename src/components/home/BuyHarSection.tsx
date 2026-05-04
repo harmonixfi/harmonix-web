@@ -7,8 +7,8 @@ import Link from "next/link";
 export default function BuyHarSection() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-7xl py-36">
-        <div className="bg-primary-700 rounded-4xl h-150 flex justify-center items-center gap-40 px-20">
+      <div className="mx-auto max-w-7xl pb-10 lg:pt-20 lg:pb-36 px-4">
+        <div className="bg-primary-700 rounded-4xl lg:h-150 flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-10 xl:gap-40 py-4 lg:py-0 px-4 lg:px-20">
           <Image
             src="/images/buyHar/buy-har.png"
             alt="Buy Harmonix"
@@ -16,7 +16,7 @@ export default function BuyHarSection() {
             height={280}
             className="w-120 h-auto"
           />
-          <div className="space-y-8">
+          <div className="space-y-5 lg:space-y-8">
             <Typography
               align={"left"}
               variant={"small"}
@@ -27,7 +27,7 @@ export default function BuyHarSection() {
             <Typography
               align={"left"}
               variant={"h1"}
-              className="text-white mt-8"
+              className="text-white mt-4 lg:mt-8"
             >
               Buy HAR.
             </Typography>
@@ -46,7 +46,7 @@ export default function BuyHarSection() {
             >
               <Button
                 className={
-                  "rounded-full text-base p-6 cursor-pointer bg-accent text-accent-foreground"
+                  "w-full lg:w-auto rounded-full text-base p-6 cursor-pointer bg-accent text-accent-foreground"
                 }
               >
                 Buy HAR
