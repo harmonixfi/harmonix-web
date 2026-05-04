@@ -10,6 +10,7 @@ import { Button } from "../ui/button";
 
 import HarmonixText from "../icons/HarmonixText";
 import HarmonixLogoWithoutBackground from "../icons/HarmonixLogoWithoutBackground";
+import { HARMONIX_CONFIG_LINK } from "@/constants/common";
 // import {
 //   Drawer,
 //   DrawerClose,
@@ -119,9 +120,15 @@ export function Navbar() {
           </div> */}
 
           <div className="flex items-center justify-end gap-2 col-span-2 md:col-span-1">
-            <Button className={"rounded-full text-base p-6 cursor-pointer"}>
-              Launch App
-            </Button>
+            <Link
+              href={HARMONIX_CONFIG_LINK.launchApp}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className={"rounded-full text-base p-6 cursor-pointer"}>
+                Launch App
+              </Button>
+            </Link>
 
             {/* Mobile Menu */}
             {/* <Drawer direction={"left"}>

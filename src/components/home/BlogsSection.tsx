@@ -1,53 +1,117 @@
+"use client";
+
+import * as React from "react";
+import {
+  type CarouselApi,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
 import { Typography } from "@/components/ui/typography";
 import Image from "next/image";
 import { Button } from "../ui/button";
+import useSWR from "swr";
+import { getBlogsFromParagraph } from "@/api/blogs";
+import Link from "next/link";
+import dayjs from "dayjs";
+
+import { toUtcDate } from "@/lib/date";
+import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
+
+const URL_PARAGRAPH = process.env.NEXT_PUBLIC_PARAGRAPH_URL_PAGE ?? "";
+const PARAGRAPH_HARMONIX_ID =
+  process.env.NEXT_PUBLIC_PARAGRAPH_HARMONIX_ID ?? "";
 
 const CardBlog = ({
   title,
   date,
   image,
+  subTitle,
+  slug,
 }: {
   title: string;
+  subTitle: string;
   date: string;
   image: string;
+  slug: string;
 }) => {
   return (
-    <div className="space-y-6">
+    <div className="">
       <Image
         width={764}
         height={474}
         loading="eager"
         src={image}
         alt={title}
-        className="w-186 h-auto object-cover"
+        className="w-186 h-auto object-cover rounded-3xl mb-6"
       />
       <Typography
         align={"left"}
         variant={"small"}
         className="text-white bg-primary-100 px-3.5 py-1 rounded-md"
       >
-        Tagline
+        {dayjs(toUtcDate(Number(date))).format("MMM DD, YYYY")}
       </Typography>
-      <Typography
-        align={"left"}
-        variant={"bodyLarge"}
-        className="text-white text-3xl mt-6 font-bold"
+      <Link
+        href={`${URL_PARAGRAPH}/${slug}`}
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        Harmonix Treasury buyback overview
-      </Typography>
+        <Typography
+          align={"left"}
+          variant={"bodyLarge"}
+          className="text-white text-3xl mt-4 font-bold cursor-pointer hover:underline"
+        >
+          {title}
+        </Typography>
+      </Link>
       <Typography
         align={"left"}
         variant={"body"}
-        className="text-muted-foreground leading-6"
+        className="text-muted-foreground leading-6 mt-2"
       >
-        Harmonix uses protocol revenue and treasury reserves to continuously
-        accumulate $HAR and $HYPE. Here is where we stand this quarter.
+        {subTitle}
       </Typography>
     </div>
   );
 };
 
 export default function BlogsSection() {
+  const { isLoading: isLoadingGetBlogPosts, data: blogPosts } = useSWR(
+    PARAGRAPH_HARMONIX_ID
+      ? ["get-blog-posts-from-paragraph", PARAGRAPH_HARMONIX_ID]
+      : null,
+    () => getBlogsFromParagraph(PARAGRAPH_HARMONIX_ID, 5),
+  );
+
+  const [carouselApi, setCarouselApi] = React.useState<CarouselApi | null>(
+    null,
+  );
+  const [snapCount, setSnapCount] = React.useState(0);
+  const [canScrollPrev, setCanScrollPrev] = React.useState(false);
+  const [canScrollNext, setCanScrollNext] = React.useState(false);
+
+  React.useEffect(() => {
+    if (!carouselApi) return;
+
+    const sync = () => {
+      setSnapCount(carouselApi.scrollSnapList().length);
+      setCanScrollPrev(carouselApi.canScrollPrev());
+      setCanScrollNext(carouselApi.canScrollNext());
+    };
+
+    sync();
+    carouselApi.on("reInit", sync);
+    carouselApi.on("select", sync);
+
+    return () => {
+      carouselApi.off("reInit", sync);
+      carouselApi.off("select", sync);
+    };
+  }, [carouselApi]);
+
+  const totalSlides = snapCount || blogPosts?.items?.length || 0;
+
   return (
     <section className="bg-[#122823]">
       <div className="space-y-12 mx-auto py-36 px-4 max-w-7xl">
@@ -57,23 +121,76 @@ export default function BlogsSection() {
             Harmonix
           </span>
         </Typography>
-        <div className="grid grid-cols-2 gap-6">
-          {Array.from({ length: 2 }).map((_, index) => (
-            <CardBlog
-              key={index}
-              title="Harmonix Blog"
-              date="2023-08-01"
-              image="/images/blog-1.png"
-            />
-          ))}
-        </div>
-        <Button
-          className={
-            "rounded-full text-base p-6 cursor-pointer bg-accent text-accent-foreground"
-          }
+
+        <Carousel
+          setApi={setCarouselApi}
+          opts={{
+            align: "start",
+            containScroll: "trimSnaps",
+            dragFree: true,
+          }}
         >
-          View all
-        </Button>
+          <CarouselContent className="p-1">
+            {blogPosts?.items?.map?.((post, index) => (
+              <CarouselItem
+                key={`index-${index}-${post.id}`}
+                className="px-4 basis-3xl"
+              >
+                <CardBlog
+                  key={index}
+                  title={post.title}
+                  subTitle={post.subtitle}
+                  date={post.publishedAt}
+                  image={post.imageUrl}
+                  slug={post.slug}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+
+        {totalSlides > 1 ? (
+          <div className="-mt-10 flex items-center justify-between">
+            <Link
+              href={URL_PARAGRAPH}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                className={
+                  "rounded-full text-base p-6 cursor-pointer bg-accent text-accent-foreground"
+                }
+              >
+                View all
+              </Button>
+            </Link>
+
+            <div className="flex items-center gap-2">
+              <Button
+                type="button"
+                variant="outline"
+                size="icon-sm"
+                className="rounded-full bg-white size-8"
+                disabled={!canScrollPrev}
+                onClick={() => carouselApi?.scrollPrev()}
+                aria-label="Previous slide"
+              >
+                <ArrowLeftIcon className="size-4" />
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                size="icon-sm"
+                className="rounded-full bg-white size-8"
+                disabled={!canScrollNext}
+                onClick={() => carouselApi?.scrollNext()}
+                aria-label="Next slide"
+              >
+                <ArrowRightIcon className="size-4" />
+              </Button>
+            </div>
+          </div>
+        ) : null}
       </div>
     </section>
   );

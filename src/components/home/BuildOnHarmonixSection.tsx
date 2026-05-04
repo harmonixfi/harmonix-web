@@ -2,6 +2,8 @@ import { Typography } from "@/components/ui/typography";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Rocket } from "lucide-react";
+import Link from "next/link";
+import { HARMONIX_CONFIG_LINK } from "@/constants/common";
 
 const features = [
   {
@@ -71,9 +73,15 @@ export default function BuildOnHarmonixSection() {
             ))}
           </div>
 
-          <Button className={"rounded-full text-base p-6 cursor-pointer"}>
-            Read the docs
-          </Button>
+          <Link
+            href={HARMONIX_CONFIG_LINK.docs}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className={"rounded-full text-base p-6 cursor-pointer"}>
+              Read the docs
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

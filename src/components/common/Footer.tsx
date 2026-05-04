@@ -2,11 +2,12 @@ import Link from "next/link";
 import { Typography } from "@/components/ui/typography";
 import HarmonixLogoWithoutBackground from "../icons/HarmonixLogoWithoutBackground";
 import HarmonixText from "../icons/HarmonixText";
-import FacebookIcon from "../icons/FacebookIcon";
-import InstagramIcon from "../icons/InstagramIcon";
+import { BookOpenIcon, Icon } from "lucide-react";
+import { HARMONIX_CONFIG_LINK } from "@/constants/common";
 import TwitterIcon from "../icons/TwitterIcon";
-import YoutubeIcon from "../icons/YoutubeIcon";
-import WhatsAppIcon from "../icons/WhatsAppIcon";
+import TelegramIcon from "../icons/TelegramIcon";
+import DiscordIcon from "../icons/DiscordIcon";
+import GithubIcon from "../icons/GithubIcon";
 
 const footerColumns = [
   {
@@ -37,6 +38,29 @@ const footerColumns = [
   },
 ] as const;
 
+const socialMedia = [
+  {
+    icon: TwitterIcon,
+    link: HARMONIX_CONFIG_LINK.twitter,
+    label: "Twitter",
+  },
+  {
+    icon: TelegramIcon,
+    link: HARMONIX_CONFIG_LINK.telegram,
+    label: "Telegram",
+  },
+  {
+    icon: DiscordIcon,
+    link: HARMONIX_CONFIG_LINK.discord,
+    label: "Discord",
+  },
+  {
+    icon: GithubIcon,
+    link: HARMONIX_CONFIG_LINK.github,
+    label: "Github",
+  },
+  { icon: BookOpenIcon, link: HARMONIX_CONFIG_LINK.docs, label: "Docs" },
+];
 const Footer = () => {
   return (
     <footer className="bg-[#F5F5F5]">
@@ -91,20 +115,14 @@ const Footer = () => {
           </Typography>
 
           <div className="flex items-center justify-center gap-4">
-            {[
-              { label: "Facebook", Icon: FacebookIcon },
-              { label: "Instagram", Icon: InstagramIcon },
-              { label: "X", Icon: TwitterIcon },
-              { label: "Youtube", Icon: YoutubeIcon },
-              { label: "WhatsApp", Icon: WhatsAppIcon },
-            ].map(({ label, Icon }) => (
+            {socialMedia.map((v, i) => (
               <Link
-                key={label}
-                href="#"
-                aria-label={label}
+                key={`index-${i}-${v.label}`}
+                href={v.link}
+                aria-label={v.label}
                 className="inline-flex items-center justify-center cursor-pointer"
               >
-                <Icon className="size-5" />
+                <v.icon className="size-5" />
               </Link>
             ))}
           </div>

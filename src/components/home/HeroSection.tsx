@@ -1,6 +1,8 @@
 import { Typography } from "@/components/ui/typography";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import { HARMONIX_CONFIG_LINK } from "@/constants/common";
 
 export default function HeroSection() {
   return (
@@ -22,15 +24,27 @@ export default function HeroSection() {
         Secure, automated, institutional-grade.
       </Typography>
       <div className="flex gap-3 justify-center">
-        <Button className={"rounded-full text-base p-6 cursor-pointer"}>
-          Launch App
-        </Button>
-        <Button
-          className={"rounded-full text-base p-6 cursor-pointer"}
-          variant={"outline"}
+        <Link
+          href={HARMONIX_CONFIG_LINK.launchApp}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Learn More
-        </Button>
+          <Button className={"rounded-full text-base p-6 cursor-pointer"}>
+            Launch App
+          </Button>
+        </Link>
+        <Link
+          href={HARMONIX_CONFIG_LINK.docs}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Button
+            className={"rounded-full text-base p-6 cursor-pointer"}
+            variant={"outline"}
+          >
+            Learn More
+          </Button>
+        </Link>
       </div>
       <Image
         width={1100}

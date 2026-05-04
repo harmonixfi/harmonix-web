@@ -1,6 +1,8 @@
 import { Typography } from "@/components/ui/typography";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import { HARMONIX_CONFIG_LINK } from "@/constants/common";
+import Link from "next/link";
 
 export default function BuyHarSection() {
   return (
@@ -37,13 +39,19 @@ export default function BuyHarSection() {
               Governance and rewards token for Harmonix Finance. 50% airdropped
               to the community. Trade HAR/USDC on Hyperliquid.
             </Typography>
-            <Button
-              className={
-                "rounded-full text-base p-6 cursor-pointer bg-accent text-accent-foreground"
-              }
+            <Link
+              href={HARMONIX_CONFIG_LINK.buyHamonix}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Buy HAR
-            </Button>
+              <Button
+                className={
+                  "rounded-full text-base p-6 cursor-pointer bg-accent text-accent-foreground"
+                }
+              >
+                Buy HAR
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
