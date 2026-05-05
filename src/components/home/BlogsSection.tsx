@@ -17,6 +17,7 @@ import dayjs from "dayjs";
 
 import { toUtcDate } from "@/lib/date";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
+import BlogsSectionSkeleton from "./BlogsSectionSkeleton";
 
 const URL_PARAGRAPH = process.env.NEXT_PUBLIC_PARAGRAPH_URL_PAGE ?? "";
 const PARAGRAPH_HARMONIX_ID =
@@ -43,7 +44,7 @@ const CardBlog = ({
         loading="eager"
         src={image}
         alt={title}
-        className="w-186 h-auto object-cover rounded-3xl mb-6"
+        className="w-full lg:w-186 h-auto object-cover rounded-3xl mb-6"
       />
       <Typography
         align={"left"}
@@ -68,7 +69,7 @@ const CardBlog = ({
       <Typography
         align={"left"}
         variant={"body"}
-        className="text-muted-foreground leading-6 mt-2"
+        className="text-muted-foreground leading-6 mt-2 line-clamp-3"
       >
         {subTitle}
       </Typography>
@@ -114,7 +115,7 @@ export default function BlogsSection() {
 
   return (
     <section className="bg-[#122823]">
-      <div className="space-y-12 mx-auto py-36 px-4 max-w-7xl">
+      <div className="space-y-8 lg:space-y-12 mx-auto py-10 lg:py-36 px-4 max-w-7xl">
         <Typography align={"center"} variant={"h1"} className="text-white">
           Latest from{" "}
           <span className="bg-title-gradient bg-clip-text text-transparent">
@@ -130,27 +131,31 @@ export default function BlogsSection() {
             dragFree: true,
           }}
         >
-          <CarouselContent className="p-1">
-            {blogPosts?.items?.map?.((post, index) => (
-              <CarouselItem
-                key={`index-${index}-${post.id}`}
-                className="px-4 basis-3xl"
-              >
-                <CardBlog
-                  key={index}
-                  title={post.title}
-                  subTitle={post.subtitle}
-                  date={post.publishedAt}
-                  image={post.imageUrl}
-                  slug={post.slug}
-                />
-              </CarouselItem>
-            ))}
+          <CarouselContent className="p-1 ml-0">
+            {isLoadingGetBlogPosts ? (
+              <BlogsSectionSkeleton />
+            ) : (
+              blogPosts?.items?.map?.((post, index) => (
+                <CarouselItem
+                  key={`index-${index}-${post.id}`}
+                  className="pl-4 pr-1 lg:px-4 lg:basis-3xl"
+                >
+                  <CardBlog
+                    key={index}
+                    title={post.title}
+                    subTitle={post.subtitle}
+                    date={post.publishedAt}
+                    image={post.imageUrl}
+                    slug={post.slug}
+                  />
+                </CarouselItem>
+              ))
+            )}
           </CarouselContent>
         </Carousel>
 
         {totalSlides > 1 ? (
-          <div className="-mt-10 flex items-center justify-between">
+          <div className="-mt-5 flex items-center justify-between">
             <Link
               href={URL_PARAGRAPH}
               target="_blank"

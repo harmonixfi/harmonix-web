@@ -55,9 +55,13 @@ const secureCards = [
 export default function SecureDesignSection() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-36">
+      <div className="mx-auto max-w-7xl px-4 py-10 lg:py-36">
         <div className="">
-          <Typography align={"center"} variant={"h1"} className="leading-18">
+          <Typography
+            align={"center"}
+            variant={"h1"}
+            className="leading-10 lg:leading-18"
+          >
             Open by default.
             <br />
             <span className="bg-title-gradient bg-clip-text text-transparent">
@@ -109,7 +113,7 @@ contract HarmonixVault is ERC4626 {
           </div>
         </div>
 
-        <div className="mt-6 grid gap-6 md:grid-cols-3">
+        <div className="mt-6 grid gap-6 lg:grid-cols-3">
           {secureCards.map((card) => (
             <div
               key={card.title}

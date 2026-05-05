@@ -9,7 +9,10 @@ export default function YieldSectionSkeleton() {
   return (
     <>
       {items.map((_, index) => (
-        <CarouselItem key={`yield-skeleton-${index}`} className="px-4 basis-lg">
+        <CarouselItem
+          key={`yield-skeleton-${index}`}
+          className="lg:px-4 lg:basis-lg"
+        >
           <Card className="p-8 shadow-md rounded-3xl">
             <CardHeader className="p-0">
               <CardTitle className="space-y-4">
@@ -61,4 +64,3 @@ export default function YieldSectionSkeleton() {
     </>
   );
 }
-

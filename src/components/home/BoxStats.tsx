@@ -21,7 +21,7 @@ const stats = [
 
 export default function BoxStats() {
   return (
-    <section className="rounded-[24px] bg-white p-4 xl:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-24 items-center shadow-lg">
+    <section className="rounded-[24px] bg-white p-4 lg:p-5 2xl:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-12 2xl:gap-24 items-center shadow-lg">
       {stats.map((stat) => (
         <div
           key={stat.title}

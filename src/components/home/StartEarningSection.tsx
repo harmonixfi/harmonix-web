@@ -11,8 +11,8 @@ const startEarningHighlights = [
 export default function StartEarningSection() {
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-36">
-        <div className="rounded-4xl bg-linear-to-t from-[#C8EBD3] to-[#F4FAF1] px-20 py-16">
+      <div className="mx-auto max-w-7xl px-4 py-10 lg:py-36">
+        <div className="rounded-4xl bg-linear-to-t from-[#C8EBD3] to-[#F4FAF1] px-4 lg:px-20 py-4 lg:py-16">
           <div className="mx-auto flex flex-col items-center text-center gap-5">
             <Typography
               align={"center"}

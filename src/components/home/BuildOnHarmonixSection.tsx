@@ -23,8 +23,8 @@ const features = [
 export default function BuildOnHarmonixSection() {
   return (
     <section className="bg-muted">
-      <div className="mx-auto py-36 px-4 max-w-7xl grid grid-cols-2 gap-14 items-center">
-        <div className="bg-linear-to-t from-[#C8EBD3] to-[#F4FAF1] rounded-3xl h-149 relative">
+      <div className="mx-auto py-10 lg:py-36 px-4 max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div className="hidden lg:block bg-linear-to-t from-[#C8EBD3] to-[#F4FAF1] rounded-3xl h-149 relative">
           <Image
             width={490}
             height={510}
@@ -34,18 +34,16 @@ export default function BuildOnHarmonixSection() {
             className="w-122 h-auto object-cover absolute bottom-0 right-0 rounded-br-3xl"
           />
         </div>
-        <div className="space-y-8">
-          <Typography align={"left"} variant={"h1"} className="">
+        <div className="space-y-4 lg:space-y-8">
+          <Typography variant={"h1"} className="text-center lg:text-left">
             Build on Harmonix with{" "}
             <span className="bg-title-gradient bg-clip-text text-transparent">
               confidence
             </span>
           </Typography>
-
           <Typography
-            align={"left"}
             variant={"bodyLarge"}
-            className="text-muted-foreground"
+            className="text-muted-foreground text-center lg:text-left"
           >
             Everything you need to design, launch, and scale financial products
             — from APIs to secure infrastructure.
@@ -78,7 +76,11 @@ export default function BuildOnHarmonixSection() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className={"rounded-full text-base p-6 cursor-pointer"}>
+            <Button
+              className={
+                "w-full lg:w-auto rounded-full text-base p-6 cursor-pointer"
+              }
+            >
               Read the docs
             </Button>
           </Link>

@@ -103,7 +103,11 @@ export default function YieldSection() {
               rel="noopener noreferrer"
               className="flex justify-end lg:justify-start"
             >
-              <Button className={"rounded-full text-base p-6 cursor-pointer"}>
+              <Button
+                className={
+                  "rounded-full w-full lg:w-auto text-base p-6 cursor-pointer"
+                }
+              >
                 Explore all vaults
               </Button>
             </Link>
