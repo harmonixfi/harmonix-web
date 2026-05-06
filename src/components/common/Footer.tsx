@@ -1,8 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { Typography } from "@/components/ui/typography";
 import HarmonixLogoWithoutBackground from "../icons/HarmonixLogoWithoutBackground";
 import HarmonixText from "../icons/HarmonixText";
-import { BookOpenIcon, Icon } from "lucide-react";
+import { BookOpenIcon } from "lucide-react";
 import { HARMONIX_CONFIG_LINK } from "@/constants/common";
 import TwitterIcon from "../icons/TwitterIcon";
 import TelegramIcon from "../icons/TelegramIcon";
@@ -64,7 +66,7 @@ const socialMedia = [
 const Footer = () => {
   return (
     <footer className="bg-[#F5F5F5]">
-      <div className="mx-auto max-w-7xl px-4 pt-12 lg:pt-24 pb-12">
+      <div className="mx-auto max-w-7xl px-4 py-10 lg:pt-24 lg:pb-12">
         <div className="grid gap-10 lg:gap-4 lg:grid-cols-5">
           <div className="col-span-2">
             <Typography
@@ -130,12 +132,13 @@ const Footer = () => {
             ))}
           </div>
 
-          <Link
-            href="#"
-            className="text-sm  text-center lg:text-right text-muted-foreground transition-colors hover:text-foreground animate-bounce"
+          <Typography
+            variant="bodySmall"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="text-center cursor-pointer lg:text-right text-muted-foreground transition-colors hover:text-foreground animate-bounce"
           >
             Back to top
-          </Link>
+          </Typography>
         </div>
       </div>
     </footer>

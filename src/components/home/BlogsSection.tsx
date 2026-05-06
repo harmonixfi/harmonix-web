@@ -18,6 +18,7 @@ import dayjs from "dayjs";
 import { toUtcDate } from "@/lib/date";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import BlogsSectionSkeleton from "./BlogsSectionSkeleton";
+import { ScrollReveal } from "../common/ScrollReveal";
 
 const URL_PARAGRAPH = process.env.NEXT_PUBLIC_PARAGRAPH_URL_PAGE ?? "";
 const PARAGRAPH_HARMONIX_ID =
@@ -116,43 +117,53 @@ export default function BlogsSection() {
   return (
     <section className="bg-[#122823]">
       <div className="space-y-8 lg:space-y-12 mx-auto py-10 lg:py-36 px-4 max-w-7xl">
-        <Typography align={"center"} variant={"h1"} className="text-white">
-          Latest from{" "}
-          <span className="bg-title-gradient bg-clip-text text-transparent">
-            Harmonix
-          </span>
-        </Typography>
+        <ScrollReveal direction="up" duration={800} delay={200}>
+          <Typography align={"center"} variant={"h1"} className="text-white">
+            Latest from{" "}
+            <span className="bg-title-gradient bg-clip-text text-transparent">
+              Harmonix
+            </span>
+          </Typography>
+        </ScrollReveal>
 
-        <Carousel
-          setApi={setCarouselApi}
-          opts={{
-            align: "start",
-            containScroll: "trimSnaps",
-            dragFree: true,
-          }}
+        <ScrollReveal
+          direction="left"
+          duration={800}
+          delay={300}
+          distance={70}
+          threshold={0.3}
         >
-          <CarouselContent className="p-1 ml-0">
-            {isLoadingGetBlogPosts ? (
-              <BlogsSectionSkeleton />
-            ) : (
-              blogPosts?.items?.map?.((post, index) => (
-                <CarouselItem
-                  key={`index-${index}-${post.id}`}
-                  className="pl-4 pr-1 lg:px-4 lg:basis-3xl"
-                >
-                  <CardBlog
-                    key={index}
-                    title={post.title}
-                    subTitle={post.subtitle}
-                    date={post.publishedAt}
-                    image={post.imageUrl}
-                    slug={post.slug}
-                  />
-                </CarouselItem>
-              ))
-            )}
-          </CarouselContent>
-        </Carousel>
+          <Carousel
+            setApi={setCarouselApi}
+            opts={{
+              align: "start",
+              containScroll: "trimSnaps",
+              dragFree: true,
+            }}
+          >
+            <CarouselContent className="p-1 ml-0">
+              {isLoadingGetBlogPosts ? (
+                <BlogsSectionSkeleton />
+              ) : (
+                blogPosts?.items?.map?.((post, index) => (
+                  <CarouselItem
+                    key={`index-${index}-${post.id}`}
+                    className="pl-4 pr-1 lg:px-4 lg:basis-3xl"
+                  >
+                    <CardBlog
+                      key={index}
+                      title={post.title}
+                      subTitle={post.subtitle}
+                      date={post.publishedAt}
+                      image={post.imageUrl}
+                      slug={post.slug}
+                    />
+                  </CarouselItem>
+                ))
+              )}
+            </CarouselContent>
+          </Carousel>
+        </ScrollReveal>
 
         {totalSlides > 1 ? (
           <div className="-mt-5 flex items-center justify-between">

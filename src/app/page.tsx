@@ -1,3 +1,4 @@
+import { ScrollReveal } from "@/components/common/ScrollReveal";
 import AllYourYieldSection from "@/components/home/AllYourYieldSection";
 import BlogsSection from "@/components/home/BlogsSection";
 import BoxStats from "@/components/home/BoxStats";
@@ -24,9 +25,15 @@ export default function Home() {
           alt="blur line"
           className="pointer-events-none hidden lg:block absolute top-full left-0 right-0 w-full lg:-translate-y-[70%] xl:-translate-y-[68%] 2xl:-translate-y-[60%]"
         />
-        <div className="relative mx-auto mb-10 w-full px-4 lg:absolute lg:top-full lg:left-1/2 lg:mb-0 lg:w-2/3 lg:-translate-x-1/2 lg:-translate-y-[80%] xl:w-1/2">
+
+        <ScrollReveal
+          direction="up"
+          duration={800}
+          delay={100}
+          className="relative mx-auto mb-10 w-full px-4 lg:absolute lg:top-full lg:left-1/2 lg:mb-0 lg:w-2/3 lg:-translate-x-1/2 lg:-translate-y-[80%] xl:w-1/2"
+        >
           <BoxStats />
-        </div>
+        </ScrollReveal>
       </div>
       <YieldSection />
       <BuyHarSection />

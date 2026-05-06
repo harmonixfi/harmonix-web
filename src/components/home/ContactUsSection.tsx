@@ -14,6 +14,7 @@ import {
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
 import { Mail } from "lucide-react";
+import { ScrollReveal } from "../common/ScrollReveal";
 
 const topicOptions = [
   { value: "general", label: "General" },
@@ -26,7 +27,14 @@ export default function ContactUsSection() {
   return (
     <section className="bg-muted">
       <div className="grid gap-8 lg:gap-16 lg:grid-cols-2 lg:items-center">
-        <div className="py-10 lg:py-36 mx-auto max-w-md px-4">
+        <ScrollReveal
+          direction="right"
+          duration={700}
+          delay={100}
+          distance={100}
+          threshold={0.3}
+          className="py-10 lg:py-36 mx-auto max-w-md px-4"
+        >
           <Typography
             variant="small"
             className="text-muted-foreground font-medium"
@@ -54,10 +62,17 @@ export default function ContactUsSection() {
               hello@harmonix.fi
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
 
         <div className="bg-neutral-200">
-          <div className="py-10 lg:py-36 px-4">
+          <ScrollReveal
+            direction="left"
+            duration={700}
+            delay={100}
+            distance={100}
+            threshold={0.3}
+            className="py-10 lg:py-36 px-4"
+          >
             <form className="mx-auto max-w-md space-y-5">
               <div className="space-y-2">
                 <Label className="text-sm text-foreground">Name</Label>
@@ -121,7 +136,7 @@ export default function ContactUsSection() {
 
               <Button className="h-10 w-full rounded-full">Send message</Button>
             </form>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

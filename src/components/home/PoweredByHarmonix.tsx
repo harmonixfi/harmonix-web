@@ -9,11 +9,17 @@ import TradeXYZLogo from "../icons/TradeXYZLogo";
 import FelixLogo from "../icons/FelixLogo";
 import HypurrfiLogo from "../icons/HypurrfiLogo";
 import HyperlendLogo from "../icons/HyperlendLogo";
+import { ScrollReveal } from "../common/ScrollReveal";
 
 export default function PoweredByHarmonix() {
   return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-7xl pb-10 lg:pb-36 space-y-4 lg:space-y-8 h-175 flex flex-col items-center justify-center relative">
+    <section className="bg-white">
+      <ScrollReveal
+        direction="up"
+        duration={800}
+        delay={200}
+        className="mx-auto max-w-7xl pb-10 lg:pb-36 space-y-4 lg:space-y-8 h-175 flex flex-col items-center justify-center relative"
+      >
         <Typography
           align={"center"}
           variant={"h1"}
@@ -64,7 +70,7 @@ export default function PoweredByHarmonix() {
         <UsdcAsset className="size-14 absolute rounded-full top-40 md:top-50 lg:top-50 right-10 md:right-40 lg:right-40 xl:right-66 animate-float-1" />
         <HyEnaLogo className="size-14 absolute rounded-full top-35 md:top-40 lg:top-45 left-24 md:left-50 lg:left-50 xl:left-80 animate-float-3" />
         <TradeXYZLogo className="size-14 absolute rounded-full top-8 md:top-12 lg:top-8 left-10 md:left-30 lg:left-60 animate-float-2" />
-      </div>
-    </div>
+      </ScrollReveal>
+    </section>
   );
 }

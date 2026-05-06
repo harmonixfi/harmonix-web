@@ -55,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fontPoppins.className} h-full antialiased ${fontInter.variable}`}
+      className={`${fontPoppins.className} h-full antialiased ${fontInter.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <body className="bg-linear-to-r from-[#C8EBD3] to-[#F4FAF1]">

@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import { Rocket } from "lucide-react";
 import Link from "next/link";
 import { HARMONIX_CONFIG_LINK } from "@/constants/common";
+import { ScrollReveal } from "../common/ScrollReveal";
 
 const features = [
   {
@@ -24,7 +25,13 @@ export default function BuildOnHarmonixSection() {
   return (
     <section className="bg-muted">
       <div className="mx-auto py-10 lg:py-36 px-4 max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-        <div className="hidden lg:block bg-linear-to-t from-[#C8EBD3] to-[#F4FAF1] rounded-3xl h-149 relative">
+        <ScrollReveal
+          direction="right"
+          duration={700}
+          delay={100}
+          distance={100}
+          className="hidden lg:block bg-linear-to-t from-[#C8EBD3] to-[#F4FAF1] rounded-3xl h-149 relative"
+        >
           <Image
             width={490}
             height={510}
@@ -33,8 +40,14 @@ export default function BuildOnHarmonixSection() {
             alt="harmonix docs"
             className="w-122 h-auto object-cover absolute bottom-0 right-0 rounded-br-3xl"
           />
-        </div>
-        <div className="space-y-4 lg:space-y-8">
+        </ScrollReveal>
+        <ScrollReveal
+          direction="left"
+          duration={700}
+          delay={100}
+          distance={100}
+          className="space-y-4 lg:space-y-8"
+        >
           <Typography variant={"h1"} className="text-center lg:text-left">
             Build on Harmonix with{" "}
             <span className="bg-title-gradient bg-clip-text text-transparent">
@@ -51,7 +64,14 @@ export default function BuildOnHarmonixSection() {
 
           <div className="grid grid-cols-2 gap-3">
             {features.map((v, i) => (
-              <div key={`index-feature-${i}`} className="space-y-1">
+              <ScrollReveal
+                direction="up"
+                duration={600}
+                delay={100 * (i + 1)}
+                threshold={0.2}
+                key={`index-feature-${i}`}
+                className="space-y-1"
+              >
                 <v.icon className="size-12 p-3 border rounded-lg shadow-md mb-3" />
                 <Typography
                   align={"left"}
@@ -67,7 +87,7 @@ export default function BuildOnHarmonixSection() {
                 >
                   {v.description}
                 </Typography>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 
@@ -84,7 +104,7 @@ export default function BuildOnHarmonixSection() {
               Read the docs
             </Button>
           </Link>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

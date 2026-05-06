@@ -3,12 +3,18 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import { HARMONIX_CONFIG_LINK } from "@/constants/common";
 import Link from "next/link";
+import { ScrollReveal } from "../common/ScrollReveal";
 
 export default function BuyHarSection() {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-7xl pb-10 lg:pt-20 lg:pb-36 px-4">
-        <div className="bg-primary-700 rounded-4xl lg:h-150 flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-10 xl:gap-40 py-4 lg:py-0 px-4 lg:px-20">
+        <ScrollReveal
+          direction="up"
+          duration={800}
+          delay={100}
+          className="bg-primary-700 rounded-4xl lg:h-150 flex flex-col lg:flex-row justify-center items-center gap-8 lg:gap-10 xl:gap-40 py-4 lg:py-0 px-4 lg:px-20"
+        >
           <Image
             src="/images/buyHar/buy-har.png"
             alt="Buy Harmonix"
@@ -53,7 +59,7 @@ export default function BuyHarSection() {
               </Button>
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

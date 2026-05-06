@@ -23,6 +23,7 @@ import YieldSectionSkeleton from "./YieldSectionSkeleton";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import { HARMONIX_CONFIG_LINK } from "@/constants/common";
+import { ScrollReveal } from "../common/ScrollReveal";
 
 const getDescription = (category: string) => {
   switch (category.toLowerCase()) {
@@ -79,7 +80,12 @@ export default function YieldSection() {
   return (
     <section className="pt-10 lg:pt-30 xl:pt-40 bg-white">
       <div className="space-y-12 mx-auto pb-10 px-4 max-w-7xl">
-        <div className="grid gap-3 grid-cols-1 lg:grid-cols-2">
+        <ScrollReveal
+          direction="up"
+          duration={800}
+          delay={200}
+          className="grid gap-3 grid-cols-1 lg:grid-cols-2"
+        >
           <div>
             <Typography align={"left"} variant={"h1"} className="lg:text-5xl">
               Maximize{" "}
@@ -112,8 +118,15 @@ export default function YieldSection() {
               </Button>
             </Link>
           </div>
-        </div>
-        <div className="relative">
+        </ScrollReveal>
+        <ScrollReveal
+          direction="left"
+          duration={800}
+          delay={300}
+          distance={70}
+          threshold={0.2}
+          className="relative"
+        >
           <Carousel
             setApi={setCarouselApi}
             opts={{
@@ -323,7 +336,7 @@ export default function YieldSection() {
               </div>
             </div>
           ) : null}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

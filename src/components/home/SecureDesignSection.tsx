@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react";
 import BcioLogo from "../icons/BcioLogo";
 import BaiLogo from "../icons/BalLogo";
 import BayLogo from "../icons/BayLogo";
+import { ScrollReveal } from "../common/ScrollReveal";
 
 const secureCards = [
   {
@@ -56,7 +57,7 @@ export default function SecureDesignSection() {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-4 py-10 lg:py-36">
-        <div className="">
+        <ScrollReveal direction="up" duration={600} delay={100} className="">
           <Typography
             align={"center"}
             variant={"h1"}
@@ -75,10 +76,20 @@ export default function SecureDesignSection() {
           >
             Transparent financial infrastructure. See it for yourself.
           </Typography>
-        </div>
+        </ScrollReveal>
 
-        <div className="mt-12 rounded-3xl bg-muted-100 relative h-105">
-          <div className="absolute inset-x-0 bottom-0 mx-auto max-w-4xl bg-white pt-3 px-3 rounded-t-2xl">
+        <ScrollReveal
+          direction="up"
+          duration={600}
+          delay={100}
+          className="mt-12 rounded-3xl bg-muted-100 relative h-105"
+        >
+          <ScrollReveal
+            direction="up"
+            duration={600}
+            delay={100}
+            className="absolute inset-x-0 bottom-0 mx-auto max-w-4xl bg-white pt-3 px-3 rounded-t-2xl"
+          >
             <div className="overflow-hidden rounded-t-xl bg-[#14181B]">
               <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
                 <Typography variant="small" className="text-white/80">
@@ -110,12 +121,16 @@ contract HarmonixVault is ERC4626 {
                 </pre>
               </div>
             </div>
-          </div>
-        </div>
+          </ScrollReveal>
+        </ScrollReveal>
 
         <div className="mt-6 grid gap-6 lg:grid-cols-3">
-          {secureCards.map((card) => (
-            <div
+          {secureCards.map((card, i) => (
+            <ScrollReveal
+              direction="up"
+              duration={600}
+              delay={100 * (i + 1)}
+              threshold={0.2}
               key={card.title}
               className="relative rounded-3xl bg-muted-100 p-6"
             >
@@ -143,7 +158,7 @@ contract HarmonixVault is ERC4626 {
 
                 {card.iconCount && (
                   <div className="flex items-center -space-x-2">
-                    {card.iconCount?.map((item, i) => (
+                    {card.iconCount?.map((item) => (
                       <item.icon
                         key={`avatar-${item.title}`}
                         className="size-8 rounded-full"
@@ -163,7 +178,7 @@ contract HarmonixVault is ERC4626 {
                   </Button>
                 </Link>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

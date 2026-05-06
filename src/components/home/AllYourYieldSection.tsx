@@ -2,10 +2,11 @@ import { Typography } from "@/components/ui/typography";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ScrollReveal } from "../common/ScrollReveal";
 
 const TabYieldComponent = () => {
   return (
-    <section className="bg-muted-100 rounded-4xl h-auto lg:h-150 flex flex-col lg:flex-row justify-center items-center gap-10 px-4 lg:px-20 py-4 lg:py-0 overflow-hidden">
+    <div className="bg-muted-100 rounded-4xl h-auto lg:h-150 flex flex-col lg:flex-row justify-center items-center gap-10 px-4 lg:px-20 py-4 lg:py-0 overflow-hidden">
       <div className="space-y-4 lg:space-y-6">
         <Typography
           align={"left"}
@@ -38,14 +39,19 @@ const TabYieldComponent = () => {
         className="w-276 h-auto"
         loading="eager"
       />
-    </section>
+    </div>
   );
 };
 
 export default function AllYourYieldSection() {
   return (
-    <div className="bg-white">
-      <div className="mx-auto max-w-7xl pb-10 lg:pb-36 space-y-4 lg:space-y-8 px-4">
+    <section className="bg-white">
+      <ScrollReveal
+        direction="up"
+        duration={800}
+        delay={100}
+        className="mx-auto max-w-7xl pb-10 lg:pb-36 space-y-4 lg:space-y-8 px-4"
+      >
         <Typography
           align={"center"}
           variant={"h1"}
@@ -108,7 +114,7 @@ export default function AllYourYieldSection() {
             <TabYieldComponent />
           </TabsContent>
         </Tabs>
-      </div>
-    </div>
+      </ScrollReveal>
+    </section>
   );
 }
