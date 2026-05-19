@@ -62,11 +62,13 @@ export const getRewardIcon = (
 ): RewardIconDescriptor | null => {
   switch (rewardKey.toLowerCase()) {
     case RewardKey.hip3HyENA:
+    case RewardKey.hyena:
       return { kind: "component", Component: HyEnaLogo };
     case RewardKey.usefelix:
     case RewardKey.hip3Felix:
       return { kind: "component", Component: FelixLogo };
     case RewardKey.hip3Hyperliquid:
+    case RewardKey.hyperliquidS3:
       return { kind: "component", Component: HyperliquidLogo };
     case RewardKey.hip3tradeXYZ:
       return { kind: "component", Component: TradeXYZLogo };
@@ -80,6 +82,10 @@ export const getRewardIcon = (
       return { kind: "component", Component: KinetiqLogo };
     case RewardKey.hyperunit:
       return { kind: "component", Component: HyperUnitLogo };
+    case RewardKey.tradexyz:
+      return { kind: "component", Component: TradeXYZLogo };
+    case RewardKey.marketsxyz:
+      return { kind: "image", src: '/images/icons/matkets-xyz.png', alt: 'marketsxyz' };
     default:
       return null;
   }

@@ -13,5 +13,9 @@ export enum RewardKey {
     hip3Kinetiq = 'hip3kinetiq',
     usefelix = 'usefelix',
     kPoints = 'kpoints',
-    hyperunit = 'hyperunit'
+    hyperunit = 'hyperunit',
+    hyena = "hyena",
+    hyperliquidS3 = "hyperliquid-s3",
+    tradexyz = "tradexyz",
+    marketsxyz = "marketsxyz",
 }
