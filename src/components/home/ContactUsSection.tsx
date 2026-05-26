@@ -25,7 +25,7 @@ const topicOptions = [
 
 export default function ContactUsSection() {
   return (
-    <section className="bg-muted">
+    <section className="bg-muted overflow-x-hidden">
       <div className="grid gap-8 lg:gap-16 lg:grid-cols-2 lg:items-center">
         <ScrollReveal
           direction="right"

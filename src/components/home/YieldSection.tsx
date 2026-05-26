@@ -272,7 +272,7 @@ export default function YieldSection() {
                           </div>
                         </div>
                         <Link
-                          href={HARMONIX_CONFIG_LINK.popularVault}
+                          href={`${HARMONIX_CONFIG_LINK.detailVault}/${item.attributes.slug}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >

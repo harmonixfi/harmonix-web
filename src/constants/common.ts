@@ -1,6 +1,7 @@
 export const HARMONIX_CONFIG_LINK = {
     launchApp: 'https://app.harmonix.fi/',
     popularVault: 'https://app.harmonix.fi/home',
+    detailVault: 'https://app.harmonix.fi/vaults',
     exploreVault: 'https://app.harmonix.fi/earn',
     buyHamonix: 'https://app.hyperliquid.xyz/trade/HAR/USDC',
     twitter: 'https://x.com/harmonixfi',
