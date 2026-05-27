@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 import BcioLogo from "../icons/BcioLogo";
 import BaiLogo from "../icons/BalLogo";
-import BayLogo from "../icons/BayLogo";
 import { ScrollReveal } from "../common/ScrollReveal";
+import { HARMONIX_CONFIG_LINK } from "@/constants/common";
 
 const secureCards = [
   {
@@ -13,17 +13,13 @@ const secureCards = [
     description: "By independent firms",
     cta: {
       title: "Read more",
-      href: "#",
+      href: HARMONIX_CONFIG_LINK.docs,
     },
     badge: null,
     iconCount: [
       {
         title: "Bai",
         icon: BaiLogo,
-      },
-      {
-        title: "Bay",
-        icon: BayLogo,
       },
       {
         title: "Bcio",
@@ -36,19 +32,19 @@ const secureCards = [
     description: "Integrate with Harmonix vaults",
     cta: {
       title: "Read Docs",
-      href: "#",
+      href: HARMONIX_CONFIG_LINK.docs,
     },
     badge: "Coming soon",
     iconCount: [],
   },
   {
-    title: "BoringVault",
-    description: "Battle-tested vault framework",
+    title: "Standard Vault Framework",
+    description: "Composability with ERC(4626/7540/7575)",
     cta: {
       title: "View on Github",
-      href: "#",
+      href: HARMONIX_CONFIG_LINK.github,
     },
-    badge: "Coming soon",
+    badge: null,
     iconCount: [],
   },
 ] as const;
@@ -96,7 +92,9 @@ export default function SecureDesignSection() {
                   HarmonixVault.sol
                 </Typography>
                 <Link
-                  href="#"
+                  href={HARMONIX_CONFIG_LINK.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs text-white/70 transition-colors hover:text-white"
                 >
                   Github <ExternalLink className="size-3.5" />

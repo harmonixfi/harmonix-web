@@ -3,8 +3,20 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollReveal } from "../common/ScrollReveal";
+import Link from "next/link";
+import { HARMONIX_CONFIG_LINK } from "@/constants/common";
 
-const TabYieldComponent = () => {
+const TabYieldComponent = ({
+  title,
+  description,
+  linkForward,
+  imageUrl,
+}: {
+  title: string;
+  description: string;
+  linkForward: string;
+  imageUrl: string;
+}) => {
   return (
     <div className="bg-muted-100 rounded-4xl h-auto lg:h-150 flex flex-col lg:flex-row justify-center items-center gap-10 px-4 lg:px-20 py-4 lg:py-0 overflow-hidden">
       <div className="space-y-4 lg:space-y-6">
@@ -13,26 +25,27 @@ const TabYieldComponent = () => {
           variant={"h1"}
           className="mt-8 text-primary lg:text-5xl"
         >
-          Deposit and earn.
+          {title}
         </Typography>
         <Typography
           align={"left"}
           variant={"bodyLarge"}
           className="text-primary font-normal"
         >
-          Shortly describe how this feature solves a specific user problem.
-          Focus on benefits not on technical details.
+          {description}
         </Typography>
-        <Button
-          className={
-            "rounded-full w-full lg:w-auto text-base p-6 cursor-pointer"
-          }
-        >
-          Get access
-        </Button>
+        <Link href={linkForward} target="_blank" rel="noopener noreferrer">
+          <Button
+            className={
+              "rounded-full w-full lg:w-auto text-base p-6 cursor-pointer"
+            }
+          >
+            Get access
+          </Button>
+        </Link>
       </div>
       <Image
-        src="/images/dashboard/web-dashboard.png"
+        src={imageUrl}
         alt="Dashboard Harmonix"
         width={570}
         height={400}
@@ -84,34 +97,46 @@ export default function AllYourYieldSection() {
                 Yield Markets
               </TabsTrigger>
               <TabsTrigger
-                value="yield-and-analytics"
+                value="analytics"
                 className={
                   "text-base cursor-pointer h-8 px-3 data-active:bg-white data-active:px-3 data-active:rounded-full data-active:shadow-xl data-active:border data-active:border-white"
                 }
               >
-                Yield and Analytics
+                Analytics
               </TabsTrigger>
               <TabsTrigger
-                value="points-and-cross-chain"
+                value="points-and-rewards"
                 className={
                   "text-base cursor-pointer h-8 px-3 data-active:bg-white data-active:px-3 data-active:rounded-full data-active:shadow-xl data-active:border data-active:border-white"
                 }
               >
-                Points and Cross-chain
+                Points and Rewards
               </TabsTrigger>
             </TabsList>
           </div>
           <TabsContent value="yield-market">
-            1 ne
-            <TabYieldComponent />
+            <TabYieldComponent
+              title="Deposit & Earn Passive Yield."
+              description="Put your HYPE and stablecoins to work. Earn sustainable yield and exclusive rewards driven by Hyperliquid’s automated basis trading vaults."
+              linkForward={`${HARMONIX_CONFIG_LINK.launchApp}/earn`}
+              imageUrl="/images/dashboard/web-dashboard.png"
+            />
           </TabsContent>
-          <TabsContent value="yield-and-analytics">
-            2 ne
-            <TabYieldComponent />
+          <TabsContent value="analytics">
+            <TabYieldComponent
+              title="Analytics"
+              description="Complete on-chain transparency. View how your assets are allocated through battle-tested strategies optimized for maximum risk-adjusted returns."
+              linkForward={`${HARMONIX_CONFIG_LINK.launchApp}/dashboards`}
+              imageUrl="/images/dashboard/web-dashboard.png"
+            />
           </TabsContent>
-          <TabsContent value="points-and-cross-chain">
-            3 ne
-            <TabYieldComponent />
+          <TabsContent value="points-and-rewards">
+            <TabYieldComponent
+              title="Points & Rewards."
+              description="Access multiple yield sources driven by institutional-grade strategies. Earn ecosystem points across Hyperliquid, including HyperCore, HyperEVM, and HIP3 markets."
+              linkForward={`${HARMONIX_CONFIG_LINK.launchApp}/points`}
+              imageUrl="/images/dashboard/web-dashboard.png"
+            />
           </TabsContent>
         </Tabs>
       </ScrollReveal>

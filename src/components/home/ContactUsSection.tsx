@@ -15,6 +15,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import { ScrollReveal } from "../common/ScrollReveal";
+import { HARMONIX_CONFIG_LINK } from "@/constants/common";
 
 const topicOptions = [
   { value: "general", label: "General" },
@@ -48,9 +49,8 @@ export default function ContactUsSection() {
             Get in touch
           </Typography>
           <Typography variant="body" className="mt-4 text-muted-foreground">
-            Write one or two welcoming sentences that encourage contact. Include
-            your response time commitment and highlight your team&apos;s
-            readiness to help.
+            Have questions about our vaults, strategies, or partnerships? Reach
+            out to us, and our team will get back to you shortly.
           </Typography>
 
           <div className="mt-8 flex items-center gap-3 text-sm text-foreground">
@@ -125,7 +125,7 @@ export default function ContactUsSection() {
                 >
                   By selecting this you agree to our{" "}
                   <Link
-                    href="#"
+                    href={HARMONIX_CONFIG_LINK.docs}
                     className="underline underline-offset-4 transition-colors text-foreground"
                   >
                     Privacy Policy

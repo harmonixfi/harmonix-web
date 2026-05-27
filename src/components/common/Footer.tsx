@@ -11,31 +11,44 @@ import TelegramIcon from "../icons/TelegramIcon";
 import DiscordIcon from "../icons/DiscordIcon";
 import GithubIcon from "../icons/GithubIcon";
 
+const URL_PARAGRAPH = process.env.NEXT_PUBLIC_PARAGRAPH_URL_PAGE ?? "";
+
 const footerColumns = [
   {
     heading: "Resources",
     column: [
-      { title: "Documents", link: "#" },
-      { title: "Blog", link: "#" },
-      { title: "Risks & Audits", link: "#" },
-      { title: "API reference", link: "#" },
+      { title: "Documents", link: HARMONIX_CONFIG_LINK.docs },
+      { title: "Blog", link: URL_PARAGRAPH },
+      { title: "Risks & Audits", link: HARMONIX_CONFIG_LINK.docs },
+      { title: "API reference", link: HARMONIX_CONFIG_LINK.docs },
     ],
   },
   {
     heading: "Products",
     column: [
-      { title: "haUSD Vault", link: "#" },
-      { title: "haHYPE Vault", link: "#" },
-      { title: "Basis Trade", link: "#" },
-      { title: "Dashboard", link: "#" },
+      {
+        title: "haUSD Vault",
+        link: `${HARMONIX_CONFIG_LINK.launchApp}/vaults/hip3-usdc-vault`,
+      },
+      {
+        title: "haHYPE Vault",
+        link: `${HARMONIX_CONFIG_LINK.launchApp}/vaults/hyperevm-delta-neutral-hype-v3`,
+      },
+      {
+        title: "Basis Trade",
+        link: `${HARMONIX_CONFIG_LINK.launchApp}/vaults/hype-delta-neutral-v1`,
+      },
+      {
+        title: "Dashboard",
+        link: `${HARMONIX_CONFIG_LINK.launchApp}/dashboards`,
+      },
     ],
   },
   {
     heading: "Legal",
     column: [
-      { title: "Terms of Use", link: "#" },
-      { title: "Risks & Audits", link: "#" },
-      { title: "Privacy Policy", link: "#" },
+      { title: "Terms of Use", link: HARMONIX_CONFIG_LINK.docs },
+      { title: "Privacy Policy", link: HARMONIX_CONFIG_LINK.docs },
     ],
   },
 ] as const;
@@ -92,6 +105,8 @@ const Footer = () => {
                     <Link
                       key={item.title}
                       href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="block text-sm text-muted-foreground transition-colors hover:text-foreground"
                     >
                       {item.title}
