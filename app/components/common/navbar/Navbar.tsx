@@ -2,7 +2,6 @@ import {
   DiscordIcon,
   GithubIcon,
   LogoWithTextIcon,
-  ShieldifyIcon,
   TelegramIcon,
   TwitterIcon,
 } from "../../icons";
@@ -23,10 +22,11 @@ import {
 import { Link } from "@remix-run/react";
 import { useRef, useState } from "react";
 import { EXTERNAL_LINKS } from "~/constants/url";
+import { useActivityTracking } from "~/hooks/useActivityTracking";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const { trackUiClick } = useActivityTracking();
   const navRef = useRef<HTMLDivElement>(null);
 
   const handleCloseMenu = () => {
@@ -142,6 +142,11 @@ const Navbar = () => {
             target="_blank"
             rel="noreferrer"
             size="lg"
+            onPress={() =>
+              trackUiClick({
+                element: "launch_app",
+              })
+            }
             className="bg-transparent border border-primary rounded-full text-dark-green h-10 sm:h-12 hover:bg-light-yellow hover:border-secondary"
           >
             Launch App

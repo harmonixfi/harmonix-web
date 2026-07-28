@@ -1,3 +1,4 @@
+import ActivityPageTracker from "./components/common/ActivityPageTracker";
 import Footer from "./components/common/Footer";
 import Navbar from "./components/common/navbar/Navbar";
 import "./tailwind.css";
@@ -42,6 +43,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         <NextUIProvider>
           <QueryClientProvider client={queryClient}>
+            <ActivityPageTracker />
             <Navbar />
             <main>{children}</main>
             {/* <LegalAlert /> */}
